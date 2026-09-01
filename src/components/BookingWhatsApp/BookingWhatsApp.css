@@ -3,7 +3,10 @@
 ===================================================== */
 
 .booking-whatsapp {
-  padding: 125px 40px 120px;
+  position: relative;
+  isolation: isolate;
+
+  padding: 110px 40px 85px;
 
   background: #ffffff;
   color: #151515;
@@ -11,9 +14,49 @@
   overflow: hidden;
 }
 
+.booking-whatsapp::before {
+  content: "";
+
+  position: absolute;
+
+  width: 650px;
+  height: 650px;
+
+  right: -440px;
+  top: -330px;
+
+  border: 1px solid rgba(21, 21, 21, 0.045);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.booking-whatsapp::after {
+  content: "";
+
+  position: absolute;
+
+  width: 350px;
+  height: 350px;
+
+  left: -270px;
+  bottom: -250px;
+
+  border: 1px solid rgba(21, 21, 21, 0.04);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
 .booking-whatsapp-container {
+  position: relative;
+  z-index: 2;
+
   width: 100%;
   max-width: 1380px;
+
   margin: 0 auto;
 }
 
@@ -21,58 +64,95 @@
    HEADER
 ===================================================== */
 
+.booking-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .booking-label {
   display: flex;
   align-items: center;
-  gap: 9px;
 
-  margin-bottom: 22px;
+  gap: 8px;
+
+  color: #77736c;
+
+  font-size: 7px;
+  font-weight: 900;
+
+  letter-spacing: 0.16em;
+}
+
+.booking-label span {
+  width: 6px;
+  height: 6px;
+
+  background: #f4c906;
+
+  border-radius: 50%;
+}
+
+.booking-page {
+  color: #aaa49b;
+
+  font-size: 6px;
+  font-weight: 900;
+
+  letter-spacing: 0.13em;
+}
+
+.booking-heading {
+  display: grid;
+
+  grid-template-columns: 1.15fr 0.85fr;
+
+  align-items: end;
+
+  gap: 70px;
+
+  margin-top: 24px;
+}
+
+.booking-eyebrow {
+  margin: 0 0 15px;
+
+  color: #99938a;
+
+  font-size: 7px;
+  font-weight: 900;
+
+  letter-spacing: 0.15em;
+}
+
+.booking-heading h2 {
+  max-width: 780px;
+
+  margin: 0;
+
+  font-size: clamp(54px, 5.8vw, 80px);
+
+  line-height: 0.88;
+
+  font-weight: 750;
+
+  letter-spacing: -0.075em;
+}
+
+.booking-heading h2 span {
+  color: #99938a;
+}
+
+.booking-heading > p {
+  max-width: 390px;
+
+  margin: 0 0 3px;
 
   color: #77736c;
 
   font-size: 10px;
-  font-weight: 800;
-  letter-spacing: .14em;
-}
 
-.booking-label span {
-  width: 7px;
-  height: 7px;
-
-  background: #f4c906;
-  border-radius: 50%;
-}
-
-.booking-heading {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-
-  gap: 60px;
-}
-
-.booking-heading h2 {
-  margin: 0;
-
-  font-size: clamp(50px, 5.8vw, 80px);
-  line-height: .93;
-
-  letter-spacing: -.06em;
-}
-
-.booking-heading h2 span {
-  color: #a09a91;
-}
-
-.booking-heading p {
-  max-width: 390px;
-
-  margin: 0 0 4px;
-
-  color: #77736c;
-
-  font-size: 13px;
-  line-height: 1.65;
+  line-height: 1.75;
 }
 
 /* =====================================================
@@ -81,27 +161,28 @@
 
 .booking-options {
   display: grid;
-  grid-template-columns: 1.25fr .75fr;
+
+  grid-template-columns: 1.25fr 0.75fr;
 
   gap: 14px;
 
-  margin-top: 70px;
+  margin-top: 58px;
 }
-
-/* =====================================================
-   MAIN BOOKING
-===================================================== */
 
 .booking-option {
   position: relative;
 
   overflow: hidden;
 
-  border-radius: 20px;
+  border-radius: 18px;
 }
 
+/* =====================================================
+   APPOINTMENT
+===================================================== */
+
 .booking-option-main {
-  padding: 27px;
+  padding: 26px;
 
   background: #f4f1e9;
 }
@@ -115,44 +196,58 @@
 .booking-option-number {
   color: #a09b91;
 
-  font-size: 9px;
-  font-weight: 800;
+  font-size: 7px;
+  font-weight: 900;
+
+  letter-spacing: 0.05em;
 }
 
 .booking-option-tag {
   display: inline-flex;
   align-items: center;
+
   gap: 7px;
 
   color: #77736c;
 
-  font-size: 7px;
-  font-weight: 800;
-  letter-spacing: .1em;
+  font-size: 6px;
+  font-weight: 900;
+
+  letter-spacing: 0.1em;
 }
+
+.booking-option-tag svg {
+  width: 13px;
+}
+
+/* =====================================================
+   APPOINTMENT CONTENT
+===================================================== */
 
 .booking-option-content {
   display: grid;
-  grid-template-columns: 1fr .85fr;
 
-  gap: 35px;
+  grid-template-columns: 1fr 0.82fr;
 
-  margin-top: 50px;
+  gap: 34px;
+
+  margin-top: 43px;
+
+  align-items: center;
 }
 
 .booking-option-copy h3 {
   margin: 0;
 
-  font-size: clamp(34px, 3.5vw, 53px);
+  font-size: clamp(35px, 3.4vw, 51px);
 
-  line-height: .94;
+  line-height: 0.93;
 
-  letter-spacing: -.055em;
+  letter-spacing: -0.06em;
 }
 
-.booking-option-copy h3 em,
-.whatsapp-content h3 em {
-  color: #9c968c;
+.booking-option-copy h3 em {
+  color: #99938a;
 
   font-style: normal;
 }
@@ -160,13 +255,13 @@
 .booking-option-copy > p {
   max-width: 390px;
 
-  margin: 22px 0;
+  margin: 20px 0 0;
 
   color: #77736c;
 
-  font-size: 11px;
+  font-size: 9px;
 
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 /* =====================================================
@@ -174,57 +269,38 @@
 ===================================================== */
 
 .booking-flow {
-  margin-top: 27px;
+  margin-top: 22px;
 }
 
 .booking-flow > div {
   display: flex;
   align-items: center;
 
-  gap: 10px;
+  gap: 9px;
 
-  padding: 10px 0;
+  padding: 8px 0;
 
   border-bottom: 1px solid #ddd7cd;
 }
 
+.booking-flow > div:first-child {
+  border-top: 1px solid #ddd7cd;
+}
+
 .booking-flow span {
+  width: 18px;
+
   color: #aaa49b;
 
-  font-size: 7px;
-  font-weight: 800;
+  font-size: 6px;
+  font-weight: 900;
 }
 
 .booking-flow strong {
-  font-size: 9px;
-}
+  color: #393632;
 
-/* ACTION */
-
-.booking-action {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-
-  margin-top: 25px;
-  padding: 11px 14px;
-
-  background: #111111;
-  color: #ffffff;
-
-  border-radius: 9px;
-
-  text-decoration: none;
-
-  font-size: 9px;
-  font-weight: 750;
-
-  transition: .25s ease;
-}
-
-.booking-action:hover {
-  background: #f4c906;
-  color: #111111;
+  font-size: 8px;
+  font-weight: 700;
 }
 
 /* =====================================================
@@ -234,15 +310,16 @@
 .booking-ui {
   align-self: center;
 
-  padding: 18px;
+  padding: 16px;
 
   background: #ffffff;
 
   border: 1px solid #e0dbd2;
 
-  border-radius: 15px;
+  border-radius: 13px;
 
-  box-shadow: 0 18px 45px rgba(0,0,0,.07);
+  box-shadow:
+    0 18px 42px rgba(0, 0, 0, 0.065);
 }
 
 .booking-ui-header {
@@ -250,57 +327,66 @@
   align-items: center;
   justify-content: space-between;
 
-  margin-bottom: 18px;
+  margin-bottom: 15px;
 }
 
 .booking-ui-header small {
   display: block;
 
-  margin-bottom: 4px;
+  margin-bottom: 3px;
 
   color: #aaa49b;
 
-  font-size: 6px;
-  font-weight: 800;
-  letter-spacing: .1em;
+  font-size: 5px;
+  font-weight: 900;
+
+  letter-spacing: 0.1em;
 }
 
 .booking-ui-header strong {
-  font-size: 13px;
+  font-size: 12px;
+
+  letter-spacing: -0.02em;
 }
 
 .booking-ui-header svg {
   color: #77736c;
 }
 
-/* FIELDS */
+/* =====================================================
+   BOOKING FIELDS
+===================================================== */
 
 .booking-field {
   display: grid;
+
   grid-template-columns: 1fr auto;
 
   gap: 4px;
 
-  margin-bottom: 9px;
-  padding: 10px;
+  margin-bottom: 8px;
+
+  padding: 9px;
 
   background: #f5f3ef;
 
   border-radius: 7px;
 }
 
-.booking-field span {
+.booking-field > span:first-child {
   grid-column: 1 / -1;
 
   color: #aaa49b;
 
   font-size: 5px;
-  font-weight: 800;
-  letter-spacing: .1em;
+  font-weight: 900;
+
+  letter-spacing: 0.1em;
 }
 
 .booking-field strong {
-  font-size: 8px;
+  font-size: 7px;
+
   font-weight: 600;
 }
 
@@ -310,19 +396,38 @@
   color: #77736c;
 }
 
-/* INPUTS */
+/* Selected label */
+
+.booking-field .field-status {
+  align-self: center;
+
+  padding: 3px 5px;
+
+  color: #8f887e;
+
+  font-size: 4px;
+
+  font-weight: 900;
+
+  letter-spacing: 0.08em;
+}
+
+/* =====================================================
+   INPUT PREVIEW
+===================================================== */
 
 .booking-input-row {
   display: grid;
+
   grid-template-columns: 1fr 1fr;
 
-  gap: 8px;
+  gap: 7px;
 
-  margin-bottom: 10px;
+  margin-bottom: 9px;
 }
 
 .booking-input-row > div {
-  padding: 10px;
+  padding: 9px;
 
   background: #f5f3ef;
 
@@ -337,34 +442,76 @@
   color: #aaa49b;
 
   font-size: 5px;
-  font-weight: 800;
+  font-weight: 900;
+
+  letter-spacing: 0.08em;
 }
 
 .booking-input-row strong {
   color: #77736c;
 
   font-size: 7px;
+
   font-weight: 500;
 }
 
-.booking-submit {
-  width: 100%;
+/* =====================================================
+   INFORMATIONAL STATUS
+===================================================== */
 
+.booking-status {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 
-  padding: 11px;
+  gap: 8px;
 
-  border: 0;
+  padding: 9px;
 
-  background: #f4c906;
-  color: #111111;
+  background: #f4f1e9;
+
+  border: 1px solid #e4ded4;
 
   border-radius: 7px;
+}
 
-  font-size: 8px;
-  font-weight: 800;
+.booking-status-icon {
+  width: 23px;
+  height: 23px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  background: #f4c906;
+
+  color: #111;
+
+  border-radius: 6px;
+}
+
+.booking-status > div:last-child span {
+  display: block;
+
+  margin-bottom: 2px;
+
+  color: #aaa49b;
+
+  font-size: 4px;
+
+  font-weight: 900;
+
+  letter-spacing: 0.1em;
+}
+
+.booking-status > div:last-child strong {
+  display: block;
+
+  color: #5f5a52;
+
+  font-size: 6px;
+
+  font-weight: 650;
 }
 
 /* =====================================================
@@ -372,94 +519,84 @@
 ===================================================== */
 
 .booking-option-whatsapp {
-  padding: 27px;
+  padding: 26px;
 
   background: #191919;
+
   color: #ffffff;
 }
 
 .whatsapp-content {
-  padding: 43px 7px 30px;
+  padding: 39px 6px 25px;
 }
 
 .whatsapp-icon {
-  width: 48px;
-  height: 48px;
+  width: 45px;
+  height: 45px;
 
   display: grid;
   place-items: center;
 
   background: #f4c906;
+
   color: #111111;
 
-  border-radius: 13px;
+  border-radius: 12px;
 }
 
 .whatsapp-content h3 {
-  margin: 25px 0 12px;
+  margin: 23px 0 11px;
 
-  font-size: clamp(34px, 3.5vw, 48px);
+  font-size: clamp(34px, 3.4vw, 47px);
 
-  line-height: .94;
+  line-height: 0.93;
 
-  letter-spacing: -.055em;
+  letter-spacing: -0.06em;
+}
+
+.whatsapp-content h3 em {
+  color: #aaa49d;
+
+  font-style: normal;
 }
 
 .whatsapp-content > p {
-  max-width: 330px;
+  max-width: 325px;
 
-  color: rgba(255,255,255,.4);
+  margin: 0;
 
-  font-size: 10px;
+  color: rgba(255, 255, 255, 0.43);
 
-  line-height: 1.6;
+  font-size: 9px;
+
+  line-height: 1.65;
 }
 
-/* FEATURES */
+/* =====================================================
+   WHATSAPP FEATURES
+===================================================== */
 
 .whatsapp-features {
-  margin-top: 24px;
+  margin-top: 20px;
 }
 
 .whatsapp-features div {
   display: flex;
   align-items: center;
+
   gap: 8px;
 
-  padding: 8px 0;
+  padding: 7px 0;
 
-  color: rgba(255,255,255,.65);
+  color: rgba(255, 255, 255, 0.68);
 
-  font-size: 9px;
+  font-size: 8px;
 }
 
 .whatsapp-features svg {
+  flex-shrink: 0;
+
   color: #f4c906;
-}
-
-/* ACTION */
-
-.whatsapp-action {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-
-  margin-top: 19px;
-  padding: 11px 13px;
-
-  background: #ffffff;
-  color: #111111;
-
-  border-radius: 8px;
-
-  text-decoration: none;
-
-  font-size: 8px;
-  font-weight: 800;
-}
-
-.whatsapp-action svg:last-child {
-  margin-left: 5px;
 }
 
 /* =====================================================
@@ -467,13 +604,13 @@
 ===================================================== */
 
 .whatsapp-chat {
-  margin-top: 15px;
+  margin-top: 12px;
 
   background: #242424;
 
-  border: 1px solid rgba(255,255,255,.07);
+  border: 1px solid rgba(255, 255, 255, 0.07);
 
-  border-radius: 13px;
+  border-radius: 12px;
 
   overflow: hidden;
 }
@@ -482,27 +619,28 @@
   display: flex;
   align-items: center;
 
-  gap: 9px;
+  gap: 8px;
 
-  padding: 11px;
+  padding: 10px;
 
-  border-bottom: 1px solid rgba(255,255,255,.07);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
 }
 
 .chat-avatar {
-  width: 27px;
-  height: 27px;
+  width: 26px;
+  height: 26px;
 
   display: grid;
   place-items: center;
 
   background: #f4c906;
+
   color: #111111;
 
-  border-radius: 8px;
+  border-radius: 7px;
 
-  font-size: 9px;
-  font-weight: 800;
+  font-size: 8px;
+  font-weight: 900;
 }
 
 .chat-top > div:nth-child(2) {
@@ -520,29 +658,50 @@
 
   margin-top: 2px;
 
-  color: rgba(255,255,255,.3);
+  color: rgba(255, 255, 255, 0.32);
 
-  font-size: 6px;
+  font-size: 5px;
 }
 
 .chat-top > svg {
-  color: rgba(255,255,255,.35);
+  color: rgba(255, 255, 255, 0.35);
 }
 
+/* =====================================================
+   CHAT BODY
+===================================================== */
+
 .chat-body {
-  padding: 13px;
+  padding: 11px;
+}
+
+.chat-time {
+  margin-bottom: 9px;
+
+  color: rgba(255, 255, 255, 0.22);
+
+  font-size: 4px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+
+  text-align: center;
 }
 
 .chat-message {
   width: fit-content;
-  max-width: 85%;
 
-  margin-bottom: 7px;
-  padding: 8px 10px;
+  max-width: 86%;
 
-  border-radius: 9px;
+  margin-bottom: 6px;
 
-  font-size: 7px;
+  padding: 7px 9px;
+
+  border-radius: 8px;
+
+  font-size: 6px;
+
   line-height: 1.45;
 }
 
@@ -550,6 +709,7 @@
   margin-left: auto;
 
   background: #f4c906;
+
   color: #111111;
 
   border-bottom-right-radius: 2px;
@@ -557,7 +717,8 @@
 
 .chat-message.clinic {
   background: #303030;
-  color: rgba(255,255,255,.7);
+
+  color: rgba(255, 255, 255, 0.72);
 
   border-bottom-left-radius: 2px;
 }
@@ -571,8 +732,11 @@
   align-items: center;
   justify-content: space-between;
 
-  margin-top: 55px;
-  padding-top: 25px;
+  gap: 30px;
+
+  margin-top: 45px;
+
+  padding-top: 21px;
 
   border-top: 1px solid #ded9d0;
 }
@@ -581,22 +745,30 @@
   display: flex;
   align-items: center;
 
-  gap: 12px;
+  gap: 11px;
 }
 
 .booking-bottom-flow span,
 .booking-bottom-flow strong {
-  font-size: 8px;
-  font-weight: 800;
-  letter-spacing: .08em;
+  font-size: 6px;
+
+  font-weight: 900;
+
+  letter-spacing: 0.1em;
 }
 
 .booking-bottom-flow span {
   color: #99938a;
 }
 
+.booking-bottom-flow strong {
+  color: #393632;
+}
+
 .booking-bottom-flow i {
   color: #c2bdb4;
+
+  font-size: 9px;
 
   font-style: normal;
 }
@@ -606,7 +778,8 @@
 
   color: #77736c;
 
-  font-size: 11px;
+  font-size: 9px;
+
   font-weight: 600;
 }
 
@@ -617,20 +790,47 @@
 @media (max-width: 1000px) {
 
   .booking-whatsapp {
-    padding: 100px 25px;
+    padding: 90px 28px 70px;
   }
 
   .booking-heading {
-    align-items: flex-start;
-    flex-direction: column;
+    grid-template-columns: 1fr;
+
+    gap: 24px;
+  }
+
+  .booking-heading > p {
+    max-width: 600px;
   }
 
   .booking-options {
     grid-template-columns: 1fr;
+
+    gap: 14px;
   }
 
   .booking-option-content {
-    grid-template-columns: 1fr .8fr;
+    grid-template-columns: 1fr 0.8fr;
+  }
+
+  .booking-option-whatsapp {
+    display: grid;
+
+    grid-template-columns: 0.9fr 1.1fr;
+
+    gap: 25px;
+  }
+
+  .booking-option-whatsapp .booking-option-top {
+    grid-column: 1 / -1;
+  }
+
+  .whatsapp-content {
+    padding-top: 25px;
+  }
+
+  .whatsapp-chat {
+    align-self: end;
   }
 }
 
@@ -641,50 +841,86 @@
 @media (max-width: 650px) {
 
   .booking-whatsapp {
-    padding: 80px 16px;
+    padding: 72px 16px 58px;
+  }
+
+  .booking-heading {
+    margin-top: 20px;
   }
 
   .booking-heading h2 {
-    font-size: 49px;
+    font-size: 48px;
+
+    line-height: 0.89;
+  }
+
+  .booking-heading > p {
+    font-size: 9px;
   }
 
   .booking-options {
-    margin-top: 50px;
+    margin-top: 43px;
   }
 
   .booking-option-main,
   .booking-option-whatsapp {
-    padding: 20px;
+    padding: 19px;
   }
 
   .booking-option-content {
     grid-template-columns: 1fr;
 
-    margin-top: 35px;
+    gap: 28px;
+
+    margin-top: 32px;
   }
 
   .booking-option-copy h3,
   .whatsapp-content h3 {
-    font-size: 38px;
+    font-size: 37px;
+  }
+
+  .booking-option-copy > p {
+    font-size: 8px;
   }
 
   .booking-ui {
-    margin-top: 10px;
+    margin-top: 0;
+  }
+
+  .booking-option-whatsapp {
+    display: block;
   }
 
   .whatsapp-content {
-    padding: 35px 5px 25px;
+    padding: 31px 4px 22px;
+  }
+
+  .whatsapp-content > p {
+    font-size: 8px;
+  }
+
+  .whatsapp-chat {
+    margin-top: 8px;
   }
 
   .booking-bottom {
     align-items: flex-start;
+
     flex-direction: column;
 
-    gap: 15px;
+    gap: 13px;
+
+    margin-top: 35px;
   }
 
   .booking-bottom-flow {
     flex-wrap: wrap;
-    gap: 8px;
+
+    gap: 7px;
+  }
+
+  .booking-bottom p {
+    font-size: 8px;
   }
 }

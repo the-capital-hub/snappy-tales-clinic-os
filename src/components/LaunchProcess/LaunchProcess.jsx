@@ -1,6 +1,4 @@
 import {
-  ArrowDownRight,
-  ArrowUpRight,
   Check,
   Rocket,
 } from "lucide-react";
@@ -35,7 +33,7 @@ function LaunchProcess() {
     <section className="launch-process" id="process">
       <div className="launch-process-container">
 
-        {/* TOP */}
+        {/* HEADER */}
         <motion.div
           className="launch-process-top"
           initial={{ opacity: 0, y: 30 }}
@@ -49,6 +47,7 @@ function LaunchProcess() {
           </div>
 
           <div className="launch-process-heading">
+
             <h2>
               From zero digital presence
               <br />
@@ -56,8 +55,9 @@ function LaunchProcess() {
             </h2>
 
             <div className="launch-process-intro">
+
               <div className="launch-clock">
-                <Rocket size={21} />
+                <Rocket size={20} />
               </div>
 
               <p>
@@ -65,7 +65,9 @@ function LaunchProcess() {
                 get your clinic online without weeks of
                 back-and-forth.
               </p>
+
             </div>
+
           </div>
         </motion.div>
 
@@ -76,9 +78,17 @@ function LaunchProcess() {
             <motion.div
               className="launch-step"
               key={step.number}
-              initial={{ opacity: 0, y: 35 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              initial={{
+                opacity: 0,
+                y: 35,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              viewport={{
+                once: true,
+              }}
               transition={{
                 duration: 0.5,
                 delay: index * 0.08,
@@ -92,24 +102,34 @@ function LaunchProcess() {
                 </span>
 
                 {index < steps.length - 1 && (
-                  <ArrowUpRight
-                    className="launch-step-arrow"
-                    size={18}
-                  />
+                  <span className="launch-step-connector">
+                    →
+                  </span>
                 )}
 
               </div>
 
               <div className="launch-step-icon">
+
                 {index === 0 && "01"}
+
                 {index === 1 && "02"}
+
                 {index === 2 && "03"}
-                {index === 3 && <Check size={20} />}
+
+                {index === 3 && (
+                  <Check size={20} />
+                )}
+
               </div>
 
-              <h3>{step.title}</h3>
+              <h3>
+                {step.title}
+              </h3>
 
-              <p>{step.text}</p>
+              <p>
+                {step.text}
+              </p>
 
               {index === 3 && (
                 <div className="launch-ready">
@@ -130,6 +150,7 @@ function LaunchProcess() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
+
           <div className="timeline-line">
             <span />
           </div>
@@ -143,35 +164,76 @@ function LaunchProcess() {
           </div>
 
           <div className="timeline-time">
-            <strong>24</strong>
-            <span>HOURS</span>
-          </div>
-        </motion.div>
-
-        {/* BOTTOM */}
-        <motion.div
-          className="launch-process-bottom"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          <div>
-            <span>NO DEVELOPER. NO DESIGNER. NO WEEKS OF WAITING.</span>
 
             <strong>
-              You provide the information. We handle the rest.
+              24
             </strong>
+
+            <span>
+              HOURS
+            </span>
+
           </div>
 
-          <a href="#pricing">
-            Get started
-            <span>
-              <ArrowUpRight size={16} />
-            </span>
-          </a>
         </motion.div>
 
-        {/* QUALIFICATION */}
+        {/* INFORMATIONAL BOTTOM */}
+        <motion.div
+          className="launch-process-bottom"
+          initial={{
+            opacity: 0,
+            y: 20,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: true,
+          }}
+        >
+
+          <div className="launch-process-summary">
+
+            <span>
+              SIMPLE. FAST. CLINIC-READY.
+            </span>
+
+            <strong>
+              You provide the information. We handle the digital build.
+            </strong>
+
+          </div>
+
+          <div className="launch-process-flow">
+
+            <span>
+              TEMPLATE
+            </span>
+
+            <i>→</i>
+
+            <span>
+              CONTENT
+            </span>
+
+            <i>→</i>
+
+            <span>
+              BUILD
+            </span>
+
+            <i>→</i>
+
+            <strong>
+              LIVE
+            </strong>
+
+          </div>
+
+        </motion.div>
+
+        {/* DISCLAIMER */}
         <div className="launch-disclaimer">
           *24-hour launch target applies after all required information
           and website assets are received.

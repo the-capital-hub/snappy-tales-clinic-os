@@ -1,240 +1,196 @@
-import { ArrowDown, ArrowRight, MessageCircle, Search, CalendarDays } from "lucide-react";
 import { motion } from "framer-motion";
+import {
+  FiSearch,
+  FiStar,
+  FiMessageCircle,
+  FiCalendar,
+} from "react-icons/fi";
+
 import "./Problem.css";
+
+const patientNeeds = [
+  {
+    number: "01",
+    icon: FiSearch,
+    title: "Find",
+    text: "Discover your clinic online.",
+  },
+  {
+    number: "02",
+    icon: FiStar,
+    title: "Trust",
+    text: "Understand who you are.",
+  },
+  {
+    number: "03",
+    icon: FiMessageCircle,
+    title: "Ask",
+    text: "Get answers quickly.",
+  },
+  {
+    number: "04",
+    icon: FiCalendar,
+    title: "Book",
+    text: "Request an appointment.",
+  },
+];
 
 function Problem() {
   return (
     <section className="problem-section" id="problem">
-
       <div className="problem-container">
 
-        {/* TOP INTRO */}
+        {/* HEADER */}
         <motion.div
-          className="problem-heading"
-          initial={{ opacity: 0, y: 30 }}
+          className="problem-header"
+          initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <div className="section-label">
+          <div className="problem-kicker">
             <span />
-            THE PROBLEM
+            THE DIGITAL PATIENT
           </div>
 
-          <h2>
-            Your patients are
-            <br />
-            <span>already online.</span>
-          </h2>
-
-          <p>
-            The question is — is your clinic ready for them?
-          </p>
+          <div className="problem-page-number">
+            02 / 14
+          </div>
         </motion.div>
 
-        {/* PATIENT JOURNEY */}
-        <div className="patient-journey">
+        {/* MAIN */}
+        <div className="problem-grid">
 
-          <div className="journey-copy">
-            <span className="journey-number">01</span>
+          {/* IMAGE */}
+          <motion.div
+            className="problem-image-area"
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
+            <div className="problem-image-frame">
 
-            <h3>
-              Patients don't want
-              <br />
-              to search for answers.
-            </h3>
+              <img
+                src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1600&q=90"
+                alt="Dentist consulting with a patient"
+              />
 
-            <p>
-              When someone searches for a dentist, they expect
-              everything to be simple, clear and immediate.
+              <div className="problem-image-overlay" />
+
+              <div className="problem-image-top">
+                <span>DENTAL EXPERIENCE</span>
+                <span>01</span>
+              </div>
+
+              <div className="problem-image-note">
+
+                <div className="problem-image-number">
+                  01
+                </div>
+
+                <p>
+                  Your digital presence
+                  <br />
+                  is often the first impression.
+                </p>
+
+              </div>
+            </div>
+
+            <div className="problem-yellow-square">
+              <span>FIRST</span>
+              <strong>IMPRESS.</strong>
+            </div>
+          </motion.div>
+
+          {/* CONTENT */}
+          <motion.div
+            className="problem-content"
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
+
+            <p className="problem-eyebrow">
+              THE PROBLEM
             </p>
 
-            <div className="journey-list">
+            <h2>
+              Your patients
+              <br />
+              are already <em>online.</em>
+            </h2>
 
-              <div className="journey-item">
-                <div className="journey-icon">
-                  <Search size={17} />
-                </div>
-                <span>Understand your clinic</span>
-              </div>
+            <p className="problem-description">
+              Before visiting your clinic, patients are already
+              searching, comparing and deciding who they can trust.
+              Your digital experience has to answer their questions
+              before they ever reach your reception desk.
+            </p>
 
-              <div className="journey-item">
-                <div className="journey-icon">
-                  <ArrowRight size={17} />
-                </div>
-                <span>Meet your doctors</span>
-              </div>
+            {/* PATIENT NEEDS */}
+            <div className="problem-needs">
 
-              <div className="journey-item">
-                <div className="journey-icon">
-                  <CalendarDays size={17} />
-                </div>
-                <span>Book an appointment</span>
-              </div>
+              {patientNeeds.map((item, index) => {
+                const Icon = item.icon;
 
-              <div className="journey-item">
-                <div className="journey-icon">
-                  <MessageCircle size={17} />
-                </div>
-                <span>Talk to you on WhatsApp</span>
-              </div>
+                return (
+                  <motion.div
+                    className="problem-need"
+                    key={item.number}
+                    initial={{ opacity: 0, y: 12 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                      duration: 0.4,
+                      delay: index * 0.08,
+                    }}
+                  >
+                    <span className="problem-need-number">
+                      {item.number}
+                    </span>
+
+                    <div className="problem-need-icon">
+                      <Icon size={14} />
+                    </div>
+
+                    <div className="problem-need-copy">
+                      <h3>{item.title}</h3>
+                      <p>{item.text}</p>
+                    </div>
+
+                  </motion.div>
+                );
+              })}
 
             </div>
-          </div>
 
-          {/* JOURNEY VISUAL */}
-          <div className="journey-visual">
-
-            <div className="journey-line" />
-
-            <motion.div
-              className="journey-node node-one"
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-            >
-              <div className="node-icon">
-                <Search size={19} />
-              </div>
-
-              <div>
-                <small>DISCOVER</small>
-                <strong>Google Search</strong>
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="journey-node node-two"
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.25 }}
-            >
-              <div className="node-icon">
-                <ArrowRight size={19} />
-              </div>
-
-              <div>
-                <small>EXPLORE</small>
-                <strong>Your Clinic</strong>
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="journey-node node-three"
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4 }}
-            >
-              <div className="node-icon yellow">
-                <CalendarDays size={19} />
-              </div>
-
-              <div>
-                <small>ACTION</small>
-                <strong>Book Appointment</strong>
-              </div>
-            </motion.div>
-
-            <div className="journey-bottom">
-              <span>THE IDEAL JOURNEY</span>
-              <ArrowDown size={17} />
-            </div>
-
-          </div>
-
+          </motion.div>
         </div>
 
-        {/* REVENUE LEAK */}
+        {/* BOTTOM STATEMENT */}
         <motion.div
-          className="revenue-section"
-          initial={{ opacity: 0, y: 35 }}
+          className="problem-bottom"
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.5 }}
         >
+          <div className="problem-bottom-line" />
 
-          <div className="revenue-intro">
-
-            <div className="section-label dark">
-              <span />
-              THE REVENUE LEAK
-            </div>
-
-            <h3>
-              How many patients are you
-              <br />
-              <strong>losing before they reach your chair?</strong>
-            </h3>
-
-            <p>
-              A simple example of how missed enquiries can
-              become missed revenue opportunities.
-            </p>
-
-          </div>
-
-          <div className="revenue-flow">
-
-            <div className="revenue-card">
-              <span className="revenue-label">MONTHLY ENQUIRIES</span>
-              <strong>1,000</strong>
-              <small>People showing interest</small>
-            </div>
-
-            <div className="flow-arrow">
-              ↓
-            </div>
-
-            <div className="revenue-card">
-              <span className="revenue-label">MISSED</span>
-              <strong>200</strong>
-              <small>Unanswered enquiries</small>
-            </div>
-
-            <div className="flow-arrow">
-              ↓
-            </div>
-
-            <div className="revenue-card">
-              <span className="revenue-label">POTENTIAL</span>
-              <strong>50</strong>
-              <small>Potential appointments</small>
-            </div>
-
-            <div className="flow-arrow">
-              ↓
-            </div>
-
-            <div className="revenue-card revenue-highlight">
-              <span className="revenue-label">ILLUSTRATIVE OPPORTUNITY</span>
-              <strong>₹2.5L</strong>
-              <small>Potential monthly revenue</small>
-            </div>
-
-          </div>
-
-          <div className="revenue-footer">
-            <strong>
-              Missed enquiries aren't just a communication problem.
-            </strong>
-
-            <span>
-              They're a revenue problem.
-            </span>
-          </div>
-
-          <p className="revenue-disclaimer">
-            *Illustrative example. Actual results vary by clinic,
-            enquiry volume, conversion rate and treatment value.
+          <p>
+            If reaching your clinic feels difficult,
+            <strong> patients move on.</strong>
           </p>
 
+          <span>
+            DISCOVER → TRUST → ASK → BOOK
+          </span>
         </motion.div>
 
       </div>
-
     </section>
   );
 }

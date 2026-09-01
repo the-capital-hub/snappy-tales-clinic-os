@@ -1,5 +1,4 @@
 import {
-  ArrowUpRight,
   CalendarCheck2,
   Check,
   Globe2,
@@ -49,41 +48,66 @@ function WebsiteFeatures() {
     <section className="website-features" id="website-features">
       <div className="website-features-container">
 
-        {/* HEADER */}
+        {/* =================================================
+            HEADER
+        ================================================= */}
+
         <motion.div
           className="website-features-header"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <div className="website-features-label">
-            <span />
-            YOUR WEBSITE
+          <div className="website-features-topline">
+
+            <div className="website-features-label">
+              <span />
+              YOUR WEBSITE
+            </div>
+
+            <div className="website-features-page">
+              05 / 14
+            </div>
+
           </div>
 
           <div className="website-features-heading">
-            <h2>
-              Everything a patient
-              <br />
-              needs <span>before they book.</span>
-            </h2>
+
+            <div>
+              <p className="website-features-eyebrow">
+                BUILT AROUND THE PATIENT
+              </p>
+
+              <h2>
+                Everything a patient
+                <br />
+                needs <span>before they book.</span>
+              </h2>
+            </div>
 
             <p>
               Your website should do more than look good.
               It should answer questions, build trust and make
-              taking the next step easy.
+              the patient journey feel simple.
             </p>
+
           </div>
         </motion.div>
 
-        {/* MAIN AREA */}
+        {/* =================================================
+            MAIN AREA
+        ================================================= */}
+
         <div className="website-features-main">
 
-          {/* LEFT VISUAL */}
+          {/* =================================================
+              WEBSITE VISUAL
+          ================================================= */}
+
           <motion.div
             className="website-features-visual"
-            initial={{ opacity: 0, x: -35 }}
+            initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
@@ -91,7 +115,10 @@ function WebsiteFeatures() {
 
             <div className="website-browser">
 
+              {/* BROWSER BAR */}
+
               <div className="website-browser-bar">
+
                 <div className="website-browser-dots">
                   <span />
                   <span />
@@ -102,13 +129,20 @@ function WebsiteFeatures() {
                   yourclinic.clinicos.in
                 </div>
 
-                <span className="browser-menu">•••</span>
+                <span className="browser-menu">
+                  •••
+                </span>
+
               </div>
 
               {/* WEBSITE MOCKUP */}
+
               <div className="website-screen">
 
+                {/* NAVIGATION */}
+
                 <div className="mock-nav">
+
                   <strong>
                     SMILE<span>+</span>
                   </strong>
@@ -120,10 +154,13 @@ function WebsiteFeatures() {
                     <span>Contact</span>
                   </div>
 
-                  <button>
-                    Book Appointment
-                  </button>
+                  <div className="mock-nav-indicator">
+                    CLINIC
+                  </div>
+
                 </div>
+
+                {/* HERO */}
 
                 <div className="mock-content">
 
@@ -141,40 +178,64 @@ function WebsiteFeatures() {
 
                     <p>
                       Personalised dental care designed
-                      around your comfort and confidence.
+                      around comfort, confidence and
+                      long-term oral health.
                     </p>
 
-                    <button className="mock-cta">
-                      Book Your Visit
-                      <ArrowUpRight size={13} />
-                    </button>
+                    <div className="mock-info-row">
+
+                      <div>
+                        <Check size={10} />
+                        <span>
+                          Patient-first care
+                        </span>
+                      </div>
+
+                      <div>
+                        <Check size={10} />
+                        <span>
+                          Experienced team
+                        </span>
+                      </div>
+
+                    </div>
 
                   </div>
 
                   <div className="mock-image">
+
                     <div className="mock-person">
                       <span>YOUR</span>
                       <strong>CLINIC</strong>
                     </div>
+
                   </div>
 
                 </div>
+
+                {/* TRUST STRIP */}
 
                 <div className="mock-trust">
 
                   <div>
                     <Check size={11} />
-                    <span>Experienced doctors</span>
+                    <span>
+                      Experienced doctors
+                    </span>
                   </div>
 
                   <div>
                     <Check size={11} />
-                    <span>Modern facilities</span>
+                    <span>
+                      Modern facilities
+                    </span>
                   </div>
 
                   <div>
                     <Check size={11} />
-                    <span>Patient-first care</span>
+                    <span>
+                      Patient-first care
+                    </span>
                   </div>
 
                 </div>
@@ -182,54 +243,71 @@ function WebsiteFeatures() {
               </div>
             </div>
 
-            {/* FLOATING CARD */}
-            <motion.div
-              className="website-floating-card"
-              animate={{ y: [0, -7, 0] }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            >
-              <div className="floating-check">
-                <Check size={15} />
-              </div>
+            {/* VISUAL LABEL */}
+
+            <div className="website-visual-label">
+
+              <span>01</span>
 
               <div>
-                <small>READY TO BOOK</small>
-                <strong>Appointment available</strong>
+                <small>
+                  DIGITAL EXPERIENCE
+                </small>
+
+                <strong>
+                  Designed around your clinic.
+                </strong>
               </div>
-            </motion.div>
+
+            </div>
 
           </motion.div>
 
-          {/* RIGHT FEATURES */}
+          {/* =================================================
+              FEATURES
+          ================================================= */}
+
           <div className="website-feature-list">
 
             {features.map((feature, index) => {
+
               const Icon = feature.icon;
 
               return (
                 <motion.div
                   className="website-feature-item"
                   key={feature.title}
-                  initial={{ opacity: 0, x: 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
+                  initial={{
+                    opacity: 0,
+                    x: 25,
+                  }}
+                  whileInView={{
+                    opacity: 1,
+                    x: 0,
+                  }}
+                  viewport={{
+                    once: true,
+                  }}
                   transition={{
-                    duration: 0.5,
+                    duration: 0.45,
                     delay: index * 0.06,
                   }}
                 >
 
                   <div className="website-feature-icon">
-                    <Icon size={19} />
+                    <Icon size={18} />
                   </div>
 
                   <div className="website-feature-content">
-                    <h3>{feature.title}</h3>
-                    <p>{feature.text}</p>
+
+                    <h3>
+                      {feature.title}
+                    </h3>
+
+                    <p>
+                      {feature.text}
+                    </p>
+
                   </div>
 
                   <span className="website-feature-number">
@@ -244,25 +322,48 @@ function WebsiteFeatures() {
 
         </div>
 
-        {/* BOTTOM STATEMENT */}
+        {/* =================================================
+            BOTTOM INFORMATION
+        ================================================= */}
+
         <motion.div
           className="website-features-bottom"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          initial={{
+            opacity: 0,
+            y: 15,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: true,
+          }}
         >
+
           <div>
-            <span>THE RESULT</span>
+
+            <span>
+              THE RESULT
+            </span>
 
             <strong>
-              A digital experience patients can trust.
+              A digital experience patients can understand,
+              trust and navigate with confidence.
             </strong>
+
           </div>
 
           <div className="website-features-check">
-            <Check size={17} />
-            We build the website. You focus on your patients.
+
+            <Check size={16} />
+
+            <span>
+              Built for modern dental clinics
+            </span>
+
           </div>
+
         </motion.div>
 
       </div>

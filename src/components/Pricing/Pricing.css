@@ -3,6 +3,8 @@
 ===================================================== */
 
 .pricing {
+  position: relative;
+
   padding: 125px 40px 120px;
 
   background: #f4f1e9;
@@ -11,9 +13,31 @@
   overflow: hidden;
 }
 
+.pricing::before {
+  content: "";
+
+  position: absolute;
+
+  width: 520px;
+  height: 520px;
+
+  right: -300px;
+  top: -250px;
+
+  border: 1px solid rgba(21, 21, 21, 0.055);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
 .pricing-container {
+  position: relative;
+  z-index: 1;
+
   width: 100%;
   max-width: 1380px;
+
   margin: 0 auto;
 }
 
@@ -24,6 +48,7 @@
 .pricing-label {
   display: flex;
   align-items: center;
+
   gap: 9px;
 
   margin-bottom: 22px;
@@ -32,12 +57,15 @@
 
   font-size: 10px;
   font-weight: 800;
-  letter-spacing: .14em;
+
+  letter-spacing: 0.14em;
 }
 
 .pricing-label span {
   width: 7px;
   height: 7px;
+
+  flex-shrink: 0;
 
   background: #f4c906;
 
@@ -57,9 +85,11 @@
 
   font-size: clamp(50px, 5.8vw, 80px);
 
-  line-height: .92;
+  line-height: 0.92;
 
-  letter-spacing: -.06em;
+  font-weight: 750;
+
+  letter-spacing: -0.06em;
 }
 
 .pricing-heading h2 span {
@@ -79,7 +109,7 @@
 }
 
 /* =====================================================
-   GRID
+   PRICING GRID
 ===================================================== */
 
 .pricing-grid {
@@ -99,7 +129,12 @@
 .price-card {
   position: relative;
 
+  min-height: 430px;
+
   padding: 28px;
+
+  display: flex;
+  flex-direction: column;
 
   background: #ffffff;
 
@@ -108,6 +143,17 @@
   border-radius: 18px;
 
   overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.price-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.08);
 }
 
 .price-card-dark {
@@ -117,6 +163,15 @@
 
   border-color: #151515;
 }
+
+.price-card-dark:hover {
+  box-shadow:
+    0 25px 55px rgba(0, 0, 0, 0.18);
+}
+
+/* =====================================================
+   CARD TOP
+===================================================== */
 
 .price-card-top {
   display: flex;
@@ -132,19 +187,20 @@
   font-size: 7px;
   font-weight: 800;
 
-  letter-spacing: .12em;
+  letter-spacing: 0.12em;
 }
 
 .price-card-dark .price-card-top span {
-  color: rgba(255,255,255,.28);
+  color: rgba(255, 255, 255, 0.28);
 }
 
 .price-card-top h3 {
   margin: 7px 0 0;
 
   font-size: 30px;
+  font-weight: 700;
 
-  letter-spacing: -.05em;
+  letter-spacing: -0.05em;
 }
 
 .price-number {
@@ -153,7 +209,9 @@
   font-size: 35px;
   font-weight: 850;
 
-  letter-spacing: -.06em;
+  line-height: 1;
+
+  letter-spacing: -0.06em;
 }
 
 .price-card-dark .price-number {
@@ -179,7 +237,7 @@
 }
 
 .price-card-dark .price-description {
-  color: rgba(255,255,255,.4);
+  color: rgba(255, 255, 255, 0.4);
 }
 
 /* =====================================================
@@ -195,7 +253,26 @@
 }
 
 .price-card-dark .price-divider {
-  background: rgba(255,255,255,.09);
+  background: rgba(255, 255, 255, 0.09);
+}
+
+/* =====================================================
+   WHAT'S INCLUDED
+===================================================== */
+
+.price-includes {
+  margin-bottom: 14px;
+
+  color: #99938a;
+
+  font-size: 7px;
+  font-weight: 800;
+
+  letter-spacing: 0.13em;
+}
+
+.price-card-dark .price-includes {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 /* =====================================================
@@ -229,7 +306,7 @@
 }
 
 .price-card-dark .price-features li {
-  color: rgba(255,255,255,.58);
+  color: rgba(255, 255, 255, 0.58);
 }
 
 .price-features li > span {
@@ -243,75 +320,40 @@
 
   background: #eeeae3;
 
+  color: #151515;
+
   border-radius: 5px;
 }
 
 .price-card-dark .price-features li > span {
-  background: rgba(244,201,6,.1);
+  background: rgba(244, 201, 6, 0.1);
 
   color: #f4c906;
 }
 
 /* =====================================================
-   BUTTON
+   PRICE NOTE
 ===================================================== */
-
-.price-button {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  margin-top: 27px;
-  padding: 13px 14px;
-
-  border-radius: 8px;
-
-  text-decoration: none;
-
-  font-size: 9px;
-  font-weight: 800;
-
-  transition: .25s ease;
-}
-
-.price-button-light {
-  background: #151515;
-  color: #ffffff;
-}
-
-.price-button-light:hover {
-  background: #f4c906;
-  color: #111111;
-}
-
-.price-button-yellow {
-  background: #f4c906;
-  color: #111111;
-}
-
-.price-button-yellow:hover {
-  background: #ffffff;
-  color: #111111;
-}
 
 .price-note {
   display: block;
 
-  margin-top: 9px;
+  margin-top: auto;
+  padding-top: 22px;
 
   color: #aaa49b;
 
   font-size: 6px;
 
-  text-align: center;
+  text-align: left;
 }
 
 .price-card-dark .price-note {
-  color: rgba(255,255,255,.22);
+  color: rgba(255, 255, 255, 0.22);
 }
 
 /* =====================================================
-   POPULAR
+   POPULAR BADGE
 ===================================================== */
 
 .popular-badge {
@@ -330,7 +372,7 @@
   font-size: 6px;
   font-weight: 900;
 
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
 }
 
 /* =====================================================
@@ -347,9 +389,11 @@
   gap: 17px;
 
   margin-top: 12px;
+
   padding: 20px 22px;
 
   background: #151515;
+
   color: #ffffff;
 
   border-radius: 14px;
@@ -373,56 +417,82 @@
 
   margin-bottom: 5px;
 
-  color: rgba(255,255,255,.28);
+  color: rgba(255, 255, 255, 0.28);
 
   font-size: 6px;
   font-weight: 800;
 
-  letter-spacing: .13em;
+  letter-spacing: 0.13em;
 }
 
 .early-partner-copy h3 {
-  display: inline;
-
   margin: 0;
 
   font-size: 13px;
+  font-weight: 600;
 }
 
-.early-partner-copy > strong {
-  margin-left: 7px;
+.early-partner-price {
+  margin-top: 5px;
 
   color: #f4c906;
 
-  font-size: 23px;
+  font-size: 25px;
+  font-weight: 850;
 
-  letter-spacing: -.05em;
+  line-height: 1;
+
+  letter-spacing: -0.05em;
 }
 
 .early-partner-copy p {
-  margin: 4px 0 0;
+  margin: 5px 0 0;
 
-  color: rgba(255,255,255,.28);
+  color: rgba(255, 255, 255, 0.28);
 
   font-size: 7px;
 }
 
-.early-partner > a {
+/* =====================================================
+   EARLY PARTNER STATUS
+===================================================== */
+
+.early-partner-status {
   display: flex;
   align-items: center;
 
-  gap: 8px;
+  gap: 7px;
 
-  color: #ffffff;
+  padding: 9px 12px;
 
-  text-decoration: none;
+  background: rgba(244, 201, 6, 0.06);
 
-  font-size: 8px;
-  font-weight: 750;
+  border: 1px solid rgba(244, 201, 6, 0.2);
+
+  border-radius: 8px;
+
+  color: #f4c906;
+
+  font-size: 6px;
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+
+  white-space: nowrap;
 }
 
-.early-partner > a svg {
-  color: #f4c906;
+.early-partner-status span {
+  width: 5px;
+  height: 5px;
+
+  flex-shrink: 0;
+
+  background: #f4c906;
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 8px rgba(244, 201, 6, 0.6);
 }
 
 /* =====================================================
@@ -434,7 +504,10 @@
   align-items: center;
   justify-content: space-between;
 
+  gap: 30px;
+
   margin-top: 35px;
+
   padding-top: 22px;
 
   border-top: 1px solid #ddd8cf;
@@ -446,7 +519,7 @@
   font-size: 6px;
   font-weight: 800;
 
-  letter-spacing: .12em;
+  letter-spacing: 0.12em;
 }
 
 .pricing-bottom p {
@@ -475,8 +548,16 @@
     gap: 25px;
   }
 
+  .pricing-heading p {
+    max-width: 520px;
+  }
+
   .pricing-grid {
     grid-template-columns: 1fr;
+  }
+
+  .price-card {
+    min-height: auto;
   }
 }
 
@@ -494,26 +575,52 @@
     font-size: 49px;
   }
 
+  .pricing-heading p {
+    font-size: 10px;
+  }
+
   .pricing-grid {
     margin-top: 50px;
   }
 
   .price-card {
     padding: 21px;
+
+    border-radius: 15px;
+  }
+
+  .price-card-top {
+    gap: 12px;
+  }
+
+  .price-card-top h3 {
+    font-size: 26px;
   }
 
   .price-number {
     font-size: 28px;
   }
 
+  .price-description {
+    font-size: 9px;
+  }
+
   .price-features {
     grid-template-columns: 1fr;
+
+    gap: 9px;
+  }
+
+  .price-features li {
+    font-size: 8px;
   }
 
   .early-partner {
     grid-template-columns: 43px 1fr;
 
     padding: 17px;
+
+    gap: 13px;
   }
 
   .early-partner-icon {
@@ -525,22 +632,18 @@
     font-size: 11px;
   }
 
-  .early-partner-copy > strong {
-    display: block;
-
-    margin: 5px 0 0;
-
+  .early-partner-price {
     font-size: 21px;
   }
 
-  .early-partner > a {
+  .early-partner-status {
     grid-column: 1 / -1;
 
+    width: 100%;
+
+    box-sizing: border-box;
+
     justify-content: center;
-
-    padding-top: 11px;
-
-    border-top: 1px solid rgba(255,255,255,.08);
   }
 
   .pricing-bottom {

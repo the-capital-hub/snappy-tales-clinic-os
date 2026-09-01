@@ -11,7 +11,12 @@
   color: #ffffff;
 
   overflow: hidden;
+  isolation: isolate;
 }
+
+/* =====================================================
+   BACKGROUND DETAIL
+===================================================== */
 
 .ai-receptionist::before {
   content: "";
@@ -24,14 +29,35 @@
   left: -430px;
   top: -280px;
 
-  border: 1px solid rgba(244, 201, 6, .08);
+  border: 1px solid rgba(244, 201, 6, 0.08);
 
   border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.ai-receptionist::after {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  right: -250px;
+  bottom: -250px;
+
+  border: 1px solid rgba(255, 255, 255, 0.045);
+
+  border-radius: 50%;
+
+  pointer-events: none;
 }
 
 .ai-receptionist-container {
   position: relative;
-  z-index: 1;
+
+  z-index: 2;
 
   width: 100%;
   max-width: 1380px;
@@ -45,15 +71,16 @@
 
 .ai-label {
   display: inline-flex;
+
   align-items: center;
 
   gap: 8px;
 
   padding: 7px 10px;
 
-  background: rgba(244, 201, 6, .08);
+  background: rgba(244, 201, 6, 0.08);
 
-  border: 1px solid rgba(244, 201, 6, .2);
+  border: 1px solid rgba(244, 201, 6, 0.2);
 
   border-radius: 100px;
 
@@ -62,18 +89,21 @@
   font-size: 7px;
   font-weight: 800;
 
-  letter-spacing: .13em;
+  letter-spacing: 0.13em;
 }
 
 .ai-label span {
   width: 5px;
   height: 5px;
 
+  flex-shrink: 0;
+
   background: #f4c906;
 
   border-radius: 50%;
 
-  box-shadow: 0 0 12px rgba(244,201,6,.8);
+  box-shadow:
+    0 0 12px rgba(244, 201, 6, 0.8);
 }
 
 /* =====================================================
@@ -83,7 +113,7 @@
 .ai-main {
   display: grid;
 
-  grid-template-columns: .9fr 1.1fr;
+  grid-template-columns: 0.9fr 1.1fr;
 
   align-items: center;
 
@@ -96,23 +126,32 @@
    COPY
 ===================================================== */
 
+.ai-copy {
+  position: relative;
+
+  z-index: 2;
+}
+
 .ai-eyebrow {
   display: flex;
+
   align-items: center;
 
   gap: 8px;
 
   margin-bottom: 20px;
 
-  color: rgba(255,255,255,.3);
+  color: rgba(255, 255, 255, 0.3);
 
   font-size: 8px;
   font-weight: 800;
 
-  letter-spacing: .12em;
+  letter-spacing: 0.12em;
 }
 
 .ai-eyebrow svg {
+  flex-shrink: 0;
+
   color: #f4c906;
 }
 
@@ -121,9 +160,11 @@
 
   font-size: clamp(55px, 6vw, 84px);
 
-  line-height: .9;
+  line-height: 0.9;
 
-  letter-spacing: -.065em;
+  font-weight: 760;
+
+  letter-spacing: -0.065em;
 }
 
 .ai-copy h2 span {
@@ -135,7 +176,7 @@
 
   margin: 25px 0 0;
 
-  color: rgba(255,255,255,.4);
+  color: rgba(255, 255, 255, 0.4);
 
   font-size: 12px;
 
@@ -143,36 +184,41 @@
 }
 
 /* =====================================================
-   EXCLUSIVE
+   EXCLUSIVE ACCESS
 ===================================================== */
 
 .ai-exclusive {
   display: flex;
+
   align-items: center;
 
   gap: 15px;
+
+  width: fit-content;
 
   margin-top: 35px;
 
   padding: 15px;
 
-  width: fit-content;
-
   background: #1b1b1b;
 
-  border: 1px solid rgba(255,255,255,.07);
+  border: 1px solid rgba(255, 255, 255, 0.07);
 
   border-radius: 12px;
 }
 
 .ai-exclusive-number {
-  display: grid;
-  place-items: center;
-
   width: 53px;
   height: 53px;
 
+  flex-shrink: 0;
+
+  display: grid;
+
+  place-items: center;
+
   background: #f4c906;
+
   color: #111111;
 
   border-radius: 10px;
@@ -180,28 +226,32 @@
   font-size: 20px;
   font-weight: 900;
 
-  letter-spacing: -.05em;
+  letter-spacing: -0.05em;
 }
 
-.ai-exclusive span {
+.ai-exclusive-copy span {
   display: block;
 
   margin-bottom: 5px;
 
-  color: rgba(255,255,255,.25);
+  color: rgba(255, 255, 255, 0.25);
 
   font-size: 6px;
   font-weight: 800;
 
-  letter-spacing: .13em;
+  letter-spacing: 0.13em;
 }
 
-.ai-exclusive strong {
+.ai-exclusive-copy strong {
   display: block;
+
+  color: rgba(255, 255, 255, 0.78);
 
   font-size: 10px;
 
   font-weight: 600;
+
+  line-height: 1.4;
 }
 
 /* =====================================================
@@ -214,15 +264,22 @@
   min-height: 500px;
 
   display: grid;
+
   place-items: center;
 }
+
+/* =====================================================
+   ORBITS
+===================================================== */
 
 .ai-orbit {
   position: absolute;
 
-  border: 1px solid rgba(244,201,6,.13);
+  border: 1px solid rgba(244, 201, 6, 0.13);
 
   border-radius: 50%;
+
+  pointer-events: none;
 }
 
 .ai-orbit-one {
@@ -234,38 +291,42 @@
   width: 255px;
   height: 255px;
 
-  border-color: rgba(255,255,255,.08);
+  border-color: rgba(255, 255, 255, 0.08);
 }
 
 /* =====================================================
-   CENTER
+   CENTER AI
 ===================================================== */
 
 .ai-center {
   position: relative;
+
   z-index: 2;
 
   width: 190px;
   height: 190px;
 
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
+
   justify-content: center;
 
   background:
     radial-gradient(
       circle,
-      rgba(244,201,6,.12),
-      rgba(17,17,17,.95) 68%
+      rgba(244, 201, 6, 0.12),
+      rgba(17, 17, 17, 0.95) 68%
     );
 
-  border: 1px solid rgba(244,201,6,.3);
+  border: 1px solid rgba(244, 201, 6, 0.3);
 
   border-radius: 50%;
 
   box-shadow:
-    0 0 80px rgba(244,201,6,.08);
+    0 0 80px rgba(244, 201, 6, 0.08);
 }
 
 .ai-bot-icon {
@@ -273,17 +334,19 @@
   height: 61px;
 
   display: grid;
+
   place-items: center;
 
   margin-bottom: 13px;
 
   background: #f4c906;
+
   color: #111111;
 
   border-radius: 17px;
 
   box-shadow:
-    0 0 30px rgba(244,201,6,.2);
+    0 0 30px rgba(244, 201, 6, 0.2);
 }
 
 .ai-center-dot {
@@ -299,24 +362,27 @@
 
   border-radius: 50%;
 
-  box-shadow: 0 0 15px #f4c906;
+  box-shadow:
+    0 0 15px #f4c906;
 }
 
-.ai-center span {
-  color: rgba(255,255,255,.3);
+.ai-center > span {
+  color: rgba(255, 255, 255, 0.3);
 
   font-size: 6px;
   font-weight: 800;
 
-  letter-spacing: .15em;
+  letter-spacing: 0.15em;
 }
 
 .ai-center strong {
   margin-top: 4px;
 
+  color: #ffffff;
+
   font-size: 17px;
 
-  letter-spacing: -.03em;
+  letter-spacing: -0.03em;
 }
 
 .ai-center small {
@@ -328,7 +394,8 @@
   font-weight: 800;
 
   text-transform: uppercase;
-  letter-spacing: .1em;
+
+  letter-spacing: 0.1em;
 }
 
 /* =====================================================
@@ -337,9 +404,11 @@
 
 .ai-floating-card {
   position: absolute;
+
   z-index: 3;
 
   display: flex;
+
   align-items: center;
 
   gap: 9px;
@@ -348,28 +417,31 @@
 
   background: #202020;
 
-  border: 1px solid rgba(255,255,255,.09);
+  border: 1px solid rgba(255, 255, 255, 0.09);
 
   border-radius: 9px;
 
-  box-shadow: 0 18px 35px rgba(0,0,0,.25);
+  box-shadow:
+    0 18px 35px rgba(0, 0, 0, 0.25);
 
-  animation: aiFloat 4s ease-in-out infinite;
+  will-change: transform;
 }
 
 .ai-floating-card svg {
+  flex-shrink: 0;
+
   color: #f4c906;
 }
 
 .ai-floating-card div span {
   display: block;
 
-  color: rgba(255,255,255,.25);
+  color: rgba(255, 255, 255, 0.25);
 
   font-size: 5px;
   font-weight: 800;
 
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
 }
 
 .ai-floating-card div strong {
@@ -377,41 +449,28 @@
 
   margin-top: 3px;
 
-  color: rgba(255,255,255,.75);
+  color: rgba(255, 255, 255, 0.75);
 
   font-size: 7px;
+
+  font-weight: 600;
 }
+
+/* CARD POSITIONS */
 
 .ai-card-one {
   top: 55px;
   left: 7%;
-
-  animation-delay: 0s;
 }
 
 .ai-card-two {
-  right: 3%;
   top: 170px;
-
-  animation-delay: 1s;
+  right: 3%;
 }
 
 .ai-card-three {
-  left: 12%;
   bottom: 55px;
-
-  animation-delay: 2s;
-}
-
-@keyframes aiFloat {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-8px);
-  }
+  left: 12%;
 }
 
 /* =====================================================
@@ -427,13 +486,14 @@
 
   margin-top: 45px;
 
-  border-top: 1px solid rgba(255,255,255,.09);
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
 
-  border-bottom: 1px solid rgba(255,255,255,.09);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
 }
 
 .ai-feature {
   display: flex;
+
   align-items: flex-start;
 
   gap: 13px;
@@ -442,11 +502,11 @@
 
   padding: 25px 20px;
 
-  border-right: 1px solid rgba(255,255,255,.09);
+  border-right: 1px solid rgba(255, 255, 255, 0.09);
 }
 
 .ai-feature:first-child {
-  border-left: 1px solid rgba(255,255,255,.09);
+  border-left: 1px solid rgba(255, 255, 255, 0.09);
 }
 
 .ai-feature-icon {
@@ -456,31 +516,36 @@
   flex-shrink: 0;
 
   display: grid;
+
   place-items: center;
 
-  background: rgba(244,201,6,.08);
+  background: rgba(244, 201, 6, 0.08);
 
-  border: 1px solid rgba(244,201,6,.15);
+  border: 1px solid rgba(244, 201, 6, 0.15);
 
   border-radius: 9px;
 
   color: #f4c906;
 }
 
-.ai-feature h3 {
+.ai-feature-content h3 {
   margin: 2px 0 7px;
+
+  color: #ffffff;
 
   font-size: 12px;
 
-  letter-spacing: -.02em;
+  font-weight: 700;
+
+  letter-spacing: -0.02em;
 }
 
-.ai-feature p {
+.ai-feature-content p {
   max-width: 210px;
 
   margin: 0;
 
-  color: rgba(255,255,255,.32);
+  color: rgba(255, 255, 255, 0.32);
 
   font-size: 8px;
 
@@ -488,50 +553,112 @@
 }
 
 /* =====================================================
-   BOTTOM
+   BOTTOM INFORMATION
 ===================================================== */
 
 .ai-bottom {
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
 
+  gap: 40px;
+
+  margin-top: 28px;
+
   padding-top: 28px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
 }
 
-.ai-bottom span {
+.ai-bottom-message span {
   display: block;
 
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 
-  color: rgba(255,255,255,.2);
+  color: rgba(255, 255, 255, 0.2);
 
   font-size: 6px;
   font-weight: 800;
 
-  letter-spacing: .12em;
+  letter-spacing: 0.12em;
 }
 
-.ai-bottom strong {
-  font-size: 14px;
-}
-
-.ai-bottom a {
-  display: flex;
-  align-items: center;
-
-  gap: 8px;
+.ai-bottom-message strong {
+  display: block;
 
   color: #ffffff;
 
-  text-decoration: none;
+  font-size: 14px;
 
-  font-size: 9px;
-  font-weight: 750;
+  font-weight: 600;
+
+  letter-spacing: -0.02em;
 }
 
-.ai-bottom a svg {
+/* =====================================================
+   EARLY ACCESS NOTE
+===================================================== */
+
+.ai-bottom-note {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 9px 13px;
+
+  background: rgba(244, 201, 6, 0.06);
+
+  border: 1px solid rgba(244, 201, 6, 0.15);
+
+  border-radius: 9px;
+}
+
+.ai-bottom-note-number {
+  width: 31px;
+  height: 31px;
+
+  flex-shrink: 0;
+
+  display: grid;
+
+  place-items: center;
+
+  background: #f4c906;
+
+  color: #111111;
+
+  border-radius: 7px;
+
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.ai-bottom-note span {
+  display: block;
+
+  margin-bottom: 3px;
+
   color: #f4c906;
+
+  font-size: 5px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+}
+
+.ai-bottom-note strong {
+  display: block;
+
+  color: rgba(255, 255, 255, 0.62);
+
+  font-size: 8px;
+
+  font-weight: 600;
 }
 
 /* =====================================================
@@ -557,6 +684,10 @@
   .ai-visual {
     min-height: 430px;
   }
+
+  .ai-features {
+    margin-top: 35px;
+  }
 }
 
 /* =====================================================
@@ -575,10 +706,14 @@
 
   .ai-copy h2 {
     font-size: 50px;
+
+    line-height: 0.9;
   }
 
   .ai-copy > p {
     font-size: 11px;
+
+    line-height: 1.7;
   }
 
   .ai-exclusive {
@@ -589,6 +724,8 @@
 
   .ai-visual {
     min-height: 350px;
+
+    margin-top: 10px;
   }
 
   .ai-orbit-one {
@@ -610,11 +747,30 @@
     width: 47px;
     height: 47px;
 
+    margin-bottom: 9px;
+
     border-radius: 13px;
+  }
+
+  .ai-bot-icon svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .ai-center-dot {
+    width: 6px;
+    height: 6px;
+
+    top: 20px;
+    right: 29px;
   }
 
   .ai-center strong {
     font-size: 14px;
+  }
+
+  .ai-center small {
+    font-size: 5px;
   }
 
   .ai-card-one {
@@ -623,29 +779,60 @@
   }
 
   .ai-card-two {
-    right: 0;
     top: 125px;
+    right: 0;
   }
 
   .ai-card-three {
-    left: 0;
     bottom: 20px;
+    left: 0;
+  }
+
+  .ai-floating-card {
+    padding: 8px 9px;
+
+    gap: 7px;
+  }
+
+  .ai-floating-card svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .ai-floating-card div span {
+    font-size: 4px;
+  }
+
+  .ai-floating-card div strong {
+    font-size: 6px;
   }
 
   .ai-features {
     grid-template-columns: 1fr;
+
+    margin-top: 30px;
   }
 
   .ai-feature {
     min-height: auto;
 
-    border-left: 1px solid rgba(255,255,255,.09);
-    border-bottom: 1px solid rgba(255,255,255,.09);
-    border-right: 1px solid rgba(255,255,255,.09);
+    padding: 20px 17px;
+
+    border-left: 1px solid rgba(255, 255, 255, 0.09);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+
+    border-right: 1px solid rgba(255, 255, 255, 0.09);
   }
 
   .ai-feature:last-child {
     border-bottom: 0;
+  }
+
+  .ai-feature-content p {
+    max-width: 280px;
+
+    font-size: 8px;
   }
 
   .ai-bottom {
@@ -653,6 +840,54 @@
 
     flex-direction: column;
 
-    gap: 20px;
+    gap: 16px;
+
+    margin-top: 25px;
+  }
+
+  .ai-bottom-message strong {
+    font-size: 13px;
+  }
+
+  .ai-bottom-note {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    justify-content: flex-start;
+  }
+}
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 380px) {
+
+  .ai-copy h2 {
+    font-size: 44px;
+  }
+
+  .ai-visual {
+    min-height: 320px;
+  }
+
+  .ai-orbit-one {
+    width: 250px;
+    height: 250px;
+  }
+
+  .ai-orbit-two {
+    width: 175px;
+    height: 175px;
+  }
+
+  .ai-center {
+    width: 130px;
+    height: 130px;
+  }
+
+  .ai-card-two {
+    right: -3px;
   }
 }

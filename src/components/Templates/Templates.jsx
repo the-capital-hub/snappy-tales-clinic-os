@@ -1,4 +1,4 @@
-import { ArrowUpRight, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
 import "./Templates.css";
 
@@ -40,25 +40,43 @@ function Templates() {
     <section className="templates-section" id="templates">
       <div className="templates-container">
 
+        {/* HEADER */}
         <motion.div
           className="templates-header"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
         >
-          <div className="templates-label">
-            <span />
-            DESIGNED FOR DENTAL CLINICS
+          <div className="templates-topline">
+
+            <div className="templates-label">
+              <span />
+              DESIGNED FOR DENTAL CLINICS
+            </div>
+
+            <div className="templates-page-number">
+              04 / 14
+            </div>
+
           </div>
 
           <div className="templates-heading-row">
-            <h2>
-              Choose a design
-              <br />
-              <span>you love.</span>
-            </h2>
+
+            <div>
+              <p className="templates-eyebrow">
+                WEBSITE DIRECTIONS
+              </p>
+
+              <h2>
+                Five ways to make
+                <br />
+                your clinic <span>stand out.</span>
+              </h2>
+            </div>
 
             <div className="templates-copy">
+
               <p>
                 Start with a professionally designed dental
                 website and make it yours with your clinic's
@@ -69,28 +87,42 @@ function Templates() {
                 <strong>05</strong>
                 <span>DESIGN DIRECTIONS</span>
               </div>
+
             </div>
+
           </div>
         </motion.div>
 
+        {/* TEMPLATE GRID */}
         <div className="templates-grid">
 
           {templates.map((template, index) => (
+
             <motion.article
               className="template-card"
               key={template.number}
-              initial={{ opacity: 0, y: 35 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              initial={{
+                opacity: 0,
+                y: 30,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              viewport={{
+                once: true,
+              }}
               transition={{
-                duration: 0.55,
+                duration: 0.5,
                 delay: index * 0.08,
               }}
             >
 
+              {/* PREVIEW */}
               <div className="template-preview">
 
                 <div className="template-browser">
+
                   <div className="browser-dots">
                     <span />
                     <span />
@@ -98,10 +130,13 @@ function Templates() {
                   </div>
 
                   <div className="browser-url">
-                    {template.url.replace("https://", "").replace("/", "")}
+                    {template.url
+                      .replace("https://", "")
+                      .replace("/", "")}
                   </div>
 
-                  <ExternalLink size={13} />
+                  <ExternalLink size={11} />
+
                 </div>
 
                 <iframe
@@ -111,65 +146,86 @@ function Templates() {
                   className="template-iframe"
                 />
 
+                {/* INFORMATION OVERLAY — NO CTA */}
                 <div className="template-overlay">
-                  <a
-                    href={template.url}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Open Live Website
-                    <ArrowUpRight size={17} />
-                  </a>
+
+                  <span className="template-overlay-number">
+                    {template.number}
+                  </span>
+
+                  <div>
+                    <small>
+                      DENTAL WEBSITE
+                    </small>
+
+                    <strong>
+                      {template.style}
+                    </strong>
+                  </div>
+
                 </div>
 
               </div>
 
+              {/* INFORMATION */}
               <div className="template-info">
 
                 <div className="template-title">
-                  <span>{template.number}</span>
+
+                  <span>
+                    {template.number}
+                  </span>
 
                   <div>
-                    <h3>{template.name}</h3>
-                    <small>{template.style}</small>
+                    <h3>
+                      {template.name}
+                    </h3>
+
+                    <small>
+                      {template.style} direction
+                    </small>
                   </div>
+
                 </div>
 
-                <a
-                  href={template.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={`Open ${template.name}`}
-                >
-                  <ArrowUpRight size={17} />
-                </a>
+                <div className="template-type">
+                  WEBSITE
+                </div>
 
               </div>
 
             </motion.article>
+
           ))}
 
         </div>
 
+        {/* BOTTOM INFORMATION */}
         <motion.div
           className="templates-bottom"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
+
+          <div className="templates-bottom-line" />
+
           <div>
-            <span>YOUR CLINIC. YOUR BRAND.</span>
+            <span>
+              YOUR CLINIC. YOUR BRAND.
+            </span>
+
             <strong>
-              Choose a template. We'll customise the rest.
+              Every design can be customised around
+              your clinic's identity.
             </strong>
           </div>
 
-          <a href="#pricing">
-            Get your clinic online
-            <span>
-              <ArrowUpRight size={16} />
-            </span>
-          </a>
+          <div className="templates-bottom-count">
+            <strong>05</strong>
+            <span>STARTING DIRECTIONS</span>
+          </div>
+
         </motion.div>
 
       </div>

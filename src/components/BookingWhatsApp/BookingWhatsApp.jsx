@@ -1,5 +1,4 @@
 import {
-  ArrowUpRight,
   CalendarCheck2,
   Check,
   Clock3,
@@ -17,35 +16,52 @@ function BookingWhatsApp() {
         {/* HEADER */}
         <motion.div
           className="booking-header"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <div className="booking-label">
-            <span />
-            PATIENT CONNECTION
+          <div className="booking-topline">
+            <div className="booking-label">
+              <span />
+              PATIENT CONNECTION
+            </div>
+
+            <div className="booking-page">
+              06 / 14
+            </div>
           </div>
 
           <div className="booking-heading">
-            <h2>
-              Make it easy for
-              <br />
-              patients to <span>reach you.</span>
-            </h2>
+
+            <div>
+              <p className="booking-eyebrow">
+                SIMPLE WAYS TO CONNECT
+              </p>
+
+              <h2>
+                Make it easy for
+                <br />
+                patients to <span>reach you.</span>
+              </h2>
+            </div>
 
             <p>
-              Every extra step creates friction. ClinicOS gives
-              patients two simple ways to take action — book
-              an appointment or start a conversation.
+              Patients can choose the interaction that feels most
+              natural to them — requesting an appointment or
+              starting a conversation with the clinic.
             </p>
+
           </div>
         </motion.div>
 
-        {/* TWO OPTIONS */}
+        {/* TWO CONNECTION OPTIONS */}
         <div className="booking-options">
 
-          {/* APPOINTMENT */}
+          {/* =================================================
+              APPOINTMENT
+          ================================================= */}
+
           <motion.div
             className="booking-option booking-option-main"
             initial={{ opacity: 0, x: -30 }}
@@ -55,6 +71,7 @@ function BookingWhatsApp() {
           >
 
             <div className="booking-option-top">
+
               <div className="booking-option-number">
                 01
               </div>
@@ -63,11 +80,15 @@ function BookingWhatsApp() {
                 <CalendarCheck2 size={13} />
                 APPOINTMENT BOOKING
               </div>
+
             </div>
 
             <div className="booking-option-content">
 
+              {/* COPY */}
+
               <div className="booking-option-copy">
+
                 <h3>
                   Turn interest
                   <br />
@@ -75,12 +96,13 @@ function BookingWhatsApp() {
                 </h3>
 
                 <p>
-                  Give patients a clear path from discovering
-                  your clinic to requesting their preferred
-                  appointment.
+                  A simple appointment journey helps patients
+                  provide the right information without making
+                  the process feel complicated.
                 </p>
 
                 <div className="booking-flow">
+
                   <div>
                     <span>01</span>
                     <strong>Choose service</strong>
@@ -93,63 +115,121 @@ function BookingWhatsApp() {
 
                   <div>
                     <span>03</span>
-                    <strong>Request appointment</strong>
+                    <strong>Preferred date</strong>
                   </div>
+
+                  <div>
+                    <span>04</span>
+                    <strong>Clinic confirmation</strong>
+                  </div>
+
                 </div>
 
-                <a href="#contact" className="booking-action">
-                  Book an appointment
-                  <ArrowUpRight size={15} />
-                </a>
               </div>
 
               {/* BOOKING UI */}
+
               <div className="booking-ui">
 
                 <div className="booking-ui-header">
+
                   <div>
-                    <small>APPOINTMENT</small>
-                    <strong>Request a visit</strong>
+                    <small>
+                      APPOINTMENT
+                    </small>
+
+                    <strong>
+                      Request a visit
+                    </strong>
                   </div>
 
                   <CalendarCheck2 size={18} />
+
                 </div>
 
                 <div className="booking-field">
-                  <span>SELECT SERVICE</span>
-                  <strong>Dental Consultation</strong>
-                  <ArrowUpRight size={12} />
+
+                  <span>
+                    SELECT SERVICE
+                  </span>
+
+                  <strong>
+                    Dental Consultation
+                  </strong>
+
+                  <span className="field-status">
+                    SELECTED
+                  </span>
+
                 </div>
 
                 <div className="booking-field">
-                  <span>PREFERRED DATE</span>
-                  <strong>Choose a date</strong>
+
+                  <span>
+                    PREFERRED DATE
+                  </span>
+
+                  <strong>
+                    Choose a date
+                  </strong>
+
                   <Clock3 size={12} />
+
                 </div>
 
                 <div className="booking-input-row">
+
                   <div>
-                    <span>NAME</span>
-                    <strong>Your name</strong>
+                    <span>
+                      NAME
+                    </span>
+
+                    <strong>
+                      Your name
+                    </strong>
                   </div>
 
                   <div>
-                    <span>PHONE</span>
-                    <strong>+91 XXXXX</strong>
+                    <span>
+                      PHONE
+                    </span>
+
+                    <strong>
+                      +91 XXXXX
+                    </strong>
                   </div>
+
                 </div>
 
-                <button className="booking-submit">
-                  Request appointment
-                  <ArrowUpRight size={13} />
-                </button>
+                {/* INFORMATIONAL STATUS */}
+
+                <div className="booking-status">
+
+                  <div className="booking-status-icon">
+                    <Check size={12} />
+                  </div>
+
+                  <div>
+                    <span>
+                      REQUEST FLOW
+                    </span>
+
+                    <strong>
+                      Details sent securely to the clinic
+                    </strong>
+                  </div>
+
+                </div>
 
               </div>
 
             </div>
           </motion.div>
 
-          {/* WHATSAPP */}
+          {/* =================================================
+              WHATSAPP
+          ================================================= */}
+
           <motion.div
             className="booking-option booking-option-whatsapp"
             initial={{ opacity: 0, x: 30 }}
@@ -159,6 +239,7 @@ function BookingWhatsApp() {
           >
 
             <div className="booking-option-top">
+
               <div className="booking-option-number">
                 02
               </div>
@@ -167,12 +248,13 @@ function BookingWhatsApp() {
                 <MessageCircle size={13} />
                 WHATSAPP
               </div>
+
             </div>
 
             <div className="whatsapp-content">
 
               <div className="whatsapp-icon">
-                <MessageCircle size={25} />
+                <MessageCircle size={23} />
               </div>
 
               <h3>
@@ -182,8 +264,9 @@ function BookingWhatsApp() {
               </h3>
 
               <p>
-                Let patients ask questions, request an appointment
-                or simply reach your clinic through WhatsApp.
+                Patients can ask questions, understand treatments,
+                share basic details or discuss an appointment
+                through a familiar messaging experience.
               </p>
 
               <div className="whatsapp-features">
@@ -191,6 +274,11 @@ function BookingWhatsApp() {
                 <div>
                   <Check size={13} />
                   Ask a question
+                </div>
+
+                <div>
+                  <Check size={13} />
+                  Discuss a treatment
                 </div>
 
                 <div>
@@ -205,34 +293,37 @@ function BookingWhatsApp() {
 
               </div>
 
-              <a
-                href="#contact"
-                className="whatsapp-action"
-              >
-                <MessageCircle size={16} />
-                Chat on WhatsApp
-                <ArrowUpRight size={15} />
-              </a>
-
             </div>
 
             {/* CHAT PREVIEW */}
+
             <div className="whatsapp-chat">
 
               <div className="chat-top">
+
                 <div className="chat-avatar">
                   S
                 </div>
 
                 <div>
-                  <strong>Your Clinic</strong>
-                  <small>Usually replies instantly</small>
+                  <strong>
+                    Your Clinic
+                  </strong>
+
+                  <small>
+                    Clinic WhatsApp
+                  </small>
                 </div>
 
                 <Phone size={14} />
+
               </div>
 
               <div className="chat-body">
+
+                <div className="chat-time">
+                  TODAY · 10:42 AM
+                </div>
 
                 <div className="chat-message patient">
                   Hi, I wanted to know about
@@ -241,7 +332,12 @@ function BookingWhatsApp() {
 
                 <div className="chat-message clinic">
                   Hi! We'd be happy to help.
-                  Would you like to book a consultation?
+                  What would you like to know?
+                </div>
+
+                <div className="chat-message patient">
+                  I'd like to understand the
+                  treatment and consultation process.
                 </div>
 
               </div>
@@ -252,26 +348,34 @@ function BookingWhatsApp() {
 
         </div>
 
-        {/* BOTTOM */}
+        {/* BOTTOM INFORMATION */}
+
         <motion.div
           className="booking-bottom"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
+
           <div className="booking-bottom-flow">
+
             <span>WEBSITE</span>
             <i>→</i>
+
             <span>BOOKING</span>
             <i>→</i>
+
             <span>WHATSAPP</span>
             <i>→</i>
+
             <strong>CLINIC</strong>
+
           </div>
 
           <p>
-            Less friction. More conversations.
+            Two simple connection points for patients.
           </p>
+
         </motion.div>
 
       </div>

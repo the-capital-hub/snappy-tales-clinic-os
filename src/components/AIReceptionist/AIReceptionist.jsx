@@ -1,5 +1,4 @@
 import {
-  ArrowUpRight,
   Bot,
   Clock3,
   MessageCircle,
@@ -32,27 +31,39 @@ function AIReceptionist() {
     <section className="ai-receptionist" id="ai-receptionist">
       <div className="ai-receptionist-container">
 
-        {/* TOP LABEL */}
+        {/* =====================================================
+            TOP LABEL
+        ===================================================== */}
+
         <motion.div
           className="ai-label"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
         >
           <span />
           COMING SOON
         </motion.div>
 
-        {/* MAIN */}
+        {/* =====================================================
+            MAIN
+        ===================================================== */}
+
         <div className="ai-main">
 
-          {/* LEFT */}
+          {/* =================================================
+              LEFT CONTENT
+          ================================================= */}
+
           <motion.div
             className="ai-copy"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
           >
+
             <div className="ai-eyebrow">
               <Sparkles size={13} />
               THE NEXT LAYER OF CLINICOS
@@ -70,31 +81,44 @@ function AIReceptionist() {
               and support patients beyond reception hours.
             </p>
 
+            {/* EARLY ACCESS */}
+
             <div className="ai-exclusive">
+
               <div className="ai-exclusive-number">
                 100
               </div>
 
-              <div>
+              <div className="ai-exclusive-copy">
                 <span>EXCLUSIVE EARLY ACCESS</span>
+
                 <strong>
                   Available to the first 100 ClinicOS doctors.
                 </strong>
               </div>
+
             </div>
+
           </motion.div>
 
-          {/* RIGHT VISUAL */}
+          {/* =================================================
+              RIGHT VISUAL
+          ================================================= */}
+
           <motion.div
             className="ai-visual"
-            initial={{ opacity: 0, scale: .96 }}
+            initial={{ opacity: 0, scale: 0.96 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: .7 }}
+            transition={{ duration: 0.7 }}
           >
+
+            {/* ORBITS */}
 
             <div className="ai-orbit ai-orbit-one" />
             <div className="ai-orbit ai-orbit-two" />
+
+            {/* CENTER AI */}
 
             <div className="ai-center">
 
@@ -116,46 +140,92 @@ function AIReceptionist() {
 
             </div>
 
-            {/* FLOATING CARDS */}
+            {/* =================================================
+                FLOATING INFORMATION CARD 01
+            ================================================= */}
 
-            <div className="ai-floating-card ai-card-one">
+            <motion.div
+              className="ai-floating-card ai-card-one"
+              animate={{ y: [0, -7, 0] }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+
               <MessageCircle size={14} />
 
               <div>
                 <span>NEW MESSAGE</span>
+
                 <strong>
                   Patient enquiry
                 </strong>
               </div>
-            </div>
 
-            <div className="ai-floating-card ai-card-two">
+            </motion.div>
+
+            {/* =================================================
+                FLOATING INFORMATION CARD 02
+            ================================================= */}
+
+            <motion.div
+              className="ai-floating-card ai-card-two"
+              animate={{ y: [0, 7, 0] }}
+              transition={{
+                duration: 4.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+
               <Clock3 size={14} />
 
               <div>
                 <span>AFTER HOURS</span>
+
                 <strong>
                   Still responding
                 </strong>
               </div>
-            </div>
 
-            <div className="ai-floating-card ai-card-three">
+            </motion.div>
+
+            {/* =================================================
+                FLOATING INFORMATION CARD 03
+            ================================================= */}
+
+            <motion.div
+              className="ai-floating-card ai-card-three"
+              animate={{ y: [0, -6, 0] }}
+              transition={{
+                duration: 4.2,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+
               <UserRoundCheck size={14} />
 
               <div>
                 <span>ENQUIRY CAPTURED</span>
+
                 <strong>
                   Ready for clinic
                 </strong>
               </div>
-            </div>
+
+            </motion.div>
 
           </motion.div>
 
         </div>
 
-        {/* FEATURES */}
+        {/* =====================================================
+            FEATURES
+        ===================================================== */}
+
         <div className="ai-features">
 
           {features.map((feature, index) => {
@@ -165,47 +235,95 @@ function AIReceptionist() {
               <motion.div
                 className="ai-feature"
                 key={feature.title}
-                initial={{ opacity: 0, y: 25 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                initial={{
+                  opacity: 0,
+                  y: 25,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                viewport={{
+                  once: true,
+                }}
                 transition={{
-                  duration: .5,
-                  delay: index * .08,
+                  duration: 0.5,
+                  delay: index * 0.08,
                 }}
               >
+
                 <div className="ai-feature-icon">
                   <Icon size={17} />
                 </div>
 
-                <div>
-                  <h3>{feature.title}</h3>
-                  <p>{feature.text}</p>
+                <div className="ai-feature-content">
+                  <h3>
+                    {feature.title}
+                  </h3>
+
+                  <p>
+                    {feature.text}
+                  </p>
                 </div>
+
               </motion.div>
             );
           })}
 
         </div>
 
-        {/* BOTTOM */}
+        {/* =====================================================
+            BOTTOM INFORMATION
+        ===================================================== */}
+
         <motion.div
           className="ai-bottom"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          initial={{
+            opacity: 0,
+            y: 15,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: true,
+          }}
+          transition={{
+            duration: 0.5,
+          }}
         >
-          <div>
-            <span>CLINICOS × AI</span>
+
+          <div className="ai-bottom-message">
+
+            <span>
+              CLINICOS × AI
+            </span>
 
             <strong>
               The digital front desk is getting smarter.
             </strong>
+
           </div>
 
-          <a href="#pricing">
-            Become an early ClinicOS partner
-            <ArrowUpRight size={15} />
-          </a>
+          <div className="ai-bottom-note">
+
+            <div className="ai-bottom-note-number">
+              100
+            </div>
+
+            <div>
+              <span>
+                EARLY ACCESS
+              </span>
+
+              <strong>
+                First 100 ClinicOS doctors
+              </strong>
+            </div>
+
+          </div>
+
         </motion.div>
 
       </div>

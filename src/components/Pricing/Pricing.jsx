@@ -1,5 +1,4 @@
 import {
-  ArrowUpRight,
   Check,
   Sparkles,
 } from "lucide-react";
@@ -35,6 +34,7 @@ function Feature({ children }) {
       <span>
         <Check size={11} />
       </span>
+
       {children}
     </li>
   );
@@ -45,53 +45,97 @@ function Pricing() {
     <section className="pricing" id="pricing">
       <div className="pricing-container">
 
-        {/* HEADER */}
+        {/* =================================================
+            HEADER
+        ================================================= */}
+
         <motion.div
           className="pricing-header"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          initial={{
+            opacity: 0,
+            y: 30,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: true,
+          }}
+          transition={{
+            duration: 0.6,
+          }}
         >
+
           <div className="pricing-label">
             <span />
             SIMPLE PRICING
           </div>
 
           <div className="pricing-heading">
+
             <h2>
               Start with your website.
               <br />
-              <span>Upgrade when you're ready.</span>
+              <span>
+                Upgrade when you're ready.
+              </span>
             </h2>
 
             <p>
               Choose the level that fits your clinic today.
-              You can start with a professional website and
-              move into the full ClinicOS platform when ready.
+              Start with a professional website or build a
+              complete digital infrastructure with ClinicOS.
             </p>
+
           </div>
+
         </motion.div>
 
-        {/* PRICING CARDS */}
+        {/* =================================================
+            PRICING CARDS
+        ================================================= */}
+
         <div className="pricing-grid">
 
-          {/* GET ONLINE */}
-          <motion.div
+          {/* =================================================
+              GET ONLINE
+          ================================================= */}
+
+          <motion.article
             className="price-card"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: .5 }}
+            initial={{
+              opacity: 0,
+              y: 30,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            viewport={{
+              once: true,
+            }}
+            transition={{
+              duration: 0.5,
+            }}
           >
+
             <div className="price-card-top">
+
               <div>
-                <span>01 / WEBSITE</span>
-                <h3>Get Online</h3>
+                <span>
+                  01 / WEBSITE
+                </span>
+
+                <h3>
+                  Get Online
+                </h3>
               </div>
 
               <div className="price-number">
                 ₹30K
               </div>
+
             </div>
 
             <p className="price-description">
@@ -101,6 +145,10 @@ function Pricing() {
 
             <div className="price-divider" />
 
+            <div className="price-includes">
+              WHAT'S INCLUDED
+            </div>
+
             <ul className="price-features">
               {websiteFeatures.map((feature) => (
                 <Feature key={feature}>
@@ -109,40 +157,55 @@ function Pricing() {
               ))}
             </ul>
 
-            <a
-              href="#contact"
-              className="price-button price-button-light"
-            >
-              Get your website
-              <ArrowUpRight size={15} />
-            </a>
-
-            <small className="price-note">
+            <div className="price-note">
               One-time website setup
-            </small>
-          </motion.div>
+            </div>
 
-          {/* CLINICOS */}
-          <motion.div
+          </motion.article>
+
+          {/* =================================================
+              CLINICOS
+          ================================================= */}
+
+          <motion.article
             className="price-card price-card-dark"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: .5, delay: .08 }}
+            initial={{
+              opacity: 0,
+              y: 30,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            viewport={{
+              once: true,
+            }}
+            transition={{
+              duration: 0.5,
+              delay: 0.08,
+            }}
           >
+
             <div className="popular-badge">
               MOST COMPLETE
             </div>
 
             <div className="price-card-top">
+
               <div>
-                <span>02 / PLATFORM</span>
-                <h3>ClinicOS</h3>
+                <span>
+                  02 / PLATFORM
+                </span>
+
+                <h3>
+                  ClinicOS
+                </h3>
               </div>
 
               <div className="price-number">
                 ₹40K
               </div>
+
             </div>
 
             <p className="price-description">
@@ -152,6 +215,10 @@ function Pricing() {
 
             <div className="price-divider" />
 
+            <div className="price-includes">
+              WHAT'S INCLUDED
+            </div>
+
             <ul className="price-features">
               {clinicFeatures.map((feature) => (
                 <Feature key={feature}>
@@ -160,28 +227,34 @@ function Pricing() {
               ))}
             </ul>
 
-            <a
-              href="#contact"
-              className="price-button price-button-yellow"
-            >
-              Explore ClinicOS
-              <ArrowUpRight size={15} />
-            </a>
-
-            <small className="price-note">
+            <div className="price-note">
               Platform setup
-            </small>
-          </motion.div>
+            </div>
+
+          </motion.article>
 
         </div>
 
-        {/* EARLY PARTNER */}
+        {/* =================================================
+            EARLY PARTNER INFORMATION
+        ================================================= */}
+
         <motion.div
           className="early-partner"
-          initial={{ opacity: 0, y: 25 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: .5 }}
+          initial={{
+            opacity: 0,
+            y: 25,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: true,
+          }}
+          transition={{
+            duration: 0.5,
+          }}
         >
 
           <div className="early-partner-icon">
@@ -189,41 +262,59 @@ function Pricing() {
           </div>
 
           <div className="early-partner-copy">
-            <span>EARLY CLINICOS PARTNER OFFER</span>
+
+            <span>
+              EARLY CLINICOS PARTNER OFFER
+            </span>
 
             <h3>
-              Get the complete ClinicOS experience for
+              Complete ClinicOS experience
             </h3>
 
-            <strong>
+            <div className="early-partner-price">
               ₹35,000
-            </strong>
+            </div>
 
             <p>
               Available for selected early ClinicOS clinics.
             </p>
+
           </div>
 
-          <a href="#contact">
-            Become an early partner
-            <ArrowUpRight size={16} />
-          </a>
+          <div className="early-partner-status">
+            <span />
+            LIMITED EARLY ACCESS
+          </div>
 
         </motion.div>
 
-        {/* BOTTOM */}
-        <div className="pricing-bottom">
+        {/* =================================================
+            BOTTOM INFORMATION
+        ================================================= */}
+
+        <motion.div
+          className="pricing-bottom"
+          initial={{
+            opacity: 0,
+          }}
+          whileInView={{
+            opacity: 1,
+          }}
+          viewport={{
+            once: true,
+          }}
+        >
 
           <span>
-            NO HIDDEN WEBSITE PACKAGE
+            TRANSPARENT CLINICOS PRICING
           </span>
 
           <p>
-            Start small. Build your digital infrastructure
-            as your clinic grows.
+            Start with your website and expand your digital
+            infrastructure as your clinic grows.
           </p>
 
-        </div>
+        </motion.div>
 
       </div>
     </section>

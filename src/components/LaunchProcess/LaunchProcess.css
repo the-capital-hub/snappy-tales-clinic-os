@@ -1,7 +1,12 @@
+/* =====================================================
+   CLINICOS — LAUNCH PROCESS
+===================================================== */
+
 .launch-process {
   position: relative;
+  isolation: isolate;
 
-  padding: 125px 40px 120px;
+  padding: 120px 40px 95px;
 
   background: #111111;
   color: #ffffff;
@@ -9,21 +14,45 @@
   overflow: hidden;
 }
 
+/* BACKGROUND DETAIL */
+
 .launch-process::before {
   content: "";
 
   position: absolute;
 
-  width: 500px;
-  height: 500px;
+  width: 560px;
+  height: 560px;
 
-  right: -220px;
-  top: -250px;
+  right: -270px;
+  top: -280px;
 
-  border: 1px solid rgba(244, 201, 6, 0.12);
+  border: 1px solid rgba(244, 201, 6, 0.1);
 
   border-radius: 50%;
+
+  pointer-events: none;
 }
+
+.launch-process::after {
+  content: "";
+
+  position: absolute;
+
+  width: 320px;
+  height: 320px;
+
+  left: -240px;
+  bottom: -240px;
+
+  border: 1px solid rgba(255, 255, 255, 0.035);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+/* CONTAINER */
 
 .launch-process-container {
   position: relative;
@@ -31,6 +60,7 @@
 
   width: 100%;
   max-width: 1380px;
+
   margin: 0 auto;
 }
 
@@ -41,21 +71,22 @@
 .launch-process-label {
   display: flex;
   align-items: center;
+
   gap: 9px;
 
   margin-bottom: 22px;
 
-  color: rgba(255,255,255,.38);
+  color: rgba(255, 255, 255, 0.38);
 
-  font-size: 10px;
+  font-size: 8px;
   font-weight: 800;
 
-  letter-spacing: .14em;
+  letter-spacing: 0.16em;
 }
 
 .launch-process-label span {
-  width: 7px;
-  height: 7px;
+  width: 6px;
+  height: 6px;
 
   background: #f4c906;
 
@@ -63,7 +94,7 @@
 }
 
 /* =====================================================
-   HEADING
+   HEADER
 ===================================================== */
 
 .launch-process-heading {
@@ -77,16 +108,22 @@
 .launch-process-heading h2 {
   margin: 0;
 
-  font-size: clamp(48px, 5.8vw, 80px);
+  max-width: 850px;
 
-  line-height: .93;
+  font-size: clamp(52px, 5.8vw, 80px);
 
-  letter-spacing: -.06em;
+  line-height: 0.9;
+
+  font-weight: 720;
+
+  letter-spacing: -0.07em;
 }
 
 .launch-process-heading h2 span {
   color: #f4c906;
 }
+
+/* INTRO */
 
 .launch-process-intro {
   display: flex;
@@ -100,28 +137,29 @@
 }
 
 .launch-clock {
-  width: 47px;
-  height: 47px;
-
-  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
 
   display: grid;
   place-items: center;
 
+  flex-shrink: 0;
+
   background: #f4c906;
+
   color: #111111;
 
-  border-radius: 13px;
+  border-radius: 12px;
 }
 
 .launch-process-intro p {
   margin: 0;
 
-  color: rgba(255,255,255,.45);
+  color: rgba(255, 255, 255, 0.43);
 
-  font-size: 13px;
+  font-size: 10px;
 
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 /* =====================================================
@@ -133,10 +171,11 @@
 
   grid-template-columns: repeat(4, 1fr);
 
-  margin-top: 75px;
+  margin-top: 70px;
 
-  border-top: 1px solid rgba(255,255,255,.1);
-  border-bottom: 1px solid rgba(255,255,255,.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .launch-step {
@@ -144,14 +183,22 @@
 
   min-height: 315px;
 
-  padding: 27px 25px;
+  padding: 26px 24px;
 
-  border-right: 1px solid rgba(255,255,255,.1);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+
+  transition: background 0.3s ease;
 }
 
 .launch-step:first-child {
-  border-left: 1px solid rgba(255,255,255,.1);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+.launch-step:hover {
+  background: rgba(255, 255, 255, 0.018);
+}
+
+/* STEP TOP */
 
 .launch-step-top {
   display: flex;
@@ -160,68 +207,89 @@
 }
 
 .launch-step-number {
-  color: rgba(255,255,255,.28);
+  color: rgba(255, 255, 255, 0.27);
 
-  font-size: 9px;
-  font-weight: 800;
+  font-size: 8px;
+  font-weight: 900;
+
+  letter-spacing: 0.08em;
 }
 
-.launch-step-arrow {
-  color: rgba(255,255,255,.25);
+.launch-step-connector {
+  color: rgba(255, 255, 255, 0.2);
+
+  font-size: 13px;
 }
+
+/* =====================================================
+   ICON
+===================================================== */
 
 .launch-step-icon {
-  width: 52px;
-  height: 52px;
+  width: 50px;
+  height: 50px;
 
   display: grid;
   place-items: center;
 
-  margin-top: 42px;
+  margin-top: 43px;
 
-  background: #202020;
+  background: #1d1d1d;
 
-  border: 1px solid rgba(255,255,255,.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 
   color: #f4c906;
 
-  border-radius: 14px;
+  border-radius: 13px;
 
-  font-size: 11px;
-  font-weight: 800;
+  font-size: 10px;
+  font-weight: 850;
 
   transition:
-    background .25s ease,
-    color .25s ease,
-    transform .25s ease;
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .launch-step:hover .launch-step-icon {
   background: #f4c906;
+
   color: #111111;
 
-  transform: translateY(-4px);
+  transform: translateY(-3px);
 }
 
+/* =====================================================
+   CONTENT
+===================================================== */
+
 .launch-step h3 {
-  margin: 25px 0 9px;
+  margin: 24px 0 9px;
 
-  font-size: 20px;
+  max-width: 210px;
 
-  letter-spacing: -.035em;
+  font-size: 18px;
+
+  line-height: 1.1;
+
+  font-weight: 650;
+
+  letter-spacing: -0.035em;
 }
 
 .launch-step p {
-  max-width: 240px;
+  max-width: 235px;
 
   margin: 0;
 
-  color: rgba(255,255,255,.38);
+  color: rgba(255, 255, 255, 0.37);
 
-  font-size: 10px;
+  font-size: 9px;
 
-  line-height: 1.6;
+  line-height: 1.7;
 }
+
+/* READY */
 
 .launch-ready {
   display: flex;
@@ -229,19 +297,21 @@
 
   gap: 6px;
 
-  margin-top: 24px;
+  margin-top: 23px;
 
   color: #f4c906;
 
-  font-size: 6px;
-  font-weight: 800;
+  font-size: 5px;
+  font-weight: 900;
 
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
 }
 
 .launch-ready span {
   width: 5px;
   height: 5px;
+
+  flex-shrink: 0;
 
   background: #f4c906;
 
@@ -255,9 +325,9 @@
 .launch-timeline {
   position: relative;
 
-  height: 85px;
+  height: 82px;
 
-  margin-top: 5px;
+  margin-top: 4px;
 }
 
 .timeline-line {
@@ -265,11 +335,11 @@
 
   left: 7%;
   right: 7%;
-  top: 42px;
+  top: 40px;
 
   height: 1px;
 
-  background: rgba(255,255,255,.13);
+  background: rgba(255, 255, 255, 0.13);
 }
 
 .timeline-line span {
@@ -284,14 +354,14 @@
 .timeline-label {
   position: absolute;
 
-  top: 53px;
+  top: 52px;
 
-  color: rgba(255,255,255,.28);
+  color: rgba(255, 255, 255, 0.25);
 
-  font-size: 7px;
-  font-weight: 800;
+  font-size: 6px;
+  font-weight: 850;
 
-  letter-spacing: .12em;
+  letter-spacing: 0.12em;
 }
 
 .timeline-start {
@@ -306,36 +376,41 @@
   position: absolute;
 
   left: 50%;
-  top: 10px;
+  top: 7px;
 
   display: flex;
   align-items: baseline;
-  gap: 5px;
 
-  transform: translateX(-50%);
+  gap: 5px;
 
   padding: 0 12px;
 
   background: #111111;
+
+  transform: translateX(-50%);
 }
 
 .timeline-time strong {
   color: #f4c906;
 
-  font-size: 22px;
+  font-size: 23px;
 
-  letter-spacing: -.05em;
+  line-height: 1;
+
+  letter-spacing: -0.05em;
 }
 
 .timeline-time span {
-  color: rgba(255,255,255,.4);
+  color: rgba(255, 255, 255, 0.38);
 
-  font-size: 7px;
-  font-weight: 800;
+  font-size: 6px;
+  font-weight: 900;
+
+  letter-spacing: 0.08em;
 }
 
 /* =====================================================
-   BOTTOM
+   BOTTOM INFORMATION
 ===================================================== */
 
 .launch-process-bottom {
@@ -343,53 +418,88 @@
   align-items: center;
   justify-content: space-between;
 
-  padding-top: 27px;
+  gap: 40px;
 
-  border-top: 1px solid rgba(255,255,255,.1);
+  margin-top: 2px;
+
+  padding-top: 26px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.launch-process-bottom > div span {
+/* SUMMARY */
+
+.launch-process-summary {
+  max-width: 650px;
+}
+
+.launch-process-summary span {
   display: block;
 
-  margin-bottom: 6px;
+  margin-bottom: 7px;
 
-  color: rgba(255,255,255,.25);
+  color: rgba(255, 255, 255, 0.23);
 
-  font-size: 7px;
-  font-weight: 800;
+  font-size: 6px;
+  font-weight: 900;
 
-  letter-spacing: .12em;
+  letter-spacing: 0.12em;
 }
 
-.launch-process-bottom strong {
-  font-size: 16px;
+.launch-process-summary strong {
+  display: block;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 15px;
+
+  line-height: 1.35;
+
   font-weight: 600;
+
+  letter-spacing: -0.02em;
 }
 
-.launch-process-bottom > a {
-  display: inline-flex;
+/* PROCESS FLOW */
+
+.launch-process-flow {
+  display: flex;
   align-items: center;
+
   gap: 10px;
 
-  color: #ffffff;
+  padding: 11px 14px;
 
-  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 
-  font-size: 12px;
-  font-weight: 750;
+  border-radius: 7px;
 }
 
-.launch-process-bottom > a span {
-  width: 31px;
-  height: 31px;
+.launch-process-flow span,
+.launch-process-flow strong {
+  margin: 0;
 
-  display: grid;
-  place-items: center;
+  font-size: 6px;
 
-  background: #f4c906;
-  color: #111111;
+  font-weight: 900;
 
-  border-radius: 8px;
+  letter-spacing: 0.1em;
+}
+
+.launch-process-flow span {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.launch-process-flow strong {
+  color: #f4c906;
+}
+
+.launch-process-flow i {
+  color: rgba(255, 255, 255, 0.2);
+
+  font-size: 9px;
+
+  font-style: normal;
 }
 
 /* =====================================================
@@ -397,11 +507,11 @@
 ===================================================== */
 
 .launch-disclaimer {
-  margin-top: 22px;
+  margin-top: 20px;
 
-  color: rgba(255,255,255,.2);
+  color: rgba(255, 255, 255, 0.18);
 
-  font-size: 8px;
+  font-size: 7px;
 
   line-height: 1.5;
 }
@@ -413,7 +523,7 @@
 @media (max-width: 1000px) {
 
   .launch-process {
-    padding: 100px 25px;
+    padding: 95px 28px 80px;
   }
 
   .launch-process-heading {
@@ -424,12 +534,16 @@
     gap: 25px;
   }
 
+  .launch-process-heading h2 {
+    max-width: 760px;
+  }
+
   .launch-steps {
     grid-template-columns: repeat(2, 1fr);
   }
 
   .launch-step {
-    border-bottom: 1px solid rgba(255,255,255,.1);
+    min-height: 290px;
   }
 
   .launch-step:nth-child(2) {
@@ -437,12 +551,20 @@
   }
 
   .launch-step:nth-child(3) {
-    border-left: 1px solid rgba(255,255,255,.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .launch-step:nth-child(3),
   .launch-step:nth-child(4) {
     border-bottom: 0;
+  }
+
+  .launch-process-bottom {
+    align-items: flex-start;
+  }
+
+  .launch-process-flow {
+    display: none;
   }
 }
 
@@ -453,32 +575,51 @@
 @media (max-width: 650px) {
 
   .launch-process {
-    padding: 80px 16px;
+    padding: 75px 16px 60px;
+  }
+
+  .launch-process-label {
+    font-size: 7px;
   }
 
   .launch-process-heading h2 {
-    font-size: 49px;
+    font-size: 48px;
+
+    line-height: 0.9;
   }
 
   .launch-process-intro {
     align-items: flex-start;
+
+    gap: 11px;
+  }
+
+  .launch-clock {
+    width: 42px;
+    height: 42px;
+  }
+
+  .launch-process-intro p {
+    font-size: 8px;
   }
 
   .launch-steps {
     grid-template-columns: 1fr;
 
-    margin-top: 50px;
+    margin-top: 48px;
   }
 
   .launch-step,
   .launch-step:nth-child(3) {
     min-height: auto;
 
-    padding: 25px 20px;
+    padding: 24px 20px;
 
-    border-left: 1px solid rgba(255,255,255,.1);
-    border-right: 1px solid rgba(255,255,255,.1);
-    border-bottom: 1px solid rgba(255,255,255,.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .launch-step:last-child {
@@ -487,6 +628,14 @@
 
   .launch-step-icon {
     margin-top: 30px;
+  }
+
+  .launch-step h3 {
+    font-size: 18px;
+  }
+
+  .launch-step p {
+    font-size: 8px;
   }
 
   .launch-timeline {
@@ -498,8 +647,16 @@
 
     flex-direction: column;
 
-    gap: 23px;
+    gap: 12px;
 
-    margin-top: 5px;
+    margin-top: 0;
+  }
+
+  .launch-process-summary strong {
+    font-size: 13px;
+  }
+
+  .launch-disclaimer {
+    font-size: 6px;
   }
 }

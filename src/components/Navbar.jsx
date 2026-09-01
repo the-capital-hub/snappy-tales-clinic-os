@@ -62,12 +62,7 @@ function Navbar() {
         </nav>
 
         {/* CTA */}
-        <a href="#pricing" className="nav-cta">
-          Get Started
-          <span className="nav-cta-icon">
-            <ArrowUpRight size={16} strokeWidth={2.4} />
-          </span>
-        </a>
+        
 
       </div>
     </header>

@@ -1,21 +1,62 @@
 /* =====================================================
-   CLINICOS — INTRO SECTION
+   CLINICOS — DIGITAL FRONT DESK
 ===================================================== */
 
 .clinicos-section {
   position: relative;
+  isolation: isolate;
 
-  padding: 125px 40px 120px;
+  padding: 110px 40px 90px;
 
-  background: #111111;
-  color: #ffffff;
+  background: #111;
+  color: #fff;
 
   overflow: hidden;
 }
 
+.clinicos-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 760px;
+  height: 760px;
+
+  top: -470px;
+  right: -390px;
+
+  border: 1px solid rgba(244, 201, 6, 0.06);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.clinicos-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  left: -310px;
+  bottom: -300px;
+
+  border: 1px solid rgba(255, 255, 255, 0.035);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
 .clinicos-container {
+  position: relative;
+  z-index: 2;
+
   width: 100%;
   max-width: 1380px;
+
   margin: 0 auto;
 }
 
@@ -23,35 +64,70 @@
    HEADER
 ===================================================== */
 
+.clinicos-header {
+  position: relative;
+}
+
 .clinicos-label {
   display: flex;
   align-items: center;
+
   gap: 9px;
 
-  margin-bottom: 22px;
+  color: rgba(255, 255, 255, 0.35);
 
-  color: rgba(255, 255, 255, 0.4);
+  font-size: 7px;
+  font-weight: 900;
 
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.16em;
 }
 
 .clinicos-label span {
-  width: 7px;
-  height: 7px;
+  width: 6px;
+  height: 6px;
+
+  flex-shrink: 0;
 
   background: #f4c906;
 
   border-radius: 50%;
 }
 
+.clinicos-page-number {
+  position: absolute;
+
+  right: 0;
+  top: 0;
+
+  color: rgba(255, 255, 255, 0.18);
+
+  font-size: 6px;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
 .clinicos-heading-row {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
+  display: grid;
+
+  grid-template-columns: 1.25fr 0.75fr;
+
+  align-items: end;
 
   gap: 70px;
+
+  margin-top: 24px;
+}
+
+.clinicos-eyebrow {
+  margin: 0 0 16px;
+
+  color: #f4c906;
+
+  font-size: 7px;
+  font-weight: 900;
+
+  letter-spacing: 0.16em;
 }
 
 .clinicos-heading-row h2 {
@@ -59,10 +135,13 @@
 
   margin: 0;
 
-  font-size: clamp(48px, 5.7vw, 80px);
-  line-height: 0.95;
+  font-size: clamp(52px, 5.8vw, 82px);
 
-  letter-spacing: -0.055em;
+  line-height: 0.88;
+
+  font-weight: 760;
+
+  letter-spacing: -0.075em;
 }
 
 .clinicos-heading-row h2 span {
@@ -70,64 +149,75 @@
 }
 
 .clinicos-header-copy {
-  max-width: 350px;
+  max-width: 360px;
 
-  padding-bottom: 5px;
+  padding-bottom: 4px;
 }
 
 .clinicos-header-copy p {
-  margin: 0 0 22px;
+  margin: 0;
 
-  color: rgba(255, 255, 255, 0.48);
+  color: rgba(255, 255, 255, 0.43);
 
-  font-size: 14px;
-  line-height: 1.65;
+  font-size: 10px;
+
+  line-height: 1.75;
 }
 
-.clinicos-header-copy a {
-  display: inline-flex;
+.clinicos-system-note {
+  display: flex;
   align-items: center;
-  gap: 7px;
 
-  color: #ffffff;
+  gap: 8px;
 
-  text-decoration: none;
+  margin-top: 24px;
 
-  font-size: 13px;
-  font-weight: 650;
+  color: rgba(255, 255, 255, 0.22);
+
+  font-size: 5px;
+  font-weight: 900;
+
+  letter-spacing: 0.14em;
 }
 
-.clinicos-header-copy a svg {
-  color: #f4c906;
+.clinicos-system-note span {
+  width: 18px;
+  height: 1px;
+
+  background: #f4c906;
 }
 
 /* =====================================================
-   PRODUCT
+   PRODUCT VISUAL
 ===================================================== */
 
 .clinicos-product {
-  margin-top: 75px;
+  margin-top: 58px;
 
   background: #1b1b1b;
 
   border: 1px solid rgba(255, 255, 255, 0.08);
 
-  border-radius: 24px;
+  border-radius: 20px;
 
   overflow: hidden;
 
   box-shadow:
-    0 35px 80px rgba(0, 0, 0, 0.3);
+    0 30px 75px rgba(0, 0, 0, 0.32);
 }
 
+/* =====================================================
+   PRODUCT TOP
+===================================================== */
+
 .product-top {
-  height: 72px;
+  height: 65px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  padding: 0 25px;
+  padding: 0 22px;
 
   border-bottom: 1px solid rgba(255, 255, 255, 0.07);
 }
@@ -135,29 +225,30 @@
 .product-brand {
   display: flex;
   align-items: center;
-  gap: 11px;
+
+  gap: 10px;
 }
 
 .product-logo {
-  width: 35px;
-  height: 35px;
+  width: 32px;
+  height: 32px;
 
   display: grid;
   place-items: center;
 
   background: #f4c906;
-  color: #111111;
+  color: #111;
 
-  border-radius: 10px;
+  border-radius: 9px;
 
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 900;
 }
 
 .product-brand strong {
   display: block;
 
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .product-brand span {
@@ -165,28 +256,29 @@
 
   margin-top: 2px;
 
-  color: rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.3);
 
-  font-size: 8px;
+  font-size: 7px;
 }
 
 .product-status {
   display: flex;
   align-items: center;
+
   gap: 7px;
 
-  color: rgba(255, 255, 255, 0.38);
+  color: rgba(255, 255, 255, 0.3);
 
-  font-size: 9px;
+  font-size: 7px;
 }
 
 .product-status span {
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
+
+  background: #f4c906;
 
   border-radius: 50%;
-
-  background: #7bd58a;
 }
 
 /* =====================================================
@@ -195,9 +287,10 @@
 
 .product-body {
   display: grid;
-  grid-template-columns: 190px 1fr;
 
-  min-height: 480px;
+  grid-template-columns: 180px 1fr;
+
+  min-height: 445px;
 }
 
 /* =====================================================
@@ -205,7 +298,7 @@
 ===================================================== */
 
 .product-sidebar {
-  padding: 28px 16px;
+  padding: 25px 14px;
 
   border-right: 1px solid rgba(255, 255, 255, 0.07);
 }
@@ -213,37 +306,40 @@
 .sidebar-label {
   display: block;
 
-  padding: 0 12px;
-  margin-bottom: 10px;
+  padding: 0 11px;
 
-  color: rgba(255, 255, 255, 0.24);
+  margin-bottom: 9px;
 
-  font-size: 7px;
-  font-weight: 800;
-  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.2);
+
+  font-size: 6px;
+  font-weight: 900;
+
+  letter-spacing: 0.13em;
 }
 
 .sidebar-item {
-  padding: 10px 12px;
+  padding: 9px 11px;
 
-  margin-bottom: 3px;
+  margin-bottom: 2px;
 
-  color: rgba(255, 255, 255, 0.42);
+  color: rgba(255, 255, 255, 0.4);
 
-  border-radius: 8px;
+  border-radius: 7px;
 
-  font-size: 10px;
+  font-size: 8px;
 
   transition: 0.2s ease;
 }
 
 .sidebar-item.active {
   background: rgba(244, 201, 6, 0.1);
+
   color: #f4c906;
 }
 
 .bottom-label {
-  margin-top: 35px;
+  margin-top: 30px;
 }
 
 /* =====================================================
@@ -251,7 +347,7 @@
 ===================================================== */
 
 .product-dashboard {
-  padding: 30px;
+  padding: 27px;
 }
 
 .dashboard-heading {
@@ -260,33 +356,38 @@
   justify-content: space-between;
 }
 
-.dashboard-heading > div span {
-  color: rgba(255, 255, 255, 0.3);
+.dashboard-heading > div:first-child span {
+  color: rgba(255, 255, 255, 0.25);
 
-  font-size: 8px;
-  font-weight: 800;
-  letter-spacing: 0.1em;
+  font-size: 6px;
+  font-weight: 900;
+
+  letter-spacing: 0.11em;
 }
 
 .dashboard-heading h3 {
-  margin: 6px 0 0;
+  margin: 5px 0 0;
 
-  font-size: 25px;
-  letter-spacing: -0.04em;
+  font-size: 22px;
+
+  font-weight: 700;
+
+  letter-spacing: -0.045em;
 }
 
-.dashboard-heading button {
-  border: 0;
+.dashboard-date {
+  padding: 7px 9px;
 
-  padding: 10px 13px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
 
-  background: #f4c906;
-  color: #111111;
+  border-radius: 6px;
 
-  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.28);
 
-  font-size: 9px;
-  font-weight: 750;
+  font-size: 5px;
+  font-weight: 900;
+
+  letter-spacing: 0.12em;
 }
 
 /* =====================================================
@@ -295,40 +396,45 @@
 
 .dashboard-stats {
   display: grid;
+
   grid-template-columns: repeat(3, 1fr);
 
-  gap: 10px;
+  gap: 8px;
 
-  margin-top: 27px;
+  margin-top: 23px;
 }
 
 .dashboard-stat {
-  padding: 18px;
+  padding: 16px;
 
   background: #242424;
 
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.055);
 
-  border-radius: 12px;
+  border-radius: 10px;
 }
 
 .dashboard-stat span {
   display: block;
 
-  color: rgba(255, 255, 255, 0.32);
+  color: rgba(255, 255, 255, 0.28);
 
-  font-size: 7px;
-  font-weight: 800;
+  font-size: 6px;
+  font-weight: 900;
+
   letter-spacing: 0.09em;
 }
 
 .dashboard-stat strong {
   display: block;
 
-  margin-top: 10px;
+  margin-top: 9px;
 
-  font-size: 29px;
-  letter-spacing: -0.04em;
+  font-size: 26px;
+
+  line-height: 1;
+
+  letter-spacing: -0.045em;
 }
 
 .dashboard-stat small {
@@ -338,7 +444,7 @@
 
   color: #f4c906;
 
-  font-size: 8px;
+  font-size: 7px;
 }
 
 /* =====================================================
@@ -347,22 +453,23 @@
 
 .dashboard-content {
   display: grid;
+
   grid-template-columns: 1.25fr 0.75fr;
 
-  gap: 10px;
+  gap: 8px;
 
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 .activity-card,
 .appointment-card {
-  padding: 20px;
+  padding: 18px;
 
   background: #242424;
 
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.055);
 
-  border-radius: 12px;
+  border-radius: 10px;
 }
 
 .activity-header {
@@ -370,45 +477,50 @@
   align-items: center;
   justify-content: space-between;
 
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .activity-header strong {
-  font-size: 11px;
+  font-size: 9px;
 }
 
 .activity-header span {
-  color: rgba(255, 255, 255, 0.3);
+  color: #f4c906;
 
-  font-size: 8px;
+  font-size: 5px;
+  font-weight: 900;
+
+  letter-spacing: 0.1em;
 }
 
 .activity-row {
   display: flex;
   align-items: center;
 
-  gap: 10px;
+  gap: 9px;
 
-  padding: 11px 0;
+  padding: 9px 0;
 
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.045);
 }
 
 .activity-avatar {
-  width: 28px;
-  height: 28px;
+  width: 26px;
+  height: 26px;
 
   display: grid;
   place-items: center;
 
-  background: #313131;
+  flex-shrink: 0;
 
-  border-radius: 8px;
+  background: #303030;
 
-  color: #ffffff;
+  border-radius: 7px;
 
-  font-size: 7px;
-  font-weight: 800;
+  color: #fff;
+
+  font-size: 6px;
+  font-weight: 900;
 }
 
 .activity-row div:nth-child(2) {
@@ -418,23 +530,23 @@
 .activity-row strong {
   display: block;
 
-  font-size: 9px;
+  font-size: 7px;
 }
 
 .activity-row span {
   display: block;
 
-  margin-top: 3px;
+  margin-top: 2px;
 
-  color: rgba(255, 255, 255, 0.32);
+  color: rgba(255, 255, 255, 0.27);
 
-  font-size: 7px;
+  font-size: 6px;
 }
 
 .activity-row > small {
-  color: rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.2);
 
-  font-size: 7px;
+  font-size: 5px;
 }
 
 /* =====================================================
@@ -443,43 +555,44 @@
 
 .appointment-progress {
   display: grid;
+
   grid-template-columns: repeat(3, 1fr);
 
-  gap: 5px;
+  gap: 4px;
 
-  margin-top: 25px;
+  margin-top: 21px;
 }
 
 .appointment-progress div {
-  padding: 12px 5px;
+  padding: 10px 4px;
 
   text-align: center;
 
   background: #2d2d2d;
 
-  border-radius: 8px;
+  border-radius: 7px;
 }
 
 .appointment-progress strong {
   display: block;
 
-  font-size: 20px;
+  font-size: 17px;
 }
 
 .appointment-progress span {
   display: block;
 
-  margin-top: 4px;
+  margin-top: 3px;
 
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.25);
 
-  font-size: 7px;
+  font-size: 5px;
 }
 
 .progress-line {
-  height: 5px;
+  height: 4px;
 
-  margin-top: 23px;
+  margin-top: 20px;
 
   background: #303030;
 
@@ -498,11 +611,12 @@
 }
 
 .appointment-card p {
-  margin-top: 18px;
+  margin: 15px 0 0;
 
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.25);
 
-  font-size: 8px;
+  font-size: 6px;
+
   line-height: 1.5;
 }
 
@@ -512,25 +626,24 @@
 
 .clinicos-features {
   display: grid;
+
   grid-template-columns: repeat(4, 1fr);
 
-  gap: 10px;
+  gap: 8px;
 
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 .clinicos-feature {
-  position: relative;
+  min-height: 190px;
 
-  min-height: 220px;
-
-  padding: 23px;
+  padding: 20px;
 
   background: #1b1b1b;
 
   border: 1px solid rgba(255, 255, 255, 0.07);
 
-  border-radius: 15px;
+  border-radius: 12px;
 
   transition:
     transform 0.25s ease,
@@ -538,9 +651,9 @@
 }
 
 .clinicos-feature:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
 
-  border-color: rgba(244, 201, 6, 0.35);
+  border-color: rgba(244, 201, 6, 0.3);
 }
 
 .feature-top {
@@ -550,50 +663,46 @@
 }
 
 .feature-top > span {
-  color: rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.2);
 
-  font-size: 9px;
-  font-weight: 800;
+  font-size: 6px;
+  font-weight: 900;
 }
 
 .feature-icon {
-  width: 37px;
-  height: 37px;
+  width: 34px;
+  height: 34px;
 
   display: grid;
   place-items: center;
 
-  background: #272727;
+  background: #252525;
 
   color: #f4c906;
 
-  border-radius: 10px;
+  border-radius: 9px;
 }
 
 .clinicos-feature h3 {
-  margin: 45px 0 8px;
+  margin: 38px 0 8px;
 
-  font-size: 20px;
+  font-size: 17px;
+
+  line-height: 1.05;
 
   letter-spacing: -0.035em;
 }
 
 .clinicos-feature p {
-  max-width: 230px;
+  max-width: 220px;
 
-  color: rgba(255, 255, 255, 0.4);
+  margin: 0;
 
-  font-size: 11px;
+  color: rgba(255, 255, 255, 0.34);
+
+  font-size: 8px;
+
   line-height: 1.55;
-}
-
-.feature-arrow {
-  position: absolute;
-
-  right: 22px;
-  bottom: 22px;
-
-  color: rgba(255, 255, 255, 0.3);
 }
 
 /* =====================================================
@@ -605,24 +714,29 @@
   align-items: center;
   justify-content: space-between;
 
-  padding: 30px 5px 0;
+  gap: 30px;
+
+  padding: 24px 4px 0;
 }
 
 .clinicos-statement span {
-  color: rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.2);
 
-  font-size: 8px;
-  font-weight: 800;
-  letter-spacing: 0.12em;
+  font-size: 6px;
+  font-weight: 900;
+
+  letter-spacing: 0.13em;
 }
 
 .clinicos-statement strong {
-  font-size: 15px;
+  font-size: 11px;
   font-weight: 600;
+
+  letter-spacing: -0.01em;
 }
 
 .clinicos-statement i {
-  margin: 0 7px;
+  margin: 0 6px;
 
   color: #f4c906;
 
@@ -636,22 +750,25 @@
 @media (max-width: 1000px) {
 
   .clinicos-section {
-    padding: 100px 25px;
+    padding: 90px 28px 75px;
   }
 
   .clinicos-heading-row {
-    align-items: flex-start;
-    flex-direction: column;
+    grid-template-columns: 1fr;
 
     gap: 25px;
   }
 
   .clinicos-header-copy {
-    max-width: 600px;
+    max-width: 580px;
   }
 
   .clinicos-features {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-body {
+    grid-template-columns: 160px 1fr;
   }
 }
 
@@ -662,23 +779,46 @@
 @media (max-width: 650px) {
 
   .clinicos-section {
-    padding: 80px 16px;
+    padding: 72px 16px 60px;
+  }
+
+  .clinicos-page-number {
+    font-size: 5px;
+  }
+
+  .clinicos-heading-row {
+    margin-top: 20px;
   }
 
   .clinicos-heading-row h2 {
-    font-size: 49px;
+    font-size: 48px;
+
+    line-height: 0.88;
+  }
+
+  .clinicos-header-copy p {
+    font-size: 9px;
+  }
+
+  .clinicos-system-note {
+    margin-top: 18px;
   }
 
   .clinicos-product {
-    margin-top: 50px;
+    margin-top: 42px;
 
-    border-radius: 17px;
+    border-radius: 14px;
   }
 
   .product-top {
-    height: 62px;
+    height: 56px;
 
-    padding: 0 15px;
+    padding: 0 13px;
+  }
+
+  .product-logo {
+    width: 29px;
+    height: 29px;
   }
 
   .product-status {
@@ -696,31 +836,23 @@
   }
 
   .product-dashboard {
-    padding: 17px;
+    padding: 14px;
   }
 
   .dashboard-heading h3 {
-    font-size: 20px;
-  }
-
-  .dashboard-heading button {
-    padding: 8px 9px;
-
-    font-size: 8px;
+    font-size: 18px;
   }
 
   .dashboard-stats {
-    grid-template-columns: 1fr 1fr 1fr;
-
-    gap: 5px;
+    gap: 4px;
   }
 
   .dashboard-stat {
-    padding: 12px 8px;
+    padding: 11px 7px;
   }
 
   .dashboard-stat strong {
-    font-size: 21px;
+    font-size: 20px;
   }
 
   .dashboard-content {
@@ -729,20 +861,35 @@
 
   .clinicos-features {
     grid-template-columns: 1fr;
+
+    gap: 7px;
   }
 
   .clinicos-feature {
-    min-height: 190px;
+    min-height: 155px;
+
+    padding: 17px;
+  }
+
+  .clinicos-feature h3 {
+    margin-top: 28px;
+
+    font-size: 16px;
   }
 
   .clinicos-statement {
     align-items: flex-start;
+
     flex-direction: column;
-    gap: 12px;
+
+    gap: 10px;
+
+    padding-top: 20px;
   }
 
   .clinicos-statement strong {
-    font-size: 13px;
+    font-size: 10px;
+
     line-height: 1.7;
   }
 }

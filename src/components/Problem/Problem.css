@@ -1,467 +1,456 @@
 /* =====================================================
-   CLINICOS — PROBLEM SECTION
+   PROBLEM
 ===================================================== */
 
 .problem-section {
   position: relative;
+  isolation: isolate;
 
-  padding: 130px 40px 120px;
+  padding: 120px 40px 100px;
 
-  background: #f4f1e9;
-  color: #151515;
+  background: #111;
+  color: #fff;
 
   overflow: hidden;
 }
 
+.problem-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 700px;
+  height: 700px;
+
+  right: -500px;
+  top: -300px;
+
+  border: 1px solid rgba(244, 201, 6, .06);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.problem-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  left: -210px;
+  bottom: -190px;
+
+  border: 1px solid rgba(255,255,255,.035);
+
+  border-radius: 50%;
+}
+
 .problem-container {
+  position: relative;
+  z-index: 2;
+
   width: 100%;
-  max-width: 1380px;
+  max-width: 1340px;
+
   margin: 0 auto;
 }
 
 /* =====================================================
-   HEADING
+   HEADER
 ===================================================== */
 
-.problem-heading {
-  max-width: 850px;
-}
-
-.section-label {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-
-  margin-bottom: 20px;
-
-  color: #77736c;
-
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 0.14em;
-}
-
-.section-label span {
-  width: 7px;
-  height: 7px;
-
-  border-radius: 50%;
-
-  background: #f4c906;
-}
-
-.problem-heading h2 {
-  margin: 0;
-
-  font-size: clamp(48px, 6vw, 82px);
-  line-height: 0.94;
-
-  letter-spacing: -0.055em;
-  font-weight: 700;
-}
-
-.problem-heading h2 span {
-  color: #a09b90;
-}
-
-.problem-heading p {
-  margin-top: 25px;
-
-  color: #77736c;
-
-  font-size: 18px;
-}
-
-/* =====================================================
-   PATIENT JOURNEY
-===================================================== */
-
-.patient-journey {
-  display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
-
-  gap: 80px;
-
-  margin-top: 95px;
-  padding-bottom: 100px;
-
-  border-bottom: 1px solid #d9d4ca;
-}
-
-.journey-copy {
-  max-width: 480px;
-}
-
-.journey-number {
-  display: block;
-
-  margin-bottom: 18px;
-
-  color: #aaa49a;
-
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-}
-
-.journey-copy h3 {
-  margin: 0;
-
-  font-size: 38px;
-  line-height: 1;
-
-  letter-spacing: -0.045em;
-}
-
-.journey-copy p {
-  margin: 22px 0 30px;
-
-  color: #77736c;
-
-  font-size: 15px;
-  line-height: 1.6;
-}
-
-/* =====================================================
-   JOURNEY LIST
-===================================================== */
-
-.journey-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-  gap: 12px;
-}
-
-.journey-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
-  padding: 11px;
-
-  background: #ebe7de;
-
-  border-radius: 10px;
-
-  font-size: 11px;
-  font-weight: 650;
-}
-
-.journey-icon {
-  width: 29px;
-  height: 29px;
-
-  display: grid;
-  place-items: center;
-
-  flex-shrink: 0;
-
-  background: #ffffff;
-
-  border-radius: 8px;
-
-  color: #333;
-}
-
-/* =====================================================
-   JOURNEY VISUAL
-===================================================== */
-
-.journey-visual {
-  position: relative;
-
-  min-height: 390px;
-
-  padding: 30px 50px;
-
-  background: #171717;
-
-  border-radius: 24px;
-
-  overflow: hidden;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
-}
-
-.journey-visual::before {
-  content: "";
-
-  position: absolute;
-  width: 280px;
-  height: 280px;
-
-  top: -100px;
-  right: -80px;
-
-  background: rgba(244, 201, 6, 0.08);
-
-  border-radius: 50%;
-  filter: blur(30px);
-}
-
-.journey-line {
-  position: absolute;
-
-  left: 81px;
-  top: 83px;
-  bottom: 83px;
-
-  width: 1px;
-
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.1),
-    #f4c906,
-    rgba(255, 255, 255, 0.1)
-  );
-}
-
-.journey-node {
-  position: relative;
-  z-index: 2;
-
-  display: flex;
-  align-items: center;
-  gap: 18px;
-
-  width: 100%;
-  max-width: 430px;
-
-  margin: 13px 0;
-
-  padding: 17px 20px;
-
-  background: #242424;
-
-  border: 1px solid rgba(255, 255, 255, 0.07);
-
-  border-radius: 14px;
-}
-
-.node-icon {
-  width: 38px;
-  height: 38px;
-
-  display: grid;
-  place-items: center;
-
-  flex-shrink: 0;
-
-  background: #303030;
-
-  border-radius: 10px;
-
-  color: #ffffff;
-}
-
-.node-icon.yellow {
-  background: #f4c906;
-  color: #111111;
-}
-
-.journey-node small {
-  display: block;
-
-  margin-bottom: 4px;
-
-  color: rgba(255, 255, 255, 0.38);
-
-  font-size: 8px;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-}
-
-.journey-node strong {
-  display: block;
-
-  color: #ffffff;
-
-  font-size: 13px;
-}
-
-.journey-bottom {
-  position: absolute;
-
-  right: 35px;
-  bottom: 25px;
-
-  display: flex;
-  align-items: center;
-  gap: 8px;
-
-  color: rgba(255, 255, 255, 0.35);
-
-  font-size: 8px;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-}
-
-/* =====================================================
-   REVENUE SECTION
-===================================================== */
-
-.revenue-section {
-  margin-top: 100px;
-
-  padding: 55px;
-
-  background: #171717;
-
-  color: #ffffff;
-
-  border-radius: 25px;
-}
-
-.section-label.dark {
-  color: rgba(255, 255, 255, 0.45);
-}
-
-.revenue-intro h3 {
-  margin: 0;
-
-  max-width: 850px;
-
-  font-size: clamp(35px, 4vw, 56px);
-  line-height: 1;
-
-  letter-spacing: -0.045em;
-}
-
-.revenue-intro h3 strong {
-  color: #f4c906;
-}
-
-.revenue-intro p {
-  max-width: 500px;
-
-  margin-top: 18px;
-
-  color: rgba(255, 255, 255, 0.45);
-
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-/* =====================================================
-   REVENUE FLOW
-===================================================== */
-
-.revenue-flow {
-  display: grid;
-  grid-template-columns:
-    1fr 30px 1fr 30px 1fr 30px 1.2fr;
-
-  align-items: center;
-
-  gap: 10px;
-
-  margin-top: 50px;
-}
-
-.revenue-card {
-  min-height: 145px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  padding: 20px;
-
-  background: #242424;
-
-  border: 1px solid rgba(255, 255, 255, 0.07);
-
-  border-radius: 14px;
-}
-
-.revenue-label {
-  margin-bottom: 10px;
-
-  color: rgba(255, 255, 255, 0.4);
-
-  font-size: 8px;
-  font-weight: 800;
-  letter-spacing: 0.09em;
-}
-
-.revenue-card strong {
-  color: #ffffff;
-
-  font-size: 39px;
-  line-height: 1;
-
-  letter-spacing: -0.04em;
-}
-
-.revenue-card small {
-  margin-top: 8px;
-
-  color: rgba(255, 255, 255, 0.38);
-
-  font-size: 9px;
-}
-
-.revenue-highlight {
-  background: #f4c906;
-  border-color: #f4c906;
-}
-
-.revenue-highlight .revenue-label,
-.revenue-highlight small {
-  color: rgba(17, 17, 17, 0.55);
-}
-
-.revenue-highlight strong {
-  color: #111111;
-}
-
-.flow-arrow {
-  color: #f4c906;
-
-  text-align: center;
-
-  font-size: 20px;
-  font-weight: 700;
-}
-
-/* =====================================================
-   FOOTER MESSAGE
-===================================================== */
-
-.revenue-footer {
+.problem-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  margin-top: 45px;
-  padding-top: 25px;
-
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 55px;
 }
 
-.revenue-footer strong {
-  font-size: 15px;
+.problem-kicker {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  color: rgba(255,255,255,.35);
+
+  font-size: 7px;
+  font-weight: 800;
+
+  letter-spacing: .16em;
 }
 
-.revenue-footer span {
+.problem-kicker span {
+  width: 6px;
+  height: 6px;
+
+  background: #f4c906;
+
+  border-radius: 50%;
+}
+
+.problem-page-number {
+  color: rgba(255,255,255,.2);
+
+  font-size: 6px;
+  font-weight: 800;
+
+  letter-spacing: .12em;
+}
+
+/* =====================================================
+   GRID
+===================================================== */
+
+.problem-grid {
+  display: grid;
+
+  grid-template-columns: 1.02fr .98fr;
+
+  align-items: center;
+
+  gap: 80px;
+}
+
+/* =====================================================
+   IMAGE
+===================================================== */
+
+.problem-image-area {
+  position: relative;
+
+  padding: 0 17px 17px 0;
+}
+
+.problem-image-frame {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 1.08 / 1;
+
+  overflow: hidden;
+
+  background: #242424;
+
+  border-radius: 5px;
+}
+
+.problem-image-frame img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  filter: saturate(.72);
+
+  transition: transform .8s ease;
+}
+
+.problem-image-frame:hover img {
+  transform: scale(1.025);
+}
+
+.problem-image-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.05) 25%,
+      rgba(0,0,0,.75) 100%
+    );
+}
+
+/* IMAGE TOP */
+
+.problem-image-top {
+  position: absolute;
+
+  left: 21px;
+  right: 21px;
+  top: 19px;
+
+  display: flex;
+  justify-content: space-between;
+
+  color: rgba(255,255,255,.7);
+
+  font-size: 5px;
+  font-weight: 900;
+
+  letter-spacing: .14em;
+}
+
+/* IMAGE NOTE */
+
+.problem-image-note {
+  position: absolute;
+
+  left: 22px;
+  right: 22px;
+  bottom: 22px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.problem-image-number {
+  width: 36px;
+  height: 36px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  background: #f4c906;
+  color: #111;
+
+  border-radius: 50%;
+
+  font-size: 7px;
+  font-weight: 900;
+}
+
+.problem-image-note p {
+  margin: 0;
+
+  color: #fff;
+
+  font-size: 9px;
+
+  line-height: 1.4;
+
+  text-align: right;
+}
+
+/* YELLOW DETAIL */
+
+.problem-yellow-square {
+  position: absolute;
+
+  right: 0;
+  bottom: 0;
+
+  width: 105px;
+  height: 105px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  padding: 13px;
+
+  background: #f4c906;
+  color: #111;
+
+  z-index: -1;
+}
+
+.problem-yellow-square span {
+  font-size: 5px;
+  font-weight: 900;
+
+  letter-spacing: .12em;
+}
+
+.problem-yellow-square strong {
+  font-size: 10px;
+  line-height: .9;
+
+  letter-spacing: -.04em;
+}
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.problem-content {
+  max-width: 570px;
+}
+
+.problem-eyebrow {
+  margin: 0 0 17px;
+
   color: #f4c906;
 
-  font-size: 15px;
-  font-weight: 750;
+  font-size: 7px;
+  font-weight: 900;
+
+  letter-spacing: .16em;
 }
 
-.revenue-disclaimer {
-  margin-top: 17px;
+.problem-content h2 {
+  margin: 0;
 
-  color: rgba(255, 255, 255, 0.28);
+  font-size: clamp(55px, 6vw, 82px);
+
+  line-height: .84;
+
+  letter-spacing: -.075em;
+}
+
+.problem-content h2 em {
+  color: #77736c;
+
+  font-style: normal;
+}
+
+.problem-description {
+  max-width: 450px;
+
+  margin: 30px 0 0;
+
+  color: rgba(255,255,255,.4);
+
+  font-size: 10px;
+
+  line-height: 1.8;
+}
+
+/* =====================================================
+   PATIENT NEEDS
+===================================================== */
+
+.problem-needs {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 1px;
+
+  margin-top: 42px;
+
+  background: rgba(255,255,255,.08);
+
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+.problem-need {
+  min-height: 105px;
+
+  display: grid;
+
+  grid-template-columns: 22px 34px 1fr;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 17px;
+
+  background: #111;
+
+  transition: background .3s ease;
+}
+
+.problem-need:hover {
+  background: #171717;
+}
+
+.problem-need-number {
+  align-self: flex-start;
+
+  padding-top: 2px;
+
+  color: rgba(255,255,255,.2);
+
+  font-size: 5px;
+  font-weight: 900;
+}
+
+.problem-need-icon {
+  width: 34px;
+  height: 34px;
+
+  display: grid;
+  place-items: center;
+
+  background: #f4c906;
+  color: #111;
+
+  border-radius: 50%;
+}
+
+.problem-need-copy h3 {
+  margin: 0 0 4px;
+
+  font-size: 13px;
+
+  letter-spacing: -.025em;
+}
+
+.problem-need-copy p {
+  margin: 0;
+
+  color: rgba(255,255,255,.3);
+
+  font-size: 7px;
+
+  line-height: 1.45;
+}
+
+/* =====================================================
+   BOTTOM
+===================================================== */
+
+.problem-bottom {
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  margin-top: 50px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid rgba(255,255,255,.1);
+}
+
+.problem-bottom-line {
+  width: 30px;
+  height: 1px;
+
+  flex-shrink: 0;
+
+  background: #f4c906;
+}
+
+.problem-bottom p {
+  margin: 0;
+
+  color: rgba(255,255,255,.35);
 
   font-size: 8px;
-  line-height: 1.5;
+}
+
+.problem-bottom strong {
+  color: #fff;
+}
+
+.problem-bottom > span {
+  margin-left: auto;
+
+  color: rgba(255,255,255,.16);
+
+  font-size: 5px;
+  font-weight: 800;
+
+  letter-spacing: .1em;
 }
 
 /* =====================================================
@@ -471,28 +460,25 @@
 @media (max-width: 1000px) {
 
   .problem-section {
-    padding: 100px 25px;
+    padding: 100px 28px 85px;
   }
 
-  .patient-journey {
+  .problem-grid {
     grid-template-columns: 1fr;
-    gap: 50px;
+
+    gap: 55px;
   }
 
-  .journey-copy {
-    max-width: 700px;
+  .problem-content {
+    max-width: 720px;
   }
 
-  .revenue-flow {
-    grid-template-columns: 1fr 25px 1fr;
+  .problem-description {
+    max-width: 560px;
   }
 
-  .revenue-flow .revenue-card:nth-of-type(5) {
-    grid-column: 1 / -1;
-  }
-
-  .revenue-flow .flow-arrow:nth-of-type(3) {
-    display: none;
+  .problem-image-area {
+    max-width: 720px;
   }
 }
 
@@ -500,88 +486,90 @@
    MOBILE
 ===================================================== */
 
-@media (max-width: 650px) {
+@media (max-width: 600px) {
 
   .problem-section {
-    padding: 80px 16px;
+    padding: 75px 16px 65px;
   }
 
-  .problem-heading h2 {
-    font-size: 50px;
+  .problem-header {
+    margin-bottom: 38px;
   }
 
-  .problem-heading p {
-    font-size: 15px;
+  .problem-page-number {
+    font-size: 5px;
   }
 
-  .patient-journey {
-    margin-top: 65px;
-    padding-bottom: 70px;
+  .problem-grid {
+    gap: 42px;
   }
 
-  .journey-copy h3 {
-    font-size: 32px;
+  .problem-image-area {
+    padding: 0 9px 9px 0;
   }
 
-  .journey-list {
+  .problem-image-frame {
+    aspect-ratio: .9 / 1;
+  }
+
+  .problem-image-top {
+    left: 15px;
+    right: 15px;
+    top: 15px;
+  }
+
+  .problem-image-note {
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+  }
+
+  .problem-image-note p {
+    font-size: 7px;
+  }
+
+  .problem-yellow-square {
+    width: 67px;
+    height: 67px;
+
+    padding: 8px;
+  }
+
+  .problem-yellow-square strong {
+    font-size: 7px;
+  }
+
+  .problem-content h2 {
+    font-size: 48px;
+  }
+
+  .problem-description {
+    margin-top: 22px;
+
+    font-size: 9px;
+  }
+
+  .problem-needs {
     grid-template-columns: 1fr;
+
+    margin-top: 32px;
   }
 
-  .journey-visual {
-    min-height: 390px;
-
-    padding: 25px 18px;
-  }
-
-  .journey-line {
-    left: 47px;
-  }
-
-  .journey-node {
-    max-width: none;
+  .problem-need {
+    min-height: 82px;
 
     padding: 14px;
   }
 
-  .journey-bottom {
-    right: 20px;
+  .problem-bottom {
+    flex-wrap: wrap;
+
+    margin-top: 32px;
   }
 
-  .revenue-section {
-    margin-top: 70px;
+  .problem-bottom > span {
+    width: 100%;
 
-    padding: 28px 18px;
-
-    border-radius: 19px;
-  }
-
-  .revenue-intro h3 {
-    font-size: 34px;
-  }
-
-  .revenue-flow {
-    grid-template-columns: 1fr;
-    gap: 8px;
-
-    margin-top: 35px;
-  }
-
-  .revenue-flow .revenue-card:nth-of-type(5) {
-    grid-column: auto;
-  }
-
-  .flow-arrow {
-    transform: rotate(90deg);
-  }
-
-  .revenue-footer {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 7px;
-  }
-
-  .revenue-footer strong,
-  .revenue-footer span {
-    font-size: 13px;
+    margin-left: 43px;
   }
 }
