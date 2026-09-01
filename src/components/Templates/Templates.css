@@ -1,103 +1,132 @@
+/* =====================================================
+   CLINICOS — TEMPLATES
+===================================================== */
+
 .templates-section {
   position: relative;
-  padding: 25px 40px 25px;
+
+  padding: 90px 40px 95px;
+
   background: #f4f1e9;
   color: #151515;
+
   overflow: hidden;
 }
 
 
 /* =====================================================
-   REAL TEMPLATE IMAGE
+   BACKGROUND
 ===================================================== */
-
-
-
-
-.template-screen {
-  position: relative;
-  height: calc(100% - 32px);
-  overflow: hidden;
-  background: #ffffff;
-}
-
-.template-image {
-  width: 100%;
-  height: 100%;
-
-  display: block;
-
-  object-fit: contain;
-  object-position: center;
-
-  background: #ffffff;
-
-  transition: transform 0.6s ease;
-}
-
-.template-card:hover .template-image {
-  transform: scale(1.02);
-}
-
-/* =====================================================
-   HOVER
-===================================================== */
-
-
 
 .templates-section::before {
   content: "";
+
   position: absolute;
-  width: 520px;
-  height: 520px;
-  right: -310px;
-  top: 70px;
-  border: 1px solid rgba(21, 21, 21, 0.06);
+
+  width: 620px;
+  height: 620px;
+
+  right: -360px;
+  top: 80px;
+
+  border: 1px solid rgba(21, 21, 21, 0.055);
+
   border-radius: 50%;
+
   pointer-events: none;
 }
 
+.templates-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 320px;
+  height: 320px;
+
+  left: -220px;
+  bottom: 100px;
+
+  border: 1px solid rgba(21, 21, 21, 0.035);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
 .templates-container {
   position: relative;
-  z-index: 1;
+
+  z-index: 2;
+
   width: 100%;
   max-width: 1380px;
+
   margin: 0 auto;
 }
 
-/* HEADER */
+
+/* =====================================================
+   LABEL
+===================================================== */
 
 .templates-label {
   display: flex;
   align-items: center;
+
   gap: 9px;
+
   margin-bottom: 22px;
+
   color: #77736c;
-  font-size: 9px;
+
+  font-size: 10px;
+
   font-weight: 800;
+
   letter-spacing: 0.15em;
 }
 
 .templates-label span {
   width: 7px;
   height: 7px;
+
   flex-shrink: 0;
+
   background: #f4c906;
+
   border-radius: 50%;
 }
 
+
+/* =====================================================
+   HEADER
+===================================================== */
+
 .templates-heading-row {
   display: flex;
+
   align-items: flex-end;
+
   justify-content: space-between;
-  gap: 70px;
+
+  gap: 60px;
 }
 
 .templates-heading-row h2 {
   margin: 0;
+
   font-size: clamp(52px, 6vw, 82px);
+
   line-height: 0.9;
+
   font-weight: 760;
+
   letter-spacing: -0.065em;
 }
 
@@ -105,20 +134,37 @@
   color: #9b958b;
 }
 
+
+/* =====================================================
+   INTRO
+===================================================== */
+
 .templates-intro {
   display: flex;
+
   align-items: flex-end;
-  gap: 40px;
+
+  gap: 38px;
+
   max-width: 500px;
 }
 
 .templates-intro p {
   max-width: 350px;
+
   margin: 0;
+
   color: #77736c;
+
   font-size: 11px;
+
   line-height: 1.7;
 }
+
+
+/* =====================================================
+   COUNT
+===================================================== */
 
 .templates-count {
   flex-shrink: 0;
@@ -126,168 +172,382 @@
 
 .templates-count strong {
   display: block;
+
   font-size: 42px;
+
   line-height: 0.8;
+
   letter-spacing: -0.06em;
 }
 
 .templates-count span {
   display: block;
+
   margin-top: 8px;
+
   color: #99938a;
-  font-size: 6px;
+
+  font-size: 8px;
+
   font-weight: 800;
+
   letter-spacing: 0.12em;
+
   white-space: nowrap;
 }
 
-/* GRID */
+
+/* =====================================================
+   GRID
+   DESKTOP = 3 + 3
+===================================================== */
 
 .templates-grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 34px 16px;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 42px 16px;
+
   margin-top: 65px;
 }
 
-.template-card {
-  grid-column: span 4;
+
+/* IMPORTANT:
+   All cards use normal grid placement.
+   No special positioning.
+*/
+
+.template-card,
+.template-card-1,
+.template-card-2,
+.template-card-3,
+.template-card-4,
+.template-card-5,
+.template-card-6 {
+  grid-column: auto;
+
   min-width: 0;
 }
 
-.template-card-4 {
-  grid-column: 3 / span 4;
-}
 
-.template-card-5 {
-  grid-column: 7 / span 4;
-}
-
-/* PREVIEW */
+/* =====================================================
+   PREVIEW
+===================================================== */
 
 .template-preview {
   position: relative;
+
+  width: 100%;
+
   height: 365px;
+
   padding: 7px;
+
+  box-sizing: border-box;
+
   background: #d8d2c7;
+
   border: 1px solid #d0cabf;
-  border-radius: 16px;
+
+  border-radius: 17px;
+
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+
+  box-shadow:
+    0 12px 32px rgba(0, 0, 0, 0.07);
+
   transition:
     transform 0.35s ease,
     box-shadow 0.35s ease;
 }
 
 .template-card:hover .template-preview {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 22px 48px rgba(0, 0, 0, 0.13);
 }
 
-/* BROWSER */
+
+/* =====================================================
+   BROWSER
+===================================================== */
 
 .template-browser {
   position: relative;
-  z-index: 3;
+
+  z-index: 5;
+
   height: 30px;
+
   display: flex;
+
   align-items: center;
+
   padding: 0 10px;
+
+  box-sizing: border-box;
+
   background: #171717;
-  border-radius: 9px 9px 0 0;
+
+  border-radius: 10px 10px 0 0;
+
   color: rgba(255, 255, 255, 0.4);
 }
 
+
+/* =====================================================
+   BROWSER DOTS
+===================================================== */
+
 .browser-dots {
   display: flex;
+
   align-items: center;
+
   gap: 4px;
+
   width: 48px;
+
+  flex-shrink: 0;
 }
 
 .browser-dots span {
   width: 5px;
   height: 5px;
-  background: #696969;
+
+  background: #666666;
+
   border-radius: 50%;
 }
 
+
+/* =====================================================
+   ADDRESS
+===================================================== */
+
 .browser-address {
   flex: 1;
+
+  min-width: 0;
+
   display: flex;
+
+  align-items: center;
+
   justify-content: center;
 }
 
 .browser-address span {
-  max-width: 190px;
-  padding: 4px 25px;
+  width: 60%;
+
+  max-width: 220px;
+
+  padding: 4px 15px;
+
   overflow: hidden;
+
   white-space: nowrap;
+
   text-overflow: ellipsis;
+
   background: #292929;
+
   border-radius: 5px;
-  color: rgba(255, 255, 255, 0.38);
-  font-size: 5.5px;
+
+  color: rgba(255, 255, 255, 0.4);
+
+  font-size: 8px;
+
   text-align: center;
 }
 
-.template-browser svg {
+.template-browser > svg {
   width: 12px;
+
   flex-shrink: 0;
+
   color: rgba(255, 255, 255, 0.35);
 }
 
-/* WEBSITE */
+
+/* =====================================================
+   WEBSITE SCREEN
+===================================================== */
 
 .template-screen {
   position: relative;
+
   width: 100%;
+
   height: calc(100% - 30px);
+
   overflow: hidden;
+
   background: #ffffff;
 }
 
-.template-iframe {
+
+/* =====================================================
+   REAL WEBSITE IMAGE
+===================================================== */
+
+.template-image {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
   width: 100%;
-  height: 100%;
+
+  height: auto;
+
+  min-height: 100%;
+
   display: block;
-  border: 0;
+
   background: #ffffff;
-  pointer-events: none;
+
+  object-fit: cover;
+
+  object-position: top center;
+
+  transition:
+    transform 0.6s cubic-bezier(.2, .7, .2, 1);
 }
 
-/* NUMBER */
+
+/* =====================================================
+   IMAGE HOVER
+===================================================== */
+
+.template-card:hover .template-image {
+  transform: scale(1.015);
+}
+
+
+/* =====================================================
+   HOVER OVERLAY
+===================================================== */
+
+.template-hover {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 4;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: rgba(21, 21, 21, 0.30);
+
+  opacity: 0;
+
+  transition:
+    opacity 0.3s ease;
+}
+
+.template-card:hover .template-hover {
+  opacity: 1;
+}
+
+
+/* =====================================================
+   LIVE WEBSITE BUTTON
+===================================================== */
+
+.template-hover a {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 11px 16px;
+
+  background: #f4c906;
+
+  color: #151515;
+
+  border-radius: 8px;
+
+  text-decoration: none;
+
+  font-size: 9px;
+
+  font-weight: 850;
+
+  box-shadow:
+    0 10px 28px rgba(0, 0, 0, 0.2);
+
+  transform: translateY(8px);
+
+  transition:
+    transform 0.3s ease,
+    background 0.25s ease;
+}
+
+.template-card:hover .template-hover a {
+  transform: translateY(0);
+}
+
+.template-hover a:hover {
+  background: #ffffff;
+}
+
+
+/* =====================================================
+   NUMBER
+===================================================== */
 
 .template-preview-number {
   position: absolute;
+
   left: 17px;
   bottom: 17px;
-  z-index: 5;
+
+  z-index: 6;
 
   width: 31px;
   height: 31px;
 
   display: grid;
+
   place-items: center;
 
   background: #f4c906;
+
   color: #151515;
 
   border-radius: 50%;
 
-  font-size: 7px;
+  font-size: 10px;
+
   font-weight: 900;
 
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.14);
+  box-shadow:
+    0 8px 18px rgba(0, 0, 0, 0.16);
 }
 
-/* INFO */
+
+/* =====================================================
+   INFO
+===================================================== */
 
 .template-info {
   display: flex;
+
   align-items: flex-start;
+
   justify-content: space-between;
-  gap: 20px;
+
+  gap: 18px;
+
   padding: 17px 3px 0;
 }
 
@@ -295,62 +555,116 @@
   min-width: 0;
 }
 
+
+/* =====================================================
+   META
+===================================================== */
+
 .template-meta {
   display: flex;
+
   align-items: center;
+
   gap: 8px;
-  margin-bottom: 5px;
+
+  margin-bottom: 6px;
 }
 
 .template-meta span {
   color: #aaa49a;
-  font-size: 7px;
+
+  font-size: 9px;
+
   font-weight: 800;
 }
 
 .template-meta small {
-  padding: 3px 7px;
+  padding: 4px 8px;
+
   background: #e8e3da;
+
   border-radius: 20px;
+
   color: #77736c;
-  font-size: 6px;
+
+  font-size: 7px;
+
   font-weight: 800;
+
   letter-spacing: 0.08em;
+
   text-transform: uppercase;
 }
 
+
+/* =====================================================
+   TITLE
+===================================================== */
+
 .template-info h3 {
   margin: 0;
+
+  color: #151515;
+
   font-size: 20px;
+
   line-height: 1;
+
+  font-weight: 750;
+
   letter-spacing: -0.045em;
 }
 
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
 .template-info p {
   max-width: 330px;
+
   margin: 8px 0 0;
+
   color: #858077;
-  font-size: 8px;
+
+  font-size: 9px;
+
   line-height: 1.6;
 }
 
-/* LINK */
+
+/* =====================================================
+   LINK
+===================================================== */
 
 .template-link {
   display: inline-flex;
+
   align-items: center;
+
   gap: 7px;
+
   flex-shrink: 0;
-  margin-top: 24px;
+
+  margin-top: 23px;
+
   color: #151515;
+
   text-decoration: none;
+
   font-size: 8px;
-  font-weight: 800;
-  transition: color 0.25s ease;
+
+  font-weight: 850;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.25s ease;
 }
 
 .template-link svg {
-  transition: transform 0.25s ease;
+  transition:
+    transform 0.25s ease;
 }
 
 .template-link:hover {
@@ -358,10 +672,14 @@
 }
 
 .template-link:hover svg {
-  transform: translate(2px, -2px);
+  transform:
+    translate(2px, -2px);
 }
 
-/* FOOTER */
+
+/* =====================================================
+   FOOTER
+===================================================== */
 
 .templates-footer {
   margin-top: 58px;
@@ -369,35 +687,54 @@
 
 .templates-footer-line {
   width: 100%;
+
   height: 1px;
+
   background: #d8d2c8;
 }
 
 .templates-footer-content {
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
+
   padding-top: 20px;
 }
 
 .templates-footer-content span {
   display: block;
+
   margin-bottom: 5px;
+
   color: #99938a;
-  font-size: 6px;
+
+  font-size: 7px;
+
   font-weight: 800;
+
   letter-spacing: 0.13em;
 }
 
 .templates-footer-content strong {
   font-size: 14px;
+
   font-weight: 600;
+
   letter-spacing: -0.02em;
 }
 
+
+/* =====================================================
+   FOOTER MARK
+===================================================== */
+
 .templates-footer-mark {
   display: flex;
+
   align-items: center;
+
   gap: 12px;
 }
 
@@ -407,67 +744,131 @@
 
 .templates-footer-mark strong {
   color: #151515;
+
   font-size: 22px;
 }
 
-/* TABLET */
 
-@media (max-width: 1000px) {
+/* =====================================================
+   LARGE TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+
   .templates-section {
-    padding: 25px 25px;
+    padding: 80px 25px 85px;
   }
 
   .templates-heading-row {
+    gap: 40px;
+  }
+
+  .templates-grid {
+    gap: 35px 14px;
+  }
+
+  .template-preview {
+    height: 330px;
+  }
+
+}
+
+
+/* =====================================================
+   TABLET
+   2 + 2 + 2
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .templates-heading-row {
     align-items: flex-start;
+
     flex-direction: column;
-    gap: 30px;
+
+    gap: 28px;
   }
 
   .templates-intro {
-    max-width: 600px;
+    max-width: 650px;
+  }
+
+  .templates-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 35px 14px;
   }
 
   .template-card,
+  .template-card-1,
+  .template-card-2,
+  .template-card-3,
   .template-card-4,
-  .template-card-5 {
-    grid-column: span 6;
+  .template-card-5,
+  .template-card-6 {
+    grid-column: auto;
   }
 
-  .template-card-4 {
-    grid-column: 1 / span 6;
+  .template-preview {
+    height: 340px;
   }
 
-  .template-card-5 {
-    grid-column: 7 / span 6;
-  }
 }
 
-/* MOBILE */
+
+/* =====================================================
+   MOBILE
+   1 + 1 + 1...
+===================================================== */
 
 @media (max-width: 650px) {
+
   .templates-section {
-    padding: 78px 16px 75px;
+    padding: 75px 16px 70px;
+  }
+
+
+  /* HEADER */
+
+  .templates-label {
+    margin-bottom: 18px;
+
+    font-size: 8px;
   }
 
   .templates-heading-row h2 {
     font-size: 49px;
+
+    line-height: 0.92;
   }
 
   .templates-intro {
     width: 100%;
+
     align-items: flex-start;
+
     flex-direction: column;
-    gap: 20px;
+
+    gap: 18px;
   }
 
   .templates-intro p {
     max-width: 340px;
-    font-size: 10px;
+
+    font-size: 9px;
+
+    line-height: 1.7;
   }
+
+
+  /* COUNT */
 
   .templates-count {
     display: flex;
+
     align-items: baseline;
+
     gap: 8px;
   }
 
@@ -477,28 +878,125 @@
 
   .templates-count span {
     margin: 0;
+
+    font-size: 7px;
   }
+
+
+  /* GRID */
 
   .templates-grid {
     grid-template-columns: 1fr;
-    gap: 32px;
+
+    gap: 34px;
+
     margin-top: 45px;
   }
 
   .template-card,
+  .template-card-1,
+  .template-card-2,
+  .template-card-3,
   .template-card-4,
-  .template-card-5 {
+  .template-card-5,
+  .template-card-6 {
     grid-column: auto;
   }
 
+
+  /* PREVIEW */
+
   .template-preview {
     height: 350px;
+
+    padding: 6px;
+
     border-radius: 13px;
   }
 
+
+  /* BROWSER */
+
+  .template-browser {
+    height: 28px;
+
+    padding: 0 8px;
+
+    border-radius: 8px 8px 0 0;
+  }
+
+  .template-screen {
+    height: calc(100% - 28px);
+  }
+
+  .browser-dots {
+    width: 38px;
+  }
+
+  .browser-dots span {
+    width: 4px;
+    height: 4px;
+  }
+
+  .browser-address span {
+    width: 58%;
+
+    padding: 4px 9px;
+
+    font-size: 6px;
+  }
+
+  .template-browser > svg {
+    width: 10px;
+  }
+
+
+  /* IMAGE */
+
+  .template-image {
+    width: 100%;
+
+    height: auto;
+
+    min-height: 100%;
+
+    object-position: top center;
+  }
+
+
+  /* NUMBER */
+
+  .template-preview-number {
+    left: 13px;
+    bottom: 13px;
+
+    width: 28px;
+    height: 28px;
+
+    font-size: 9px;
+  }
+
+
+  /* INFO */
+
   .template-info {
-    gap: 10px;
+    gap: 12px;
+
     padding-top: 14px;
+  }
+
+  .template-meta {
+    margin-bottom: 5px;
+  }
+
+  .template-meta span {
+    font-size: 8px;
+  }
+
+  .template-meta small {
+    padding: 3px 6px;
+
+    font-size: 6px;
   }
 
   .template-info h3 {
@@ -507,13 +1005,27 @@
 
   .template-info p {
     max-width: 270px;
+
     font-size: 8px;
   }
 
+
+  /* LINK */
+
   .template-link {
-    margin-top: 22px;
+    margin-top: 21px;
+
+    gap: 5px;
+
     font-size: 7px;
   }
+
+  .template-link svg {
+    width: 12px;
+  }
+
+
+  /* FOOTER */
 
   .templates-footer {
     margin-top: 45px;
@@ -521,7 +1033,628 @@
 
   .templates-footer-content {
     align-items: flex-start;
-    gap: 20px;
+
     flex-direction: column;
+
+    gap: 18px;
+  }
+
+  .templates-footer-content span {
+    font-size: 6px;
+  }
+
+  .templates-footer-content strong {
+    font-size: 12px;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 400px) {
+
+  .templates-section {
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+
+  .templates-heading-row h2 {
+    font-size: 44px;
+  }
+
+  .template-preview {
+    height: 320px;
+  }
+
+  .template-info {
+    flex-direction: column;
+
+    gap: 3px;
+  }
+
+  .template-link {
+    margin-top: 8px;
+  }
+
+}
+
+/* =====================================================
+   CLINICOS — TYPOGRAPHY UPGRADE
+   Better readable / premium sizing
+===================================================== */
+
+/* SECTION LABEL */
+.templates-label {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+}
+
+/* MAIN HEADING */
+.templates-heading-row h2 {
+  font-size: clamp(56px, 6vw, 84px);
+  line-height: 0.92;
+  letter-spacing: -0.06em;
+}
+
+/* INTRO TEXT */
+.templates-intro p {
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* COUNT */
+.templates-count strong {
+  font-size: 44px;
+}
+
+.templates-count span {
+  font-size: 9px;
+  letter-spacing: 0.12em;
+}
+
+/* BROWSER ADDRESS */
+.browser-address span {
+  font-size: 9px;
+}
+
+/* NUMBER */
+.template-preview-number {
+  width: 34px;
+  height: 34px;
+  font-size: 11px;
+}
+
+/* TEMPLATE META */
+.template-meta span {
+  font-size: 11px;
+}
+
+.template-meta small {
+  font-size: 8px;
+  padding: 5px 9px;
+}
+
+/* CARD TITLE */
+.template-info h3 {
+  font-size: 23px;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+/* CARD DESCRIPTION */
+.template-info p {
+  max-width: 350px;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+/* LINKS */
+.template-link {
+  font-size: 11px;
+  gap: 8px;
+  margin-top: 25px;
+}
+
+/* HOVER BUTTON */
+.template-hover a {
+  font-size: 11px;
+  padding: 12px 17px;
+}
+
+/* FOOTER LABEL */
+.templates-footer-content span {
+  font-size: 8px;
+}
+
+/* FOOTER TEXT */
+.templates-footer-content strong {
+  font-size: 16px;
+}
+
+
+/* =====================================================
+   ADMIN PANEL
+===================================================== */
+
+.template-admin-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .templates-heading-row h2 {
+    font-size: 58px;
+  }
+
+  .templates-intro p {
+    font-size: 12px;
+  }
+
+  .template-info h3 {
+    font-size: 21px;
+  }
+
+  .template-info p {
+    font-size: 11px;
+  }
+
+  .template-link {
+    font-size: 10px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+  .templates-label {
+    font-size: 9px;
+  }
+
+  .templates-heading-row h2 {
+    font-size: 48px;
+    line-height: 0.94;
+  }
+
+  .templates-intro p {
+    font-size: 11px;
+    line-height: 1.65;
+  }
+
+  .templates-count strong {
+    font-size: 32px;
+  }
+
+  .templates-count span {
+    font-size: 8px;
+  }
+
+  .browser-address span {
+    font-size: 7px;
+  }
+
+  .template-preview-number {
+    width: 30px;
+    height: 30px;
+    font-size: 10px;
+  }
+
+  .template-meta span {
+    font-size: 9px;
+  }
+
+  .template-meta small {
+    font-size: 7px;
+  }
+
+  .template-info h3 {
+    font-size: 20px;
+  }
+
+  .template-info p {
+    max-width: 300px;
+    font-size: 10px;
+    line-height: 1.6;
+  }
+
+  .template-link {
+    font-size: 9px;
+  }
+
+  .templates-footer-content span {
+    font-size: 7px;
+  }
+
+  .templates-footer-content strong {
+    font-size: 14px;
+  }
+}
+
+
+/* =====================================================
+   TEMPLATE IMAGE — FULL IMAGE / NO CROP
+===================================================== */
+
+.template-screen {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 30px);
+  overflow: hidden;
+  background: #ffffff;
+}
+
+/* Full website screenshot */
+.template-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: contain;
+  object-position: top center;
+
+  background: #ffffff;
+
+  transition: none;
+}
+
+/* NO HOVER ZOOM */
+.template-card:hover .template-image {
+  transform: none;
+}
+
+
+/* =====================================================
+   REMOVE HOVER OVERLAY
+===================================================== */
+
+.template-hover {
+  display: none !important;
+}
+
+
+/* =====================================================
+   REMOVE CARD HOVER MOVEMENT
+===================================================== */
+
+.template-card:hover .template-preview {
+  transform: none;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.07);
+}
+
+
+/* =====================================================
+   CLEAN TEMPLATE PREVIEW
+===================================================== */
+
+.template-preview {
+  cursor: default;
+}
+
+
+/* =====================================================
+   MOBILE — FULL IMAGE
+===================================================== */
+
+@media (max-width: 650px) {
+
+  .template-screen {
+    height: calc(100% - 28px);
+  }
+
+  .template-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    object-position: top center;
+
+    transform: none !important;
+  }
+
+  .template-card:hover .template-image {
+    transform: none !important;
+  }
+
+  .template-card:hover .template-preview {
+    transform: none !important;
+  }
+}
+
+/* =====================================================
+   TEMPLATE IMAGE
+   FULL IMAGE + NO WHITE SPACE
+===================================================== */
+
+.template-preview {
+  position: relative;
+  padding: 7px;
+
+  background: #d8d2c7;
+  border: 1px solid #d0cabf;
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+
+  transition: none !important;
+}
+
+
+/* Browser */
+.template-browser {
+  position: relative;
+  z-index: 5;
+
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 10px;
+
+  background: #171717;
+
+  border-radius: 9px 9px 0 0;
+}
+
+
+/* Image container */
+.template-screen {
+  position: relative;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  line-height: 0;
+}
+
+
+/* FULL IMAGE */
+.template-image {
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+  object-position: top center;
+
+  background: #ffffff;
+
+  transform: none !important;
+  transition: none !important;
+}
+
+
+/* NO HOVER */
+.template-card:hover .template-image {
+  transform: none !important;
+}
+
+.template-card:hover .template-preview {
+  transform: none !important;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+
+/* Remove hover overlay */
+.template-hover {
+  display: none !important;
+}
+
+
+/* =====================================================
+   IMAGE NUMBER
+===================================================== */
+
+.template-preview-number {
+  position: absolute;
+
+  left: 17px;
+  bottom: 17px;
+
+  z-index: 10;
+
+  width: 34px;
+  height: 34px;
+
+  display: grid;
+  place-items: center;
+
+  background: #f4c906;
+  color: #151515;
+
+  border-radius: 50%;
+
+  font-size: 11px;
+  font-weight: 900;
+
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.14);
+}
+
+
+/* =====================================================
+   ADMIN BADGE
+===================================================== */
+
+.template-admin-badge {
+  position: absolute;
+
+  top: 43px;
+  right: 15px;
+
+  z-index: 20;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 7px 10px;
+
+  background: #f4c906;
+  color: #151515;
+
+  border-radius: 20px;
+
+  font-size: 8px;
+  font-weight: 900;
+
+  letter-spacing: .08em;
+}
+
+
+/* =====================================================
+   CARD INFO
+===================================================== */
+
+.template-info {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 17px 3px 0;
+}
+
+.template-info h3 {
+  margin: 0;
+
+  font-size: 23px;
+  line-height: 1.05;
+
+  letter-spacing: -0.04em;
+}
+
+.template-info p {
+  max-width: 350px;
+
+  margin: 8px 0 0;
+
+  color: #858077;
+
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+
+/* =====================================================
+   LINKS
+===================================================== */
+
+.template-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  gap: 8px;
+
+  flex-shrink: 0;
+}
+
+.template-link {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+
+  color: #151515;
+
+  text-decoration: none;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.template-admin-link {
+  color: #8f8300;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+  .template-preview {
+    padding: 6px;
+
+    border-radius: 13px;
+  }
+
+  .template-browser {
+    height: 28px;
+  }
+
+  .template-image {
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+
+    transform: none !important;
+  }
+
+  .template-preview-number {
+    left: 13px;
+    bottom: 13px;
+
+    width: 30px;
+    height: 30px;
+
+    font-size: 10px;
+  }
+
+  .template-info {
+    gap: 12px;
+  }
+
+  .template-info h3 {
+    font-size: 20px;
+  }
+
+  .template-info p {
+    font-size: 10px;
+  }
+
+  .template-link {
+    font-size: 9px;
+  }
+
+  .template-admin-badge {
+    top: 39px;
+    right: 10px;
+
+    padding: 6px 8px;
+
+    font-size: 7px;
   }
 }
