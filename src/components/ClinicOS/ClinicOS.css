@@ -165,9 +165,9 @@
 
   font-size: clamp(52px, 5.8vw, 82px);
 
-  line-height: 0.88;
+  line-height: 0.98;
 
-  font-weight: 760;
+  font-weight: 600;
 
   letter-spacing: -0.075em;
 }
@@ -509,7 +509,7 @@
 }
 
 .activity-header strong {
-  font-size: 9px;
+  font-size: 10px;
 }
 
 .activity-header span {
