@@ -184,7 +184,7 @@
 .price-card-top span {
   color: #99938a;
 
-  font-size: 7px;
+  font-size: 11px;
   font-weight: 800;
 
   letter-spacing: 0.12em;
@@ -231,7 +231,7 @@
 
   color: #77736c;
 
-  font-size: 10px;
+  font-size: 11px;
 
   line-height: 1.6;
 }
@@ -265,7 +265,7 @@
 
   color: #99938a;
 
-  font-size: 7px;
+  font-size: 11px;
   font-weight: 800;
 
   letter-spacing: 0.13em;
@@ -300,7 +300,7 @@
 
   color: #57534d;
 
-  font-size: 8px;
+  font-size: 11px;
 
   line-height: 1.4;
 }
@@ -343,7 +343,7 @@
 
   color: #aaa49b;
 
-  font-size: 6px;
+  font-size: 11px;
 
   text-align: left;
 }
@@ -369,7 +369,7 @@
 
   border-radius: 0 0 6px 6px;
 
-  font-size: 6px;
+  font-size: 11px;
   font-weight: 900;
 
   letter-spacing: 0.1em;
@@ -419,7 +419,7 @@
 
   color: rgba(255, 255, 255, 0.28);
 
-  font-size: 6px;
+  font-size: 11px;
   font-weight: 800;
 
   letter-spacing: 0.13em;
@@ -450,7 +450,7 @@
 
   color: rgba(255, 255, 255, 0.28);
 
-  font-size: 7px;
+  font-size: 11px;
 }
 
 /* =====================================================
@@ -473,7 +473,7 @@
 
   color: #f4c906;
 
-  font-size: 6px;
+  font-size: 11px;
   font-weight: 800;
 
   letter-spacing: 0.1em;
@@ -516,7 +516,7 @@
 .pricing-bottom span {
   color: #aaa49b;
 
-  font-size: 6px;
+  font-size: 11px;
   font-weight: 800;
 
   letter-spacing: 0.12em;

@@ -12,6 +12,7 @@ import AIReceptionist from './components/AIReceptionist/AIReceptionist'
 import Pricing from './components/Pricing/Pricing'
 import WhySnappyTales from './components/WhySnappyTales/WhySnappyTales'
 import Footer from './components/Footer/Footer'
+import Closing from './components/Closing/Closing'
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
     <AIReceptionist/>
     <Pricing/>
     <WhySnappyTales/>
+    <Closing/>
     <Footer/>
     
     </>
