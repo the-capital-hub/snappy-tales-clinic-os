@@ -78,7 +78,7 @@
 
   color: rgba(255,255,255,.35);
 
-  font-size: 7px;
+  font-size: 11px;
   font-weight: 800;
 
   letter-spacing: .16em;
@@ -96,7 +96,7 @@
 .problem-page-number {
   color: rgba(255,255,255,.2);
 
-  font-size: 6px;
+  font-size: 11px;
   font-weight: 800;
 
   letter-spacing: .12em;
@@ -186,7 +186,7 @@
 
   color: rgba(255,255,255,.7);
 
-  font-size: 5px;
+  font-size: 10px;
   font-weight: 900;
 
   letter-spacing: .14em;
@@ -222,7 +222,7 @@
 
   border-radius: 50%;
 
-  font-size: 7px;
+  font-size: 11px;
   font-weight: 900;
 }
 
@@ -262,7 +262,7 @@
 }
 
 .problem-yellow-square span {
-  font-size: 5px;
+  font-size: 10px;
   font-weight: 900;
 
   letter-spacing: .12em;
@@ -288,7 +288,7 @@
 
   color: #f4c906;
 
-  font-size: 7px;
+  font-size: 11px;
   font-weight: 900;
 
   letter-spacing: .16em;
@@ -369,7 +369,7 @@
 
   color: rgba(255,255,255,.2);
 
-  font-size: 5px;
+  font-size: 10px;
   font-weight: 900;
 }
 
@@ -399,7 +399,7 @@
 
   color: rgba(255,255,255,.3);
 
-  font-size: 7px;
+  font-size: 11px;
 
   line-height: 1.45;
 }
@@ -435,7 +435,7 @@
 
   color: rgba(255,255,255,.35);
 
-  font-size: 8px;
+  font-size: 11px;
 }
 
 .problem-bottom strong {
@@ -447,7 +447,7 @@
 
   color: rgba(255,255,255,.16);
 
-  font-size: 5px;
+  font-size: 10px;
   font-weight: 800;
 
   letter-spacing: .1em;
@@ -497,7 +497,7 @@
   }
 
   .problem-page-number {
-    font-size: 5px;
+    font-size: 10px;
   }
 
   .problem-grid {
@@ -525,7 +525,7 @@
   }
 
   .problem-image-note p {
-    font-size: 7px;
+    font-size: 11px;
   }
 
   .problem-yellow-square {
@@ -536,7 +536,7 @@
   }
 
   .problem-yellow-square strong {
-    font-size: 7px;
+    font-size: 11px;
   }
 
   .problem-content h2 {

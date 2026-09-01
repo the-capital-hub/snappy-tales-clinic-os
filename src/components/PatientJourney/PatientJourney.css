@@ -74,7 +74,7 @@
 
   color: #858078;
 
-  font-size: 8px;
+  font-size: 11px;
   font-weight: 800;
 
   letter-spacing: 0.16em;
@@ -156,7 +156,7 @@
 
   color: #969087;
 
-  font-size: 7px;
+  font-size: 11px;
   font-weight: 800;
 
   letter-spacing: 0.14em;
@@ -176,7 +176,7 @@
 
   color: #8b857c;
 
-  font-size: 7px;
+  font-size: 11px;
 
   line-height: 1.7;
 }
@@ -241,7 +241,7 @@
 
   color: #aaa39a;
 
-  font-size: 7px;
+  font-size: 11px;
   font-weight: 800;
 
   letter-spacing: 0.1em;
@@ -307,7 +307,7 @@
 .pj-flow-copy > span {
   color: #a19a90;
 
-  font-size: 6px;
+  font-size: 11px;
   font-weight: 800;
 
   letter-spacing: 0.15em;
@@ -333,7 +333,7 @@
 
   color: #777169;
 
-  font-size: 8px;
+  font-size: 11px;
 
   line-height: 1.6;
 }
@@ -453,7 +453,7 @@
 
   color: rgba(255, 255, 255, 0.27);
 
-  font-size: 6px;
+  font-size: 11px;
   font-weight: 800;
 
   letter-spacing: 0.14em;
@@ -498,7 +498,7 @@
 
   color: rgba(255, 255, 255, 0.43);
 
-  font-size: 6px;
+  font-size: 11px;
 }
 
 /* =====================================================
@@ -531,7 +531,7 @@
 
   color: #89837a;
 
-  font-size: 8px;
+  font-size: 11px;
 
   line-height: 1.5;
 
@@ -672,7 +672,7 @@
   }
 
   .pj-new-kicker {
-    font-size: 7px;
+    font-size: 11px;
   }
 
   .pj-new-title-wrap h2 {
@@ -723,7 +723,7 @@
   .pj-flow-copy p {
     max-width: 125px;
 
-    font-size: 7px;
+    font-size: 11px;
   }
 
   .pj-clinicos-connection {

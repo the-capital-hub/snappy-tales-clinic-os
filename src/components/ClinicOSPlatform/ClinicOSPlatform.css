@@ -188,7 +188,7 @@
 
   color: rgba(255,255,255,.2);
 
-  font-size: 6px;
+  font-size: 11px;
   font-weight: 800;
 
   letter-spacing: .13em;
@@ -208,7 +208,7 @@
 
   border-radius: 7px;
 
-  font-size: 8px;
+  font-size: 11px;
 
   transition: .2s ease;
 }
@@ -233,7 +233,7 @@
 
   border-radius: 4px;
 
-  font-size: 6px;
+  font-size: 11px;
 }
 
 .platform-nav-label {
@@ -257,7 +257,7 @@
 .platform-main-top > div > span {
   color: rgba(255,255,255,.23);
 
-  font-size: 6px;
+  font-size: 11px;
   font-weight: 800;
 
   letter-spacing: .12em;
@@ -281,7 +281,7 @@
 
   border-radius: 7px;
 
-  font-size: 8px;
+  font-size: 11px;
   font-weight: 800;
 }
 
@@ -317,7 +317,7 @@
 .platform-stat > span {
   color: rgba(255,255,255,.27);
 
-  font-size: 6px;
+  font-size: 11px;
   font-weight: 800;
 
   letter-spacing: .1em;
@@ -340,7 +340,7 @@
 
   color: #f4c906;
 
-  font-size: 7px;
+  font-size: 11px;
 }
 
 /* MINI CHART */
@@ -418,7 +418,7 @@
 
   color: #ffffff;
 
-  font-size: 7px;
+  font-size: 11px;
   font-weight: 800;
 }
 
@@ -458,7 +458,7 @@
 
   color: rgba(255,255,255,.22);
 
-  font-size: 6px;
+  font-size: 11px;
   font-weight: 800;
 
   letter-spacing: .1em;
@@ -498,7 +498,7 @@
 
   border-radius: 7px;
 
-  font-size: 6px;
+  font-size: 11px;
   font-weight: 800;
 }
 
@@ -509,7 +509,7 @@
 .platform-patient strong {
   display: block;
 
-  font-size: 8px;
+  font-size: 11px;
 }
 
 .platform-patient span {
@@ -519,13 +519,13 @@
 
   color: rgba(255,255,255,.28);
 
-  font-size: 6px;
+  font-size: 11px;
 }
 
 .platform-patient > small {
   color: rgba(255,255,255,.2);
 
-  font-size: 6px;
+  font-size: 11px;
 }
 
 /* =====================================================
@@ -550,7 +550,7 @@
 .appointment-big span {
   color: rgba(255,255,255,.28);
 
-  font-size: 7px;
+  font-size: 11px;
 }
 
 .appointment-list > div {
@@ -569,17 +569,17 @@
 
   color: #f4c906;
 
-  font-size: 6px;
+  font-size: 11px;
 }
 
 .appointment-list strong {
-  font-size: 7px;
+  font-size: 11px;
 }
 
 .appointment-list small {
   color: rgba(255,255,255,.28);
 
-  font-size: 6px;
+  font-size: 11px;
 }
 
 /* =====================================================
@@ -628,7 +628,7 @@
 .module-top span {
   color: rgba(255,255,255,.22);
 
-  font-size: 8px;
+  font-size: 11px;
   font-weight: 800;
 }
 
@@ -687,7 +687,7 @@
 
   color: rgba(255,255,255,.23);
 
-  font-size: 7px;
+  font-size: 11px;
   font-weight: 800;
 
   letter-spacing: .12em;

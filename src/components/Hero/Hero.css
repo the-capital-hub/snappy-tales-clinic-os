@@ -115,7 +115,7 @@
 
   color: #77736c;
 
-  font-size: 7px;
+  font-size: 11px;
   font-weight: 800;
 
   letter-spacing: .15em;
@@ -160,7 +160,7 @@
 
   color: #99938a;
 
-  font-size: 7px;
+  font-size: 11px;
   font-weight: 900;
 
   letter-spacing: .17em;
@@ -242,7 +242,7 @@
 .hero-flow-item strong {
   color: #aaa39a;
 
-  font-size: 5px;
+  font-size: 10px;
 
   font-weight: 900;
 }
@@ -250,7 +250,7 @@
 .hero-flow-item span {
   color: #55514b;
 
-  font-size: 7px;
+  font-size: 11px;
 
   font-weight: 800;
 }
@@ -337,7 +337,7 @@
 
   color: rgba(255,255,255,.75);
 
-  font-size: 5px;
+  font-size: 10px;
   font-weight: 900;
 
   letter-spacing: .13em;
@@ -378,7 +378,7 @@
 
   border-radius: 50%;
 
-  font-size: 7px;
+  font-size: 11px;
   font-weight: 900;
 }
 
@@ -419,7 +419,7 @@
 }
 
 .clinic-hero-yellow-block span {
-  font-size: 6px;
+  font-size: 11px;
 
   font-weight: 900;
 
@@ -458,7 +458,7 @@
 
   color: #f4c906;
 
-  font-size: 5px;
+  font-size: 10px;
   font-weight: 900;
 
   letter-spacing: .13em;
@@ -495,7 +495,7 @@
 .clinic-hero-bottom > span {
   color: #aaa49b;
 
-  font-size: 5px;
+  font-size: 10px;
   font-weight: 900;
 
   letter-spacing: .13em;
@@ -506,7 +506,7 @@
 
   color: #77736c;
 
-  font-size: 7px;
+  font-size: 11px;
 }
 
 /* =====================================================
@@ -574,7 +574,7 @@
   .clinic-hero-label {
     max-width: 145px;
 
-    font-size: 5px;
+    font-size: 10px;
 
     line-height: 1.4;
 
@@ -611,7 +611,7 @@
   }
 
   .hero-flow-item span {
-    font-size: 5px;
+    font-size: 10px;
   }
 
   .hero-flow-arrow {
@@ -660,11 +660,11 @@
     width: 29px;
     height: 29px;
 
-    font-size: 6px;
+    font-size: 11px;
   }
 
   .clinic-hero-image-caption p {
-    font-size: 7px;
+    font-size: 11px;
   }
 
   .clinic-hero-bottom {

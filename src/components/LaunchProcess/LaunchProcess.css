@@ -78,7 +78,7 @@
 
   color: rgba(255, 255, 255, 0.38);
 
-  font-size: 8px;
+  font-size: 11px;
   font-weight: 800;
 
   letter-spacing: 0.16em;
@@ -209,7 +209,7 @@
 .launch-step-number {
   color: rgba(255, 255, 255, 0.27);
 
-  font-size: 8px;
+  font-size: 11px;
   font-weight: 900;
 
   letter-spacing: 0.08em;
@@ -301,7 +301,7 @@
 
   color: #f4c906;
 
-  font-size: 5px;
+  font-size: 10px;
   font-weight: 900;
 
   letter-spacing: 0.1em;
@@ -358,7 +358,7 @@
 
   color: rgba(255, 255, 255, 0.25);
 
-  font-size: 6px;
+  font-size: 11px;
   font-weight: 850;
 
   letter-spacing: 0.12em;
@@ -403,7 +403,7 @@
 .timeline-time span {
   color: rgba(255, 255, 255, 0.38);
 
-  font-size: 6px;
+  font-size: 11px;
   font-weight: 900;
 
   letter-spacing: 0.08em;
@@ -440,7 +440,7 @@
 
   color: rgba(255, 255, 255, 0.23);
 
-  font-size: 6px;
+  font-size: 11px;
   font-weight: 900;
 
   letter-spacing: 0.12em;
@@ -479,7 +479,7 @@
 .launch-process-flow strong {
   margin: 0;
 
-  font-size: 6px;
+  font-size: 11px;
 
   font-weight: 900;
 
@@ -511,7 +511,7 @@
 
   color: rgba(255, 255, 255, 0.18);
 
-  font-size: 7px;
+  font-size: 11px;
 
   line-height: 1.5;
 }
@@ -579,7 +579,7 @@
   }
 
   .launch-process-label {
-    font-size: 7px;
+    font-size: 11px;
   }
 
   .launch-process-heading h2 {
@@ -600,7 +600,7 @@
   }
 
   .launch-process-intro p {
-    font-size: 8px;
+    font-size: 11px;
   }
 
   .launch-steps {
@@ -635,7 +635,7 @@
   }
 
   .launch-step p {
-    font-size: 8px;
+    font-size: 11px;
   }
 
   .launch-timeline {
@@ -657,6 +657,6 @@
   }
 
   .launch-disclaimer {
-    font-size: 6px;
+    font-size: 11px;
   }
 }

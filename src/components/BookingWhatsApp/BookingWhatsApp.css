@@ -78,7 +78,7 @@
 
   color: #77736c;
 
-  font-size: 7px;
+  font-size: 11px;
   font-weight: 900;
 
   letter-spacing: 0.16em;
@@ -96,7 +96,7 @@
 .booking-page {
   color: #aaa49b;
 
-  font-size: 6px;
+  font-size: 11px;
   font-weight: 900;
 
   letter-spacing: 0.13em;
@@ -119,7 +119,7 @@
 
   color: #99938a;
 
-  font-size: 7px;
+  font-size: 11px;
   font-weight: 900;
 
   letter-spacing: 0.15em;
@@ -196,7 +196,7 @@
 .booking-option-number {
   color: #a09b91;
 
-  font-size: 7px;
+  font-size: 11px;
   font-weight: 900;
 
   letter-spacing: 0.05em;
@@ -210,7 +210,7 @@
 
   color: #77736c;
 
-  font-size: 6px;
+  font-size: 11px;
   font-weight: 900;
 
   letter-spacing: 0.1em;
@@ -292,14 +292,14 @@
 
   color: #aaa49b;
 
-  font-size: 6px;
+  font-size: 11px;
   font-weight: 900;
 }
 
 .booking-flow strong {
   color: #393632;
 
-  font-size: 8px;
+  font-size: 11px;
   font-weight: 700;
 }
 
@@ -337,7 +337,7 @@
 
   color: #aaa49b;
 
-  font-size: 5px;
+  font-size: 10px;
   font-weight: 900;
 
   letter-spacing: 0.1em;
@@ -378,14 +378,14 @@
 
   color: #aaa49b;
 
-  font-size: 5px;
+  font-size: 10px;
   font-weight: 900;
 
   letter-spacing: 0.1em;
 }
 
 .booking-field strong {
-  font-size: 7px;
+  font-size: 11px;
 
   font-weight: 600;
 }
@@ -441,7 +441,7 @@
 
   color: #aaa49b;
 
-  font-size: 5px;
+  font-size: 10px;
   font-weight: 900;
 
   letter-spacing: 0.08em;
@@ -450,7 +450,7 @@
 .booking-input-row strong {
   color: #77736c;
 
-  font-size: 7px;
+  font-size: 11px;
 
   font-weight: 500;
 }
@@ -509,7 +509,7 @@
 
   color: #5f5a52;
 
-  font-size: 6px;
+  font-size: 11px;
 
   font-weight: 650;
 }
@@ -590,7 +590,7 @@
 
   color: rgba(255, 255, 255, 0.68);
 
-  font-size: 8px;
+  font-size: 11px;
 }
 
 .whatsapp-features svg {
@@ -639,7 +639,7 @@
 
   border-radius: 7px;
 
-  font-size: 8px;
+  font-size: 11px;
   font-weight: 900;
 }
 
@@ -650,7 +650,7 @@
 .chat-top strong {
   display: block;
 
-  font-size: 8px;
+  font-size: 11px;
 }
 
 .chat-top small {
@@ -660,7 +660,7 @@
 
   color: rgba(255, 255, 255, 0.32);
 
-  font-size: 5px;
+  font-size: 10px;
 }
 
 .chat-top > svg {
@@ -700,7 +700,7 @@
 
   border-radius: 8px;
 
-  font-size: 6px;
+  font-size: 11px;
 
   line-height: 1.45;
 }
@@ -750,7 +750,7 @@
 
 .booking-bottom-flow span,
 .booking-bottom-flow strong {
-  font-size: 6px;
+  font-size: 11px;
 
   font-weight: 900;
 
@@ -881,7 +881,7 @@
   }
 
   .booking-option-copy > p {
-    font-size: 8px;
+    font-size: 11px;
   }
 
   .booking-ui {
@@ -897,7 +897,7 @@
   }
 
   .whatsapp-content > p {
-    font-size: 8px;
+    font-size: 11px;
   }
 
   .whatsapp-chat {
@@ -921,6 +921,6 @@
   }
 
   .booking-bottom p {
-    font-size: 8px;
+    font-size: 11px;
   }
 }

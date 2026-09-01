@@ -78,7 +78,7 @@
 
   color: #77736c;
 
-  font-size: 7px;
+  font-size: 11px;
   font-weight: 900;
 
   letter-spacing: 0.16em;
@@ -98,7 +98,7 @@
 .templates-page-number {
   color: #aaa49b;
 
-  font-size: 6px;
+  font-size: 11px;
   font-weight: 900;
 
   letter-spacing: 0.13em;
@@ -121,7 +121,7 @@
 
   color: #99938a;
 
-  font-size: 7px;
+  font-size: 11px;
   font-weight: 900;
 
   letter-spacing: 0.16em;
@@ -181,7 +181,7 @@
 .template-count span {
   color: #99938a;
 
-  font-size: 6px;
+  font-size: 11px;
   font-weight: 900;
 
   letter-spacing: 0.12em;
@@ -302,7 +302,7 @@
 
   color: rgba(255, 255, 255, 0.4);
 
-  font-size: 5px;
+  font-size: 10px;
 
   text-align: center;
 }
@@ -381,7 +381,7 @@
 
   border-radius: 50%;
 
-  font-size: 6px;
+  font-size: 11px;
   font-weight: 900;
 }
 
@@ -396,7 +396,7 @@
 
   color: rgba(255, 255, 255, 0.5);
 
-  font-size: 5px;
+  font-size: 10px;
   font-weight: 900;
 
   letter-spacing: 0.12em;
@@ -432,7 +432,7 @@
 .template-title > span {
   color: #a09b91;
 
-  font-size: 6px;
+  font-size: 11px;
   font-weight: 900;
 }
 
@@ -453,7 +453,7 @@
 
   color: #858077;
 
-  font-size: 7px;
+  font-size: 11px;
 }
 
 .template-type {
@@ -465,7 +465,7 @@
 
   color: #99938a;
 
-  font-size: 5px;
+  font-size: 10px;
   font-weight: 900;
 
   letter-spacing: 0.1em;
@@ -508,7 +508,7 @@
 
   color: #99938a;
 
-  font-size: 6px;
+  font-size: 11px;
   font-weight: 900;
 
   letter-spacing: 0.13em;

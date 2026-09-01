@@ -86,7 +86,7 @@
 
   color: #f4c906;
 
-  font-size: 7px;
+  font-size: 11px;
   font-weight: 800;
 
   letter-spacing: 0.13em;
@@ -143,7 +143,7 @@
 
   color: rgba(255, 255, 255, 0.3);
 
-  font-size: 8px;
+  font-size: 11px;
   font-weight: 800;
 
   letter-spacing: 0.12em;
@@ -236,7 +236,7 @@
 
   color: rgba(255, 255, 255, 0.25);
 
-  font-size: 6px;
+  font-size: 11px;
   font-weight: 800;
 
   letter-spacing: 0.13em;
@@ -369,7 +369,7 @@
 .ai-center > span {
   color: rgba(255, 255, 255, 0.3);
 
-  font-size: 6px;
+  font-size: 11px;
   font-weight: 800;
 
   letter-spacing: 0.15em;
@@ -390,7 +390,7 @@
 
   color: #f4c906;
 
-  font-size: 6px;
+  font-size: 11px;
   font-weight: 800;
 
   text-transform: uppercase;
@@ -438,7 +438,7 @@
 
   color: rgba(255, 255, 255, 0.25);
 
-  font-size: 5px;
+  font-size: 10px;
   font-weight: 800;
 
   letter-spacing: 0.1em;
@@ -451,7 +451,7 @@
 
   color: rgba(255, 255, 255, 0.75);
 
-  font-size: 7px;
+  font-size: 11px;
 
   font-weight: 600;
 }
@@ -547,7 +547,7 @@
 
   color: rgba(255, 255, 255, 0.32);
 
-  font-size: 8px;
+  font-size: 11px;
 
   line-height: 1.6;
 }
@@ -579,7 +579,7 @@
 
   color: rgba(255, 255, 255, 0.2);
 
-  font-size: 6px;
+  font-size: 11px;
   font-weight: 800;
 
   letter-spacing: 0.12em;
@@ -644,7 +644,7 @@
 
   color: #f4c906;
 
-  font-size: 5px;
+  font-size: 10px;
 
   font-weight: 800;
 
@@ -656,7 +656,7 @@
 
   color: rgba(255, 255, 255, 0.62);
 
-  font-size: 8px;
+  font-size: 11px;
 
   font-weight: 600;
 }
@@ -770,7 +770,7 @@
   }
 
   .ai-center small {
-    font-size: 5px;
+    font-size: 10px;
   }
 
   .ai-card-one {
@@ -804,7 +804,7 @@
   }
 
   .ai-floating-card div strong {
-    font-size: 6px;
+    font-size: 11px;
   }
 
   .ai-features {
@@ -832,7 +832,7 @@
   .ai-feature-content p {
     max-width: 280px;
 
-    font-size: 8px;
+    font-size: 11px;
   }
 
   .ai-bottom {
