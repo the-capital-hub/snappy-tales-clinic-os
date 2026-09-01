@@ -296,7 +296,7 @@
 @media (max-width: 650px) {
 
   .closing-section {
-    padding: 75px 16px 40px;
+    padding: 25px 16px 20px;
   }
 
   .closing-image {
@@ -324,7 +324,7 @@
   .closing-content {
     gap: 30px;
 
-    padding: 50px 4px 40px;
+    padding: 25px 4px 20px;
   }
 
   .closing-content h2 {

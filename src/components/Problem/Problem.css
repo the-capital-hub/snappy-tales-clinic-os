@@ -76,7 +76,7 @@
 
   gap: 9px;
 
-  color: rgba(255,255,255,.35);
+  color: rgba(255, 255, 255, 0.929);
 
   font-size: 11px;
   font-weight: 800;
@@ -94,7 +94,7 @@
 }
 
 .problem-page-number {
-  color: rgba(255,255,255,.2);
+  color: rgba(255, 255, 255, 0.947);
 
   font-size: 11px;
   font-weight: 800;
@@ -184,7 +184,7 @@
   display: flex;
   justify-content: space-between;
 
-  color: rgba(255,255,255,.7);
+  color: rgba(255, 255, 255, 0.888);
 
   font-size: 10px;
   font-weight: 900;
@@ -218,7 +218,7 @@
   flex-shrink: 0;
 
   background: #f4c906;
-  color: #111;
+  color: #ece8e8;
 
   border-radius: 50%;
 
@@ -256,7 +256,7 @@
   padding: 13px;
 
   background: #f4c906;
-  color: #111;
+  color: #f4f3f3;
 
   z-index: -1;
 }
@@ -305,7 +305,7 @@
 }
 
 .problem-content h2 em {
-  color: #77736c;
+  color: #f2f0ec;
 
   font-style: normal;
 }
@@ -315,7 +315,7 @@
 
   margin: 30px 0 0;
 
-  color: rgba(255,255,255,.4);
+  color: rgba(255, 255, 255, 0.966);
 
   font-size: 10px;
 
@@ -335,7 +335,7 @@
 
   margin-top: 42px;
 
-  background: rgba(255,255,255,.08);
+  background: rgba(25, 24, 24, 0.836);
 
   border: 1px solid rgba(255,255,255,.08);
 }
@@ -353,7 +353,7 @@
 
   padding: 17px;
 
-  background: #111;
+  background: #262525;
 
   transition: background .3s ease;
 }
@@ -367,7 +367,7 @@
 
   padding-top: 2px;
 
-  color: rgba(255,255,255,.2);
+  color: rgba(255, 255, 255, 0.902);
 
   font-size: 10px;
   font-weight: 900;
@@ -381,7 +381,7 @@
   place-items: center;
 
   background: #f4c906;
-  color: #111;
+  color: #f0eaea;
 
   border-radius: 50%;
 }
@@ -397,7 +397,7 @@
 .problem-need-copy p {
   margin: 0;
 
-  color: rgba(255,255,255,.3);
+  color: rgba(255, 255, 255, 0.925);
 
   font-size: 11px;
 
@@ -433,7 +433,7 @@
 .problem-bottom p {
   margin: 0;
 
-  color: rgba(255,255,255,.35);
+  color: rgba(255, 255, 255, 0.938);
 
   font-size: 11px;
 }
@@ -445,7 +445,7 @@
 .problem-bottom > span {
   margin-left: auto;
 
-  color: rgba(255,255,255,.16);
+  color: rgba(255, 255, 255, 0.947);
 
   font-size: 10px;
   font-weight: 800;

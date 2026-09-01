@@ -76,7 +76,7 @@ function ClinicOS() {
             <div className="clinicos-header-copy">
               <p>
                 ClinicOS brings the essential digital pieces of
-                your clinic together — helping patients discover,
+                your clinic together helping patients discover,
                 contact and book with you.
               </p>
 
@@ -230,134 +230,61 @@ function ClinicOS() {
               </div>
 
               {/* ACTIVITY */}
+<div className="activity-row">
 
-              <div className="dashboard-content">
+  <div className="activity-avatar">
+    <img
+      src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80"
+      alt="Rahul Sharma"
+    />
+  </div>
 
-                <div className="activity-card">
+  <div>
+    <strong>Rahul Sharma</strong>
+    <span>Dental Implant enquiry</span>
+  </div>
 
-                  <div className="activity-header">
-                    <strong>
-                      Recent enquiries
-                    </strong>
+  <small>2 min</small>
 
-                    <span>
-                      LIVE
-                    </span>
-                  </div>
+</div>
 
-                  <div className="activity-row">
 
-                    <div className="activity-avatar">
-                      RS
-                    </div>
+<div className="activity-row">
 
-                    <div>
-                      <strong>
-                        Rahul Sharma
-                      </strong>
+  <div className="activity-avatar">
+    <img
+      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80"
+      alt="Ananya Patel"
+    />
+  </div>
 
-                      <span>
-                        Dental Implant enquiry
-                      </span>
-                    </div>
+  <div>
+    <strong>Ananya Patel</strong>
+    <span>Teeth Whitening</span>
+  </div>
 
-                    <small>
-                      2 min
-                    </small>
+  <small>18 min</small>
 
-                  </div>
+</div>
 
-                  <div className="activity-row">
 
-                    <div className="activity-avatar">
-                      AP
-                    </div>
+<div className="activity-row">
 
-                    <div>
-                      <strong>
-                        Ananya Patel
-                      </strong>
+  <div className="activity-avatar">
+    <img
+      src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=120&q=80"
+      alt="Vikram Kumar"
+    />
+  </div>
 
-                      <span>
-                        Teeth Whitening
-                      </span>
-                    </div>
+  <div>
+    <strong>Vikram Kumar</strong>
+    <span>General Consultation</span>
+  </div>
 
-                    <small>
-                      18 min
-                    </small>
+  <small>42 min</small>
 
-                  </div>
-
-                  <div className="activity-row">
-
-                    <div className="activity-avatar">
-                      VK
-                    </div>
-
-                    <div>
-                      <strong>
-                        Vikram Kumar
-                      </strong>
-
-                      <span>
-                        General Consultation
-                      </span>
-                    </div>
-
-                    <small>
-                      42 min
-                    </small>
-
-                  </div>
-
-                </div>
-
-                {/* APPOINTMENTS */}
-
-                <div className="appointment-card">
-
-                  <div className="activity-header">
-                    <strong>
-                      Today's appointments
-                    </strong>
-
-                    <span>
-                      6 TOTAL
-                    </span>
-                  </div>
-
-                  <div className="appointment-progress">
-
-                    <div>
-                      <strong>04</strong>
-                      <span>Confirmed</span>
-                    </div>
-
-                    <div>
-                      <strong>01</strong>
-                      <span>Pending</span>
-                    </div>
-
-                    <div>
-                      <strong>01</strong>
-                      <span>Follow up</span>
-                    </div>
-
-                  </div>
-
-                  <div className="progress-line">
-                    <span />
-                  </div>
-
-                  <p>
-                    Your team has everything they need
-                    for today's patients.
-                  </p>
-
-                </div>
-
-              </div>
+</div>
 
             </div>
 

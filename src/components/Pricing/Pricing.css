@@ -162,14 +162,14 @@
 
 .price-card-top > div:first-child > div > span {
   display: block;
-  color: #99938a;
-  font-size: 7px;
+  color: #dedcd8;
+  font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.12em;
 }
 
 .price-card-dark .price-card-top > div:first-child > div > span {
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.836);
 }
 
 .price-card-top h3 {
@@ -206,7 +206,7 @@
 .price-number span {
   margin-left: 3px;
   color: #77736c;
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0;
 }
@@ -257,7 +257,7 @@
 
   color: #aaa49b;
 
-  font-size: 6px;
+  font-size: 11px;
   font-weight: 900;
   letter-spacing: 0.14em;
 }
@@ -289,7 +289,7 @@
 
   color: #57534d;
 
-  font-size: 8px;
+  font-size: 11px;
   line-height: 1.45;
 }
 
@@ -339,7 +339,7 @@
 .price-footer > span {
   color: #aaa49b;
 
-  font-size: 6px;
+  font-size: 11px;
   font-weight: 900;
 
   letter-spacing: 0.12em;
@@ -391,7 +391,7 @@
 
   border-radius: 0 0 7px 7px;
 
-  font-size: 6px;
+  font-size: 11px;
   font-weight: 900;
 
   letter-spacing: 0.1em;
@@ -491,7 +491,7 @@
 
   color: rgba(255, 255, 255, 0.3);
 
-  font-size: 6px;
+  font-size: 11px;
   font-weight: 900;
 
   letter-spacing: 0.14em;
@@ -510,7 +510,7 @@
 
   color: rgba(255, 255, 255, 0.35);
 
-  font-size: 8px;
+  font-size: 11px;
   line-height: 1.5;
 }
 
@@ -534,7 +534,7 @@
 
   color: #f4c906;
 
-  font-size: 6px;
+  font-size: 11px;
   font-weight: 900;
 
   letter-spacing: 0.13em;
@@ -568,7 +568,7 @@
 
   color: rgba(255, 255, 255, 0.25);
 
-  font-size: 6px;
+  font-size: 11px;
   font-style: normal;
 }
 
@@ -592,7 +592,7 @@
 .early-partner-mark span {
   color: rgba(255, 255, 255, 0.22);
 
-  font-size: 6px;
+  font-size: 11px;
   font-weight: 800;
 
   letter-spacing: 0.12em;
@@ -632,7 +632,7 @@
 
   color: #aaa49b;
 
-  font-size: 6px;
+  font-size: 11px;
   font-weight: 900;
 
   letter-spacing: 0.12em;
@@ -643,13 +643,13 @@
 
   color: #77736c;
 
-  font-size: 9px;
+  font-size: 11px;
 }
 
 .pricing-bottom > strong {
   color: #99938a;
 
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 700;
 }
 
