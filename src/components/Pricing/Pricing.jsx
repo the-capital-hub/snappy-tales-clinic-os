@@ -102,8 +102,8 @@ function Pricing() {
 
               <div className="price-number">
                 <small>₹</small>
-                30
-                <span>Thousand</span>
+                30,000
+                
               </div>
             </div>
 
@@ -165,8 +165,8 @@ function Pricing() {
 
               <div className="price-number">
                 <small>₹</small>
-                40
-                <span>Thousand</span>
+                40,000
+                
               </div>
             </div>
 
@@ -241,8 +241,8 @@ function Pricing() {
             <span>EARLY ACCESS</span>
 
             <strong>
-              ₹35
-              <small> Thousand</small>
+              ₹35,000
+              
             </strong>
 
             <em>
