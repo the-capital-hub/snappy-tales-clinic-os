@@ -1,0 +1,748 @@
+/* =====================================================
+   CLINICOS — INTRO SECTION
+===================================================== */
+
+.clinicos-section {
+  position: relative;
+
+  padding: 125px 40px 120px;
+
+  background: #111111;
+  color: #ffffff;
+
+  overflow: hidden;
+}
+
+.clinicos-container {
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.clinicos-label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-bottom: 22px;
+
+  color: rgba(255, 255, 255, 0.4);
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.clinicos-label span {
+  width: 7px;
+  height: 7px;
+
+  background: #f4c906;
+
+  border-radius: 50%;
+}
+
+.clinicos-heading-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 70px;
+}
+
+.clinicos-heading-row h2 {
+  max-width: 850px;
+
+  margin: 0;
+
+  font-size: clamp(48px, 5.7vw, 80px);
+  line-height: 0.95;
+
+  letter-spacing: -0.055em;
+}
+
+.clinicos-heading-row h2 span {
+  color: #f4c906;
+}
+
+.clinicos-header-copy {
+  max-width: 350px;
+
+  padding-bottom: 5px;
+}
+
+.clinicos-header-copy p {
+  margin: 0 0 22px;
+
+  color: rgba(255, 255, 255, 0.48);
+
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.clinicos-header-copy a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.clinicos-header-copy a svg {
+  color: #f4c906;
+}
+
+/* =====================================================
+   PRODUCT
+===================================================== */
+
+.clinicos-product {
+  margin-top: 75px;
+
+  background: #1b1b1b;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 24px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 35px 80px rgba(0, 0, 0, 0.3);
+}
+
+.product-top {
+  height: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 25px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.product-brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.product-logo {
+  width: 35px;
+  height: 35px;
+
+  display: grid;
+  place-items: center;
+
+  background: #f4c906;
+  color: #111111;
+
+  border-radius: 10px;
+
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.product-brand strong {
+  display: block;
+
+  font-size: 13px;
+}
+
+.product-brand span {
+  display: block;
+
+  margin-top: 2px;
+
+  color: rgba(255, 255, 255, 0.35);
+
+  font-size: 8px;
+}
+
+.product-status {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  color: rgba(255, 255, 255, 0.38);
+
+  font-size: 9px;
+}
+
+.product-status span {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #7bd58a;
+}
+
+/* =====================================================
+   PRODUCT BODY
+===================================================== */
+
+.product-body {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+
+  min-height: 480px;
+}
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.product-sidebar {
+  padding: 28px 16px;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.sidebar-label {
+  display: block;
+
+  padding: 0 12px;
+  margin-bottom: 10px;
+
+  color: rgba(255, 255, 255, 0.24);
+
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.sidebar-item {
+  padding: 10px 12px;
+
+  margin-bottom: 3px;
+
+  color: rgba(255, 255, 255, 0.42);
+
+  border-radius: 8px;
+
+  font-size: 10px;
+
+  transition: 0.2s ease;
+}
+
+.sidebar-item.active {
+  background: rgba(244, 201, 6, 0.1);
+  color: #f4c906;
+}
+
+.bottom-label {
+  margin-top: 35px;
+}
+
+/* =====================================================
+   DASHBOARD
+===================================================== */
+
+.product-dashboard {
+  padding: 30px;
+}
+
+.dashboard-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dashboard-heading > div span {
+  color: rgba(255, 255, 255, 0.3);
+
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.dashboard-heading h3 {
+  margin: 6px 0 0;
+
+  font-size: 25px;
+  letter-spacing: -0.04em;
+}
+
+.dashboard-heading button {
+  border: 0;
+
+  padding: 10px 13px;
+
+  background: #f4c906;
+  color: #111111;
+
+  border-radius: 8px;
+
+  font-size: 9px;
+  font-weight: 750;
+}
+
+/* =====================================================
+   STATS
+===================================================== */
+
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 10px;
+
+  margin-top: 27px;
+}
+
+.dashboard-stat {
+  padding: 18px;
+
+  background: #242424;
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  border-radius: 12px;
+}
+
+.dashboard-stat span {
+  display: block;
+
+  color: rgba(255, 255, 255, 0.32);
+
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+}
+
+.dashboard-stat strong {
+  display: block;
+
+  margin-top: 10px;
+
+  font-size: 29px;
+  letter-spacing: -0.04em;
+}
+
+.dashboard-stat small {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #f4c906;
+
+  font-size: 8px;
+}
+
+/* =====================================================
+   DASHBOARD CONTENT
+===================================================== */
+
+.dashboard-content {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+
+  gap: 10px;
+
+  margin-top: 10px;
+}
+
+.activity-card,
+.appointment-card {
+  padding: 20px;
+
+  background: #242424;
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  border-radius: 12px;
+}
+
+.activity-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 15px;
+}
+
+.activity-header strong {
+  font-size: 11px;
+}
+
+.activity-header span {
+  color: rgba(255, 255, 255, 0.3);
+
+  font-size: 8px;
+}
+
+.activity-row {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 11px 0;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.activity-avatar {
+  width: 28px;
+  height: 28px;
+
+  display: grid;
+  place-items: center;
+
+  background: #313131;
+
+  border-radius: 8px;
+
+  color: #ffffff;
+
+  font-size: 7px;
+  font-weight: 800;
+}
+
+.activity-row div:nth-child(2) {
+  flex: 1;
+}
+
+.activity-row strong {
+  display: block;
+
+  font-size: 9px;
+}
+
+.activity-row span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: rgba(255, 255, 255, 0.32);
+
+  font-size: 7px;
+}
+
+.activity-row > small {
+  color: rgba(255, 255, 255, 0.25);
+
+  font-size: 7px;
+}
+
+/* =====================================================
+   APPOINTMENTS
+===================================================== */
+
+.appointment-progress {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 5px;
+
+  margin-top: 25px;
+}
+
+.appointment-progress div {
+  padding: 12px 5px;
+
+  text-align: center;
+
+  background: #2d2d2d;
+
+  border-radius: 8px;
+}
+
+.appointment-progress strong {
+  display: block;
+
+  font-size: 20px;
+}
+
+.appointment-progress span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: rgba(255, 255, 255, 0.3);
+
+  font-size: 7px;
+}
+
+.progress-line {
+  height: 5px;
+
+  margin-top: 23px;
+
+  background: #303030;
+
+  border-radius: 10px;
+
+  overflow: hidden;
+}
+
+.progress-line span {
+  display: block;
+
+  width: 67%;
+  height: 100%;
+
+  background: #f4c906;
+}
+
+.appointment-card p {
+  margin-top: 18px;
+
+  color: rgba(255, 255, 255, 0.3);
+
+  font-size: 8px;
+  line-height: 1.5;
+}
+
+/* =====================================================
+   FEATURE CARDS
+===================================================== */
+
+.clinicos-features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 10px;
+
+  margin-top: 10px;
+}
+
+.clinicos-feature {
+  position: relative;
+
+  min-height: 220px;
+
+  padding: 23px;
+
+  background: #1b1b1b;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 15px;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.clinicos-feature:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(244, 201, 6, 0.35);
+}
+
+.feature-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.feature-top > span {
+  color: rgba(255, 255, 255, 0.25);
+
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.feature-icon {
+  width: 37px;
+  height: 37px;
+
+  display: grid;
+  place-items: center;
+
+  background: #272727;
+
+  color: #f4c906;
+
+  border-radius: 10px;
+}
+
+.clinicos-feature h3 {
+  margin: 45px 0 8px;
+
+  font-size: 20px;
+
+  letter-spacing: -0.035em;
+}
+
+.clinicos-feature p {
+  max-width: 230px;
+
+  color: rgba(255, 255, 255, 0.4);
+
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.feature-arrow {
+  position: absolute;
+
+  right: 22px;
+  bottom: 22px;
+
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* =====================================================
+   STATEMENT
+===================================================== */
+
+.clinicos-statement {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 30px 5px 0;
+}
+
+.clinicos-statement span {
+  color: rgba(255, 255, 255, 0.25);
+
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.clinicos-statement strong {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.clinicos-statement i {
+  margin: 0 7px;
+
+  color: #f4c906;
+
+  font-style: normal;
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+  .clinicos-section {
+    padding: 100px 25px;
+  }
+
+  .clinicos-heading-row {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 25px;
+  }
+
+  .clinicos-header-copy {
+    max-width: 600px;
+  }
+
+  .clinicos-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+  .clinicos-section {
+    padding: 80px 16px;
+  }
+
+  .clinicos-heading-row h2 {
+    font-size: 49px;
+  }
+
+  .clinicos-product {
+    margin-top: 50px;
+
+    border-radius: 17px;
+  }
+
+  .product-top {
+    height: 62px;
+
+    padding: 0 15px;
+  }
+
+  .product-status {
+    display: none;
+  }
+
+  .product-body {
+    display: block;
+
+    min-height: auto;
+  }
+
+  .product-sidebar {
+    display: none;
+  }
+
+  .product-dashboard {
+    padding: 17px;
+  }
+
+  .dashboard-heading h3 {
+    font-size: 20px;
+  }
+
+  .dashboard-heading button {
+    padding: 8px 9px;
+
+    font-size: 8px;
+  }
+
+  .dashboard-stats {
+    grid-template-columns: 1fr 1fr 1fr;
+
+    gap: 5px;
+  }
+
+  .dashboard-stat {
+    padding: 12px 8px;
+  }
+
+  .dashboard-stat strong {
+    font-size: 21px;
+  }
+
+  .dashboard-content {
+    grid-template-columns: 1fr;
+  }
+
+  .clinicos-features {
+    grid-template-columns: 1fr;
+  }
+
+  .clinicos-feature {
+    min-height: 190px;
+  }
+
+  .clinicos-statement {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .clinicos-statement strong {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+}

@@ -1,0 +1,512 @@
+/* =====================================================
+   WHY SNAPPY TALES
+===================================================== */
+
+.why-snappy {
+  padding: 125px 40px 120px;
+
+  background: #ffffff;
+  color: #151515;
+
+  overflow: hidden;
+}
+
+.why-snappy-container {
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.why-snappy-label {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 22px;
+
+  color: #77736c;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: .14em;
+}
+
+.why-snappy-label span {
+  width: 7px;
+  height: 7px;
+
+  background: #f4c906;
+
+  border-radius: 50%;
+}
+
+.why-snappy-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 60px;
+}
+
+.why-snappy-heading h2 {
+  margin: 0;
+
+  font-size: clamp(52px, 5.8vw, 80px);
+
+  line-height: .92;
+
+  letter-spacing: -.06em;
+}
+
+.why-snappy-heading h2 span {
+  color: #a09a90;
+}
+
+.why-snappy-heading p {
+  max-width: 390px;
+
+  margin: 0 0 5px;
+
+  color: #77736c;
+
+  font-size: 12px;
+
+  line-height: 1.65;
+}
+
+/* =====================================================
+   BRAND STATEMENT
+===================================================== */
+
+.snappy-brand-statement {
+  display: grid;
+
+  grid-template-columns: 75px 1fr auto;
+
+  align-items: center;
+
+  gap: 20px;
+
+  margin-top: 70px;
+
+  padding: 25px 28px;
+
+  background: #f4c906;
+
+  border-radius: 17px;
+}
+
+.snappy-brand-mark {
+  width: 57px;
+  height: 57px;
+}
+
+.snappy-brand-mark svg {
+  width: 100%;
+  height: 100%;
+}
+
+.snappy-brand-copy > span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: rgba(17,17,17,.45);
+
+  font-size: 6px;
+  font-weight: 800;
+
+  letter-spacing: .13em;
+}
+
+.snappy-brand-copy h3 {
+  margin: 0;
+
+  font-size: 24px;
+
+  letter-spacing: -.055em;
+}
+
+.snappy-brand-copy p {
+  margin: 4px 0 0;
+
+  color: rgba(17,17,17,.55);
+
+  font-size: 8px;
+}
+
+.snappy-brand-arrow {
+  width: 43px;
+  height: 43px;
+
+  display: grid;
+  place-items: center;
+
+  background: #111111;
+  color: #f4c906;
+
+  border-radius: 10px;
+}
+
+/* =====================================================
+   PILLARS
+===================================================== */
+
+.snappy-pillars {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  margin-top: 12px;
+}
+
+.snappy-pillar {
+  position: relative;
+
+  min-height: 300px;
+
+  padding: 25px 22px;
+
+  background: #f5f3ee;
+
+  border-right: 1px solid #ddd8cf;
+
+  transition:
+    transform .25s ease,
+    background .25s ease;
+}
+
+.snappy-pillar:first-child {
+  border-radius: 14px 0 0 14px;
+}
+
+.snappy-pillar:last-child {
+  border-right: 0;
+
+  border-radius: 0 14px 14px 0;
+}
+
+.snappy-pillar:hover {
+  background: #ece8df;
+
+  transform: translateY(-5px);
+}
+
+.snappy-pillar-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.snappy-pillar-top > span {
+  color: #aaa49b;
+
+  font-size: 8px;
+  font-weight: 800;
+}
+
+.snappy-pillar-top svg {
+  color: #77736c;
+}
+
+.snappy-pillar-icon {
+  width: 46px;
+  height: 46px;
+
+  display: grid;
+  place-items: center;
+
+  margin-top: 40px;
+
+  background: #111111;
+  color: #f4c906;
+
+  border-radius: 11px;
+}
+
+.snappy-pillar h3 {
+  margin: 22px 0 2px;
+
+  font-size: 23px;
+
+  letter-spacing: -.04em;
+}
+
+.snappy-pillar > strong {
+  display: block;
+
+  color: #77736c;
+
+  font-size: 8px;
+  font-weight: 750;
+
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+.snappy-pillar p {
+  max-width: 230px;
+
+  margin: 18px 0 0;
+
+  color: #77736c;
+
+  font-size: 9px;
+
+  line-height: 1.6;
+}
+
+/* =====================================================
+   CLINICOS CONNECTION
+===================================================== */
+
+.snappy-clinicos {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 50px;
+
+  margin-top: 12px;
+
+  padding: 35px 30px;
+
+  background: #111111;
+  color: #ffffff;
+
+  border-radius: 14px;
+}
+
+.snappy-clinicos-left > span {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: rgba(255,255,255,.25);
+
+  font-size: 6px;
+  font-weight: 800;
+
+  letter-spacing: .13em;
+}
+
+.snappy-clinicos-left h3 {
+  margin: 0;
+
+  font-size: clamp(29px, 3vw, 42px);
+
+  line-height: .95;
+
+  letter-spacing: -.05em;
+}
+
+.snappy-clinicos-right {
+  align-self: center;
+}
+
+.snappy-mini-flow {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 18px;
+}
+
+.snappy-mini-flow span {
+  color: #f4c906;
+
+  font-size: 7px;
+  font-weight: 800;
+
+  letter-spacing: .08em;
+}
+
+.snappy-mini-flow i {
+  color: rgba(255,255,255,.2);
+
+  font-size: 10px;
+
+  font-style: normal;
+}
+
+.snappy-clinicos-right p {
+  max-width: 440px;
+
+  margin: 0;
+
+  color: rgba(255,255,255,.38);
+
+  font-size: 10px;
+
+  line-height: 1.65;
+}
+
+/* =====================================================
+   BOTTOM
+===================================================== */
+
+.why-snappy-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 35px;
+  padding-top: 23px;
+
+  border-top: 1px solid #ded9d0;
+}
+
+.why-snappy-bottom span {
+  color: #aaa49b;
+
+  font-size: 6px;
+  font-weight: 800;
+
+  letter-spacing: .12em;
+}
+
+.why-snappy-bottom p {
+  margin: 0;
+
+  color: #77736c;
+
+  font-size: 9px;
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+  .why-snappy {
+    padding: 100px 25px;
+  }
+
+  .why-snappy-heading {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 25px;
+  }
+
+  .snappy-pillars {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .snappy-pillar {
+    border-bottom: 1px solid #ddd8cf;
+  }
+
+  .snappy-pillar:first-child {
+    border-radius: 14px 0 0 0;
+  }
+
+  .snappy-pillar:nth-child(2) {
+    border-radius: 0 14px 0 0;
+
+    border-right: 0;
+  }
+
+  .snappy-pillar:nth-child(3) {
+    border-radius: 0 0 0 14px;
+  }
+
+  .snappy-pillar:last-child {
+    border-radius: 0 0 14px 0;
+  }
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+  .why-snappy {
+    padding: 80px 16px;
+  }
+
+  .why-snappy-heading h2 {
+    font-size: 50px;
+  }
+
+  .snappy-brand-statement {
+    grid-template-columns: 55px 1fr auto;
+
+    gap: 12px;
+
+    margin-top: 50px;
+
+    padding: 18px;
+  }
+
+  .snappy-brand-mark {
+    width: 48px;
+    height: 48px;
+  }
+
+  .snappy-brand-copy h3 {
+    font-size: 18px;
+  }
+
+  .snappy-brand-arrow {
+    width: 36px;
+    height: 36px;
+  }
+
+  .snappy-pillars {
+    grid-template-columns: 1fr;
+  }
+
+  .snappy-pillar,
+  .snappy-pillar:first-child,
+  .snappy-pillar:nth-child(2),
+  .snappy-pillar:nth-child(3),
+  .snappy-pillar:last-child {
+    min-height: 230px;
+
+    border-right: 1px solid #ddd8cf;
+    border-bottom: 1px solid #ddd8cf;
+
+    border-radius: 0;
+  }
+
+  .snappy-pillar:first-child {
+    border-radius: 14px 14px 0 0;
+  }
+
+  .snappy-pillar:last-child {
+    border-radius: 0 0 14px 14px;
+
+    border-bottom: 0;
+  }
+
+  .snappy-clinicos {
+    grid-template-columns: 1fr;
+
+    gap: 28px;
+
+    padding: 27px 21px;
+  }
+
+  .snappy-mini-flow {
+    flex-wrap: wrap;
+  }
+
+  .why-snappy-bottom {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 9px;
+  }
+}

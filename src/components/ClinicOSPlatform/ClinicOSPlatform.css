@@ -1,0 +1,817 @@
+/* =====================================================
+   CLINICOS PLATFORM
+===================================================== */
+
+.clinicos-platform {
+  position: relative;
+
+  padding: 125px 40px 120px;
+
+  background: #111111;
+  color: #ffffff;
+
+  overflow: hidden;
+}
+
+.clinicos-platform::before {
+  content: "";
+
+  position: absolute;
+
+  width: 650px;
+  height: 650px;
+
+  right: -350px;
+  top: 100px;
+
+  border: 1px solid rgba(244, 201, 6, .07);
+
+  border-radius: 50%;
+}
+
+.clinicos-platform-container {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.platform-label {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 22px;
+
+  color: rgba(255,255,255,.32);
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: .14em;
+}
+
+.platform-label span {
+  width: 7px;
+  height: 7px;
+
+  background: #f4c906;
+
+  border-radius: 50%;
+}
+
+.platform-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 60px;
+}
+
+.platform-heading h2 {
+  margin: 0;
+
+  font-size: clamp(50px, 5.8vw, 80px);
+
+  line-height: .92;
+
+  letter-spacing: -.06em;
+}
+
+.platform-heading h2 span {
+  color: #f4c906;
+}
+
+.platform-intro {
+  max-width: 390px;
+
+  padding-bottom: 5px;
+}
+
+.platform-intro strong {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 16px;
+}
+
+.platform-intro p {
+  margin: 0;
+
+  color: rgba(255,255,255,.4);
+
+  font-size: 12px;
+
+  line-height: 1.65;
+}
+
+/* =====================================================
+   DASHBOARD
+===================================================== */
+
+.platform-dashboard {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+
+  min-height: 540px;
+
+  margin-top: 75px;
+
+  background: #1a1a1a;
+
+  border: 1px solid rgba(255,255,255,.08);
+
+  border-radius: 21px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 35px 80px rgba(0,0,0,.3);
+}
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.platform-sidebar {
+  padding: 23px 14px;
+
+  border-right: 1px solid rgba(255,255,255,.07);
+}
+
+.platform-logo {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 35px;
+
+  padding: 0 7px;
+}
+
+.platform-logo > div {
+  width: 30px;
+  height: 30px;
+
+  display: grid;
+  place-items: center;
+
+  background: #f4c906;
+  color: #111111;
+
+  border-radius: 8px;
+
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.platform-logo span {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.platform-sidebar > small {
+  display: block;
+
+  padding: 0 9px;
+
+  margin-bottom: 8px;
+
+  color: rgba(255,255,255,.2);
+
+  font-size: 6px;
+  font-weight: 800;
+
+  letter-spacing: .13em;
+}
+
+.platform-nav {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 10px 9px;
+
+  margin-bottom: 3px;
+
+  color: rgba(255,255,255,.4);
+
+  border-radius: 7px;
+
+  font-size: 8px;
+
+  transition: .2s ease;
+}
+
+.platform-nav svg {
+  flex-shrink: 0;
+}
+
+.platform-nav.active {
+  background: rgba(244,201,6,.1);
+
+  color: #f4c906;
+}
+
+.platform-nav b {
+  margin-left: auto;
+
+  padding: 3px 5px;
+
+  background: #f4c906;
+  color: #111111;
+
+  border-radius: 4px;
+
+  font-size: 6px;
+}
+
+.platform-nav-label {
+  margin-top: 28px;
+}
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.platform-main {
+  padding: 28px;
+}
+
+.platform-main-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.platform-main-top > div > span {
+  color: rgba(255,255,255,.23);
+
+  font-size: 6px;
+  font-weight: 800;
+
+  letter-spacing: .12em;
+}
+
+.platform-main-top h3 {
+  margin: 6px 0 0;
+
+  font-size: 22px;
+
+  letter-spacing: -.04em;
+}
+
+.platform-main-top button {
+  padding: 9px 11px;
+
+  border: 0;
+
+  background: #f4c906;
+  color: #111111;
+
+  border-radius: 7px;
+
+  font-size: 8px;
+  font-weight: 800;
+}
+
+/* =====================================================
+   STATS
+===================================================== */
+
+.platform-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 9px;
+
+  margin-top: 27px;
+}
+
+.platform-stat {
+  position: relative;
+
+  min-height: 120px;
+
+  padding: 17px;
+
+  background: #222222;
+
+  border: 1px solid rgba(255,255,255,.06);
+
+  border-radius: 11px;
+
+  overflow: hidden;
+}
+
+.platform-stat > span {
+  color: rgba(255,255,255,.27);
+
+  font-size: 6px;
+  font-weight: 800;
+
+  letter-spacing: .1em;
+}
+
+.platform-stat > strong {
+  display: block;
+
+  margin-top: 9px;
+
+  font-size: 29px;
+
+  letter-spacing: -.05em;
+}
+
+.platform-stat > small {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #f4c906;
+
+  font-size: 7px;
+}
+
+/* MINI CHART */
+
+.mini-chart {
+  position: absolute;
+
+  right: 15px;
+  bottom: 17px;
+
+  height: 35px;
+
+  display: flex;
+  align-items: flex-end;
+
+  gap: 3px;
+}
+
+.mini-chart i {
+  display: block;
+
+  width: 5px;
+
+  background: #f4c906;
+
+  border-radius: 2px;
+}
+
+.mini-chart i:nth-child(1) {
+  height: 12px;
+}
+
+.mini-chart i:nth-child(2) {
+  height: 18px;
+}
+
+.mini-chart i:nth-child(3) {
+  height: 14px;
+}
+
+.mini-chart i:nth-child(4) {
+  height: 24px;
+}
+
+.mini-chart i:nth-child(5) {
+  height: 19px;
+}
+
+.mini-chart i:nth-child(6) {
+  height: 29px;
+}
+
+.mini-chart i:nth-child(7) {
+  height: 35px;
+}
+
+/* CIRCLE */
+
+.stat-circle {
+  position: absolute;
+
+  right: 15px;
+  bottom: 15px;
+
+  width: 43px;
+  height: 43px;
+
+  display: grid;
+  place-items: center;
+
+  border: 4px solid #343434;
+  border-top-color: #f4c906;
+
+  border-radius: 50%;
+
+  color: #ffffff;
+
+  font-size: 7px;
+  font-weight: 800;
+}
+
+/* =====================================================
+   LOWER
+===================================================== */
+
+.platform-lower {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+
+  gap: 9px;
+
+  margin-top: 9px;
+}
+
+.platform-panel {
+  padding: 19px;
+
+  background: #222222;
+
+  border: 1px solid rgba(255,255,255,.06);
+
+  border-radius: 11px;
+}
+
+.platform-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 17px;
+}
+
+.platform-panel-header span {
+  display: block;
+
+  color: rgba(255,255,255,.22);
+
+  font-size: 6px;
+  font-weight: 800;
+
+  letter-spacing: .1em;
+}
+
+.platform-panel-header h4 {
+  margin: 5px 0 0;
+
+  font-size: 12px;
+}
+
+.platform-panel-header > svg {
+  color: rgba(255,255,255,.3);
+}
+
+/* PATIENT */
+
+.platform-patient {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 10px 0;
+
+  border-top: 1px solid rgba(255,255,255,.05);
+}
+
+.patient-avatar {
+  width: 27px;
+  height: 27px;
+
+  display: grid;
+  place-items: center;
+
+  background: #303030;
+
+  border-radius: 7px;
+
+  font-size: 6px;
+  font-weight: 800;
+}
+
+.platform-patient > div:nth-child(2) {
+  flex: 1;
+}
+
+.platform-patient strong {
+  display: block;
+
+  font-size: 8px;
+}
+
+.platform-patient span {
+  display: block;
+
+  margin-top: 2px;
+
+  color: rgba(255,255,255,.28);
+
+  font-size: 6px;
+}
+
+.platform-patient > small {
+  color: rgba(255,255,255,.2);
+
+  font-size: 6px;
+}
+
+/* =====================================================
+   APPOINTMENTS
+===================================================== */
+
+.appointment-big {
+  display: flex;
+  align-items: baseline;
+
+  gap: 7px;
+
+  margin-bottom: 13px;
+}
+
+.appointment-big strong {
+  font-size: 31px;
+
+  letter-spacing: -.05em;
+}
+
+.appointment-big span {
+  color: rgba(255,255,255,.28);
+
+  font-size: 7px;
+}
+
+.appointment-list > div {
+  display: grid;
+  grid-template-columns: 55px 1fr;
+
+  gap: 2px;
+
+  padding: 8px 0;
+
+  border-top: 1px solid rgba(255,255,255,.05);
+}
+
+.appointment-list span {
+  grid-row: span 2;
+
+  color: #f4c906;
+
+  font-size: 6px;
+}
+
+.appointment-list strong {
+  font-size: 7px;
+}
+
+.appointment-list small {
+  color: rgba(255,255,255,.28);
+
+  font-size: 6px;
+}
+
+/* =====================================================
+   MODULES
+===================================================== */
+
+.platform-modules {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 10px;
+
+  margin-top: 10px;
+}
+
+.platform-module {
+  position: relative;
+
+  min-height: 205px;
+
+  padding: 21px;
+
+  background: #1a1a1a;
+
+  border: 1px solid rgba(255,255,255,.07);
+
+  border-radius: 14px;
+
+  transition:
+    transform .25s ease,
+    border-color .25s ease;
+}
+
+.platform-module:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(244,201,6,.35);
+}
+
+.module-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.module-top span {
+  color: rgba(255,255,255,.22);
+
+  font-size: 8px;
+  font-weight: 800;
+}
+
+.module-top svg {
+  color: #f4c906;
+}
+
+.platform-module h3 {
+  margin: 50px 0 7px;
+
+  font-size: 19px;
+
+  letter-spacing: -.035em;
+}
+
+.platform-module p {
+  max-width: 200px;
+
+  margin: 0;
+
+  color: rgba(255,255,255,.35);
+
+  font-size: 9px;
+
+  line-height: 1.55;
+}
+
+.module-arrow {
+  position: absolute;
+
+  right: 19px;
+  bottom: 19px;
+
+  color: rgba(255,255,255,.25);
+}
+
+/* =====================================================
+   BOTTOM
+===================================================== */
+
+.platform-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 45px;
+  padding-top: 27px;
+
+  border-top: 1px solid rgba(255,255,255,.1);
+}
+
+.platform-bottom span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: rgba(255,255,255,.23);
+
+  font-size: 7px;
+  font-weight: 800;
+
+  letter-spacing: .12em;
+}
+
+.platform-bottom strong {
+  font-size: 15px;
+}
+
+.platform-bottom a {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 10px;
+  font-weight: 750;
+}
+
+.platform-bottom a svg {
+  color: #f4c906;
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+  .clinicos-platform {
+    padding: 100px 25px;
+  }
+
+  .platform-heading {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 25px;
+  }
+
+  .platform-modules {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+  .clinicos-platform {
+    padding: 80px 16px;
+  }
+
+  .platform-heading h2 {
+    font-size: 49px;
+  }
+
+  .platform-dashboard {
+    display: block;
+
+    margin-top: 50px;
+
+    min-height: auto;
+  }
+
+  .platform-sidebar {
+    display: none;
+  }
+
+  .platform-main {
+    padding: 17px;
+  }
+
+  .platform-main-top h3 {
+    font-size: 18px;
+  }
+
+  .platform-main-top button {
+    padding: 8px;
+  }
+
+  .platform-stats {
+    gap: 5px;
+  }
+
+  .platform-stat {
+    min-height: 95px;
+
+    padding: 11px 9px;
+  }
+
+  .platform-stat > strong {
+    font-size: 21px;
+  }
+
+  .mini-chart,
+  .stat-circle {
+    display: none;
+  }
+
+  .platform-lower {
+    grid-template-columns: 1fr;
+  }
+
+  .platform-modules {
+    grid-template-columns: 1fr;
+  }
+
+  .platform-module {
+    min-height: 175px;
+  }
+
+  .platform-bottom {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 18px;
+  }
+}

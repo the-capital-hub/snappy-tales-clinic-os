@@ -1,0 +1,772 @@
+/* =====================================================
+   PATIENT JOURNEY
+===================================================== */
+
+.patient-journey {
+  position: relative;
+  isolation: isolate;
+
+  padding: 120px 40px 105px;
+
+  background: #f7f3ea;
+  color: #111;
+
+  overflow: hidden;
+}
+
+.patient-journey::before {
+  content: "";
+
+  position: absolute;
+
+  width: 720px;
+  height: 720px;
+
+  top: -430px;
+  right: -350px;
+
+  border: 1px solid rgba(17, 17, 17, 0.06);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.patient-journey::after {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  left: -300px;
+  bottom: -280px;
+
+  border: 1px solid rgba(17, 17, 17, 0.045);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.patient-journey-container {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1340px;
+
+  margin: 0 auto;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.pj-new-kicker {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 20px;
+
+  color: #858078;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  letter-spacing: 0.16em;
+}
+
+.pj-new-kicker span {
+  width: 6px;
+  height: 6px;
+
+  background: #f4c906;
+
+  border-radius: 50%;
+}
+
+.pj-new-title-wrap {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr) 350px;
+
+  align-items: end;
+
+  gap: 80px;
+}
+
+.pj-new-title-wrap h2 {
+  margin: 0;
+
+  font-size: clamp(56px, 6.3vw, 86px);
+
+  line-height: 0.88;
+
+  font-weight: 750;
+
+  letter-spacing: -0.07em;
+}
+
+.pj-new-title-wrap h2 em {
+  color: #a39d93;
+
+  font-style: normal;
+}
+
+.pj-new-title-wrap p {
+  max-width: 340px;
+
+  margin: 0 0 5px;
+
+  color: #77736c;
+
+  font-size: 10px;
+
+  line-height: 1.75;
+}
+
+/* =====================================================
+   JOURNEY AREA
+===================================================== */
+
+.pj-new-visual {
+  display: grid;
+
+  grid-template-columns: 145px minmax(0, 1fr);
+
+  gap: 45px;
+
+  margin-top: 95px;
+}
+
+/* =====================================================
+   SIDE LABEL
+===================================================== */
+
+.pj-side-label {
+  padding-top: 4px;
+}
+
+.pj-side-label > span {
+  display: block;
+
+  color: #969087;
+
+  font-size: 7px;
+  font-weight: 800;
+
+  letter-spacing: 0.14em;
+}
+
+.pj-side-line {
+  width: 30px;
+  height: 1px;
+
+  margin: 14px 0;
+
+  background: #111;
+}
+
+.pj-side-label small {
+  display: block;
+
+  color: #8b857c;
+
+  font-size: 7px;
+
+  line-height: 1.7;
+}
+
+/* =====================================================
+   FLOW
+===================================================== */
+
+.pj-flow {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  min-width: 0;
+}
+
+/* =====================================================
+   FLOW LINE
+===================================================== */
+
+.pj-flow-line {
+  position: absolute;
+
+  top: 51px;
+  left: 8%;
+  right: 8%;
+
+  height: 1px;
+
+  background: #d4cec2;
+
+  pointer-events: none;
+}
+
+.pj-flow-line-active {
+  width: 100%;
+  height: 100%;
+
+  background: #111;
+
+  transform-origin: left center;
+}
+
+/* =====================================================
+   FLOW ITEM
+===================================================== */
+
+.pj-flow-item {
+  position: relative;
+
+  min-width: 0;
+
+  padding: 0 12px;
+
+  text-align: center;
+}
+
+.pj-flow-number {
+  margin-bottom: 12px;
+
+  color: #aaa39a;
+
+  font-size: 7px;
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+}
+
+/* =====================================================
+   NODE
+===================================================== */
+
+.pj-flow-node {
+  position: relative;
+  z-index: 3;
+
+  width: 64px;
+  height: 64px;
+
+  display: grid;
+  place-items: center;
+
+  margin: 0 auto;
+
+  background: #f7f3ea;
+
+  color: #111;
+
+  border: 1px solid #111;
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 0 8px #f7f3ea;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.pj-flow-item:hover .pj-flow-node {
+  background: #111;
+
+  color: #f4c906;
+
+  transform: translateY(-4px);
+}
+
+.pj-flow-item-last .pj-flow-node {
+  background: #f4c906;
+
+  border-color: #f4c906;
+
+  color: #111;
+}
+
+/* =====================================================
+   FLOW COPY
+===================================================== */
+
+.pj-flow-copy {
+  margin-top: 27px;
+}
+
+.pj-flow-copy > span {
+  color: #a19a90;
+
+  font-size: 6px;
+  font-weight: 800;
+
+  letter-spacing: 0.15em;
+}
+
+.pj-flow-copy h3 {
+  margin: 7px 0 8px;
+
+  color: #111;
+
+  font-size: 24px;
+  font-weight: 750;
+
+  line-height: 1;
+
+  letter-spacing: -0.045em;
+}
+
+.pj-flow-copy p {
+  max-width: 145px;
+
+  margin: 0 auto;
+
+  color: #777169;
+
+  font-size: 8px;
+
+  line-height: 1.6;
+}
+
+/* =====================================================
+   CLINICOS STRIP
+===================================================== */
+
+.pj-clinicos-connection {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: auto 30px minmax(220px, 1fr) auto;
+
+  align-items: center;
+
+  gap: 20px;
+
+  margin-top: 88px;
+
+  padding: 23px 25px;
+
+  background: #111;
+
+  color: #fff;
+
+  border-radius: 13px;
+
+  overflow: hidden;
+}
+
+.pj-clinicos-connection::after {
+  content: "";
+
+  position: absolute;
+
+  width: 270px;
+  height: 270px;
+
+  top: -155px;
+  right: -145px;
+
+  border: 1px solid rgba(244, 201, 6, 0.13);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+/* =====================================================
+   CLINICOS BRAND
+===================================================== */
+
+.pj-connection-brand {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.pj-connection-dot {
+  width: 38px;
+  height: 38px;
+
+  display: grid;
+  place-items: center;
+
+  background: #f4c906;
+  color: #111;
+
+  border-radius: 9px;
+
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.pj-connection-brand > span {
+  color: #fff;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 0.02em;
+}
+
+/* =====================================================
+   ARROW
+===================================================== */
+
+.pj-connection-arrow {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+  place-items: center;
+
+  color: #f4c906;
+}
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.pj-connection-content {
+  position: relative;
+  z-index: 2;
+}
+
+.pj-connection-content > span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: rgba(255, 255, 255, 0.27);
+
+  font-size: 6px;
+  font-weight: 800;
+
+  letter-spacing: 0.14em;
+}
+
+.pj-connection-content h3 {
+  margin: 0;
+
+  color: #fff;
+
+  font-size: 17px;
+
+  line-height: 1.08;
+
+  letter-spacing: -0.04em;
+}
+
+/* =====================================================
+   POINTS
+===================================================== */
+
+.pj-connection-points {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+}
+
+.pj-connection-points span {
+  white-space: nowrap;
+
+  padding: 7px 9px;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 5px;
+
+  color: rgba(255, 255, 255, 0.43);
+
+  font-size: 6px;
+}
+
+/* =====================================================
+   BOTTOM
+===================================================== */
+
+.pj-new-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  margin-top: 32px;
+}
+
+.pj-bottom-accent {
+  width: 5px;
+  height: 5px;
+
+  flex-shrink: 0;
+
+  background: #f4c906;
+
+  border-radius: 50%;
+}
+
+.pj-new-bottom p {
+  margin: 0;
+
+  color: #89837a;
+
+  font-size: 8px;
+
+  line-height: 1.5;
+
+  text-align: center;
+}
+
+.pj-new-bottom strong {
+  color: #111;
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1050px) {
+
+  .patient-journey {
+    padding: 100px 28px 90px;
+  }
+
+  .pj-new-title-wrap {
+    grid-template-columns: 1fr 290px;
+
+    gap: 40px;
+  }
+
+  .pj-new-visual {
+    grid-template-columns: 110px minmax(0, 1fr);
+
+    gap: 25px;
+
+    margin-top: 75px;
+  }
+
+  .pj-flow-item {
+    padding: 0 7px;
+  }
+
+  .pj-flow-copy h3 {
+    font-size: 21px;
+  }
+
+  .pj-clinicos-connection {
+    grid-template-columns: auto 25px 1fr;
+
+    gap: 15px;
+  }
+
+  .pj-connection-points {
+    grid-column: 1 / -1;
+
+    margin-top: 4px;
+  }
+}
+
+/* =====================================================
+   SMALL TABLET
+===================================================== */
+
+@media (max-width: 800px) {
+
+  .pj-new-title-wrap {
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+  }
+
+  .pj-new-title-wrap p {
+    max-width: 430px;
+  }
+
+  .pj-new-visual {
+    grid-template-columns: 1fr;
+
+    gap: 28px;
+  }
+
+  .pj-side-label {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+  }
+
+  .pj-side-line {
+    margin: 0;
+  }
+
+  .pj-side-label small {
+    display: none;
+  }
+
+  .pj-flow {
+    overflow-x: auto;
+
+    display: flex;
+
+    width: 100%;
+
+    margin-right: -28px;
+
+    padding-right: 28px;
+    padding-bottom: 20px;
+
+    scrollbar-width: none;
+  }
+
+  .pj-flow::-webkit-scrollbar {
+    display: none;
+  }
+
+  .pj-flow-line {
+    left: 65px;
+    right: auto;
+
+    width: 690px;
+  }
+
+  .pj-flow-item {
+    flex: 0 0 185px;
+
+    padding: 0 8px;
+  }
+
+  .pj-clinicos-connection {
+    margin-top: 55px;
+  }
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .patient-journey {
+    padding: 78px 16px 72px;
+  }
+
+  .pj-new-kicker {
+    font-size: 7px;
+  }
+
+  .pj-new-title-wrap h2 {
+    font-size: 49px;
+
+    line-height: 0.9;
+  }
+
+  .pj-new-title-wrap p {
+    max-width: 330px;
+
+    font-size: 9px;
+  }
+
+  .pj-new-visual {
+    margin-top: 52px;
+  }
+
+  .pj-flow {
+    margin-right: -16px;
+
+    padding-right: 16px;
+  }
+
+  .pj-flow-item {
+    flex-basis: 170px;
+  }
+
+  .pj-flow-line {
+    width: 640px;
+
+    top: 51px;
+  }
+
+  .pj-flow-node {
+    width: 58px;
+    height: 58px;
+  }
+
+  .pj-flow-copy {
+    margin-top: 23px;
+  }
+
+  .pj-flow-copy h3 {
+    font-size: 20px;
+  }
+
+  .pj-flow-copy p {
+    max-width: 125px;
+
+    font-size: 7px;
+  }
+
+  .pj-clinicos-connection {
+    grid-template-columns: auto 1fr;
+
+    gap: 13px;
+
+    margin-top: 50px;
+
+    padding: 18px;
+  }
+
+  .pj-connection-arrow {
+    display: none;
+  }
+
+  .pj-connection-content {
+    grid-column: 1 / -1;
+
+    padding-top: 4px;
+  }
+
+  .pj-connection-content h3 {
+    font-size: 16px;
+  }
+
+  .pj-connection-points {
+    grid-column: 1 / -1;
+
+    flex-wrap: wrap;
+
+    margin-top: 3px;
+  }
+
+  .pj-new-bottom {
+    justify-content: flex-start;
+
+    align-items: flex-start;
+
+    margin-top: 27px;
+  }
+
+  .pj-new-bottom p {
+    text-align: left;
+  }
+}

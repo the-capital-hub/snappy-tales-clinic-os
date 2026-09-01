@@ -1,0 +1,706 @@
+/* =====================================================
+   CLINICOS — WEBSITE FEATURES
+===================================================== */
+
+.website-features {
+  position: relative;
+
+  padding: 125px 40px 120px;
+
+  background: #f4f1e9;
+  color: #151515;
+
+  overflow: hidden;
+}
+
+.website-features-container {
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.website-features-label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-bottom: 22px;
+
+  color: #77736c;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .14em;
+}
+
+.website-features-label span {
+  width: 7px;
+  height: 7px;
+
+  background: #f4c906;
+
+  border-radius: 50%;
+}
+
+.website-features-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 70px;
+}
+
+.website-features-heading h2 {
+  margin: 0;
+
+  font-size: clamp(48px, 5.6vw, 78px);
+  line-height: .94;
+
+  letter-spacing: -.055em;
+}
+
+.website-features-heading h2 span {
+  color: #99938a;
+}
+
+.website-features-heading p {
+  max-width: 390px;
+
+  margin: 0 0 5px;
+
+  color: #77736c;
+
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.website-features-main {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+
+  gap: 65px;
+
+  margin-top: 75px;
+
+  align-items: center;
+}
+
+/* =====================================================
+   VISUAL
+===================================================== */
+
+.website-features-visual {
+  position: relative;
+
+  min-height: 500px;
+
+  display: flex;
+  align-items: center;
+}
+
+.website-browser {
+  width: 100%;
+
+  padding: 8px;
+
+  background: #d8d3c9;
+
+  border-radius: 21px;
+
+  box-shadow:
+    0 30px 65px rgba(0,0,0,.12);
+
+  transform: rotate(-1.2deg);
+}
+
+/* =====================================================
+   BROWSER BAR
+===================================================== */
+
+.website-browser-bar {
+  height: 35px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 12px;
+
+  background: #1b1b1b;
+
+  border-radius: 12px 12px 0 0;
+}
+
+.website-browser-dots {
+  display: flex;
+  gap: 5px;
+}
+
+.website-browser-dots span {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #696969;
+}
+
+.website-browser-url {
+  margin: auto;
+
+  padding: 6px 70px;
+
+  background: #292929;
+
+  border-radius: 6px;
+
+  color: rgba(255,255,255,.4);
+
+  font-size: 7px;
+}
+
+.browser-menu {
+  color: rgba(255,255,255,.4);
+
+  font-size: 9px;
+}
+
+/* =====================================================
+   WEBSITE SCREEN
+===================================================== */
+
+.website-screen {
+  min-height: 415px;
+
+  background: #f8f6f0;
+
+  overflow: hidden;
+
+  border-radius: 0 0 12px 12px;
+}
+
+/* NAV */
+
+.mock-nav {
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 25px;
+}
+
+.mock-nav strong {
+  font-size: 15px;
+
+  letter-spacing: -.05em;
+}
+
+.mock-nav strong span {
+  color: #d8b800;
+}
+
+.mock-nav-links {
+  display: flex;
+  gap: 22px;
+}
+
+.mock-nav-links span {
+  color: #77736c;
+
+  font-size: 8px;
+}
+
+.mock-nav button {
+  padding: 9px 12px;
+
+  border: 0;
+
+  background: #171717;
+  color: #ffffff;
+
+  border-radius: 7px;
+
+  font-size: 7px;
+  font-weight: 700;
+}
+
+/* CONTENT */
+
+.mock-content {
+  display: grid;
+  grid-template-columns: 1fr .8fr;
+
+  min-height: 285px;
+
+  margin: 0 13px;
+
+  overflow: hidden;
+
+  border-radius: 13px;
+
+  background: #e7e0d3;
+}
+
+.mock-copy {
+  padding: 48px 27px;
+}
+
+.mock-copy small {
+  color: #8b857a;
+
+  font-size: 7px;
+  font-weight: 800;
+
+  letter-spacing: .12em;
+}
+
+.mock-copy h3 {
+  margin: 12px 0;
+
+  font-size: 34px;
+  line-height: .93;
+
+  letter-spacing: -.055em;
+}
+
+.mock-copy p {
+  max-width: 220px;
+
+  margin: 0 0 20px;
+
+  color: #77736c;
+
+  font-size: 9px;
+  line-height: 1.55;
+}
+
+.mock-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 10px 12px;
+
+  border: 0;
+
+  background: #f4c906;
+  color: #111111;
+
+  border-radius: 7px;
+
+  font-size: 8px;
+  font-weight: 750;
+}
+
+.mock-image {
+  position: relative;
+
+  background:
+    linear-gradient(
+      145deg,
+      #d3c8ba,
+      #92877a
+    );
+}
+
+.mock-person {
+  position: absolute;
+
+  left: 22%;
+  right: 22%;
+  bottom: 0;
+
+  height: 83%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+
+  padding-bottom: 35px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ded6ca,
+      #847a70
+    );
+
+  border-radius: 110px 110px 0 0;
+
+  color: rgba(255,255,255,.62);
+}
+
+.mock-person span {
+  font-size: 7px;
+
+  letter-spacing: .18em;
+}
+
+.mock-person strong {
+  margin-top: 2px;
+
+  font-size: 20px;
+}
+
+/* TRUST */
+
+.mock-trust {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 1px;
+
+  margin: 13px;
+
+  background: #d8d2c8;
+
+  border-radius: 8px;
+
+  overflow: hidden;
+}
+
+.mock-trust div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  padding: 11px 5px;
+
+  background: #f8f6f0;
+
+  color: #77736c;
+
+  font-size: 7px;
+}
+
+.mock-trust svg {
+  color: #7b756b;
+}
+
+/* =====================================================
+   FLOATING CARD
+===================================================== */
+
+.website-floating-card {
+  position: absolute;
+
+  right: -22px;
+  top: 16%;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 13px 15px;
+
+  background: #1b1b1b;
+
+  border: 1px solid rgba(255,255,255,.08);
+
+  border-radius: 12px;
+
+  box-shadow: 0 18px 40px rgba(0,0,0,.18);
+}
+
+.floating-check {
+  width: 30px;
+  height: 30px;
+
+  display: grid;
+  place-items: center;
+
+  background: #f4c906;
+  color: #111111;
+
+  border-radius: 8px;
+}
+
+.website-floating-card small {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: rgba(255,255,255,.35);
+
+  font-size: 7px;
+  letter-spacing: .1em;
+}
+
+.website-floating-card strong {
+  display: block;
+
+  color: #ffffff;
+
+  font-size: 9px;
+}
+
+/* =====================================================
+   FEATURE LIST
+===================================================== */
+
+.website-feature-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.website-feature-item {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 42px 1fr 25px;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 21px 0;
+
+  border-bottom: 1px solid #d8d2c8;
+}
+
+.website-feature-item:first-child {
+  border-top: 1px solid #d8d2c8;
+}
+
+.website-feature-icon {
+  width: 39px;
+  height: 39px;
+
+  display: grid;
+  place-items: center;
+
+  background: #e9e4da;
+
+  border-radius: 10px;
+
+  color: #272727;
+
+  transition:
+    background .25s ease,
+    transform .25s ease;
+}
+
+.website-feature-item:hover .website-feature-icon {
+  background: #f4c906;
+  transform: translateY(-2px);
+}
+
+.website-feature-content h3 {
+  margin: 0 0 4px;
+
+  font-size: 15px;
+
+  letter-spacing: -.025em;
+}
+
+.website-feature-content p {
+  max-width: 410px;
+
+  margin: 0;
+
+  color: #77736c;
+
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.website-feature-number {
+  align-self: flex-start;
+
+  color: #aaa49a;
+
+  font-size: 8px;
+  font-weight: 800;
+}
+
+/* =====================================================
+   BOTTOM
+===================================================== */
+
+.website-features-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 75px;
+  padding-top: 27px;
+
+  border-top: 1px solid #d8d2c8;
+}
+
+.website-features-bottom span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #99938a;
+
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+
+.website-features-bottom strong {
+  font-size: 16px;
+}
+
+.website-features-check {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  color: #4e4a44;
+
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.website-features-check svg {
+  color: #111111;
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+  .website-features {
+    padding: 100px 25px;
+  }
+
+  .website-features-heading {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 25px;
+  }
+
+  .website-features-main {
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+  }
+
+  .website-features-visual {
+    max-width: 800px;
+  }
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+  .website-features {
+    padding: 80px 16px;
+  }
+
+  .website-features-heading h2 {
+    font-size: 49px;
+  }
+
+  .website-features-main {
+    margin-top: 50px;
+  }
+
+  .website-features-visual {
+    min-height: 330px;
+  }
+
+  .website-browser {
+    transform: none;
+  }
+
+  .website-screen {
+    min-height: 285px;
+  }
+
+  .mock-nav {
+    height: 45px;
+
+    padding: 0 12px;
+  }
+
+  .mock-nav-links {
+    display: none;
+  }
+
+  .mock-nav button {
+    padding: 7px 8px;
+  }
+
+  .mock-content {
+    min-height: 190px;
+  }
+
+  .mock-copy {
+    padding: 28px 15px;
+  }
+
+  .mock-copy h3 {
+    font-size: 22px;
+  }
+
+  .mock-copy p {
+    font-size: 7px;
+  }
+
+  .mock-trust div {
+    font-size: 5px;
+  }
+
+  .website-floating-card {
+    right: -4px;
+    top: 5%;
+
+    transform: scale(.78);
+    transform-origin: right top;
+  }
+
+  .website-feature-item {
+    grid-template-columns: 38px 1fr 20px;
+
+    gap: 11px;
+
+    padding: 18px 0;
+  }
+
+  .website-feature-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .website-feature-content h3 {
+    font-size: 14px;
+  }
+
+  .website-feature-content p {
+    font-size: 9px;
+  }
+
+  .website-features-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 18px;
+
+    margin-top: 55px;
+  }
+
+  .website-features-check {
+    font-size: 10px;
+  }
+}

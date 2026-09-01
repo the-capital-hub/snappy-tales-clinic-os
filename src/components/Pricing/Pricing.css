@@ -1,0 +1,553 @@
+/* =====================================================
+   CLINICOS — PRICING
+===================================================== */
+
+.pricing {
+  padding: 125px 40px 120px;
+
+  background: #f4f1e9;
+  color: #151515;
+
+  overflow: hidden;
+}
+
+.pricing-container {
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.pricing-label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-bottom: 22px;
+
+  color: #77736c;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .14em;
+}
+
+.pricing-label span {
+  width: 7px;
+  height: 7px;
+
+  background: #f4c906;
+
+  border-radius: 50%;
+}
+
+.pricing-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 60px;
+}
+
+.pricing-heading h2 {
+  margin: 0;
+
+  font-size: clamp(50px, 5.8vw, 80px);
+
+  line-height: .92;
+
+  letter-spacing: -.06em;
+}
+
+.pricing-heading h2 span {
+  color: #9d978d;
+}
+
+.pricing-heading p {
+  max-width: 390px;
+
+  margin: 0 0 5px;
+
+  color: #77736c;
+
+  font-size: 12px;
+
+  line-height: 1.65;
+}
+
+/* =====================================================
+   GRID
+===================================================== */
+
+.pricing-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 12px;
+
+  margin-top: 70px;
+}
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.price-card {
+  position: relative;
+
+  padding: 28px;
+
+  background: #ffffff;
+
+  border: 1px solid #ded9d0;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+}
+
+.price-card-dark {
+  background: #151515;
+
+  color: #ffffff;
+
+  border-color: #151515;
+}
+
+.price-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.price-card-top span {
+  color: #99938a;
+
+  font-size: 7px;
+  font-weight: 800;
+
+  letter-spacing: .12em;
+}
+
+.price-card-dark .price-card-top span {
+  color: rgba(255,255,255,.28);
+}
+
+.price-card-top h3 {
+  margin: 7px 0 0;
+
+  font-size: 30px;
+
+  letter-spacing: -.05em;
+}
+
+.price-number {
+  color: #151515;
+
+  font-size: 35px;
+  font-weight: 850;
+
+  letter-spacing: -.06em;
+}
+
+.price-card-dark .price-number {
+  color: #f4c906;
+}
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.price-description {
+  max-width: 440px;
+
+  min-height: 50px;
+
+  margin: 25px 0 0;
+
+  color: #77736c;
+
+  font-size: 10px;
+
+  line-height: 1.6;
+}
+
+.price-card-dark .price-description {
+  color: rgba(255,255,255,.4);
+}
+
+/* =====================================================
+   DIVIDER
+===================================================== */
+
+.price-divider {
+  height: 1px;
+
+  margin: 23px 0 17px;
+
+  background: #e2ddd4;
+}
+
+.price-card-dark .price-divider {
+  background: rgba(255,255,255,.09);
+}
+
+/* =====================================================
+   FEATURES
+===================================================== */
+
+.price-features {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 10px 20px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.price-features li {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color: #57534d;
+
+  font-size: 8px;
+
+  line-height: 1.4;
+}
+
+.price-card-dark .price-features li {
+  color: rgba(255,255,255,.58);
+}
+
+.price-features li > span {
+  width: 18px;
+  height: 18px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  background: #eeeae3;
+
+  border-radius: 5px;
+}
+
+.price-card-dark .price-features li > span {
+  background: rgba(244,201,6,.1);
+
+  color: #f4c906;
+}
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.price-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 27px;
+  padding: 13px 14px;
+
+  border-radius: 8px;
+
+  text-decoration: none;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  transition: .25s ease;
+}
+
+.price-button-light {
+  background: #151515;
+  color: #ffffff;
+}
+
+.price-button-light:hover {
+  background: #f4c906;
+  color: #111111;
+}
+
+.price-button-yellow {
+  background: #f4c906;
+  color: #111111;
+}
+
+.price-button-yellow:hover {
+  background: #ffffff;
+  color: #111111;
+}
+
+.price-note {
+  display: block;
+
+  margin-top: 9px;
+
+  color: #aaa49b;
+
+  font-size: 6px;
+
+  text-align: center;
+}
+
+.price-card-dark .price-note {
+  color: rgba(255,255,255,.22);
+}
+
+/* =====================================================
+   POPULAR
+===================================================== */
+
+.popular-badge {
+  position: absolute;
+
+  top: 0;
+  right: 25px;
+
+  padding: 7px 9px;
+
+  background: #f4c906;
+  color: #111111;
+
+  border-radius: 0 0 6px 6px;
+
+  font-size: 6px;
+  font-weight: 900;
+
+  letter-spacing: .1em;
+}
+
+/* =====================================================
+   EARLY PARTNER
+===================================================== */
+
+.early-partner {
+  display: grid;
+
+  grid-template-columns: 54px 1fr auto;
+
+  align-items: center;
+
+  gap: 17px;
+
+  margin-top: 12px;
+  padding: 20px 22px;
+
+  background: #151515;
+  color: #ffffff;
+
+  border-radius: 14px;
+}
+
+.early-partner-icon {
+  width: 46px;
+  height: 46px;
+
+  display: grid;
+  place-items: center;
+
+  background: #f4c906;
+  color: #111111;
+
+  border-radius: 11px;
+}
+
+.early-partner-copy > span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: rgba(255,255,255,.28);
+
+  font-size: 6px;
+  font-weight: 800;
+
+  letter-spacing: .13em;
+}
+
+.early-partner-copy h3 {
+  display: inline;
+
+  margin: 0;
+
+  font-size: 13px;
+}
+
+.early-partner-copy > strong {
+  margin-left: 7px;
+
+  color: #f4c906;
+
+  font-size: 23px;
+
+  letter-spacing: -.05em;
+}
+
+.early-partner-copy p {
+  margin: 4px 0 0;
+
+  color: rgba(255,255,255,.28);
+
+  font-size: 7px;
+}
+
+.early-partner > a {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 8px;
+  font-weight: 750;
+}
+
+.early-partner > a svg {
+  color: #f4c906;
+}
+
+/* =====================================================
+   BOTTOM
+===================================================== */
+
+.pricing-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 35px;
+  padding-top: 22px;
+
+  border-top: 1px solid #ddd8cf;
+}
+
+.pricing-bottom span {
+  color: #aaa49b;
+
+  font-size: 6px;
+  font-weight: 800;
+
+  letter-spacing: .12em;
+}
+
+.pricing-bottom p {
+  margin: 0;
+
+  color: #77736c;
+
+  font-size: 9px;
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+  .pricing {
+    padding: 100px 25px;
+  }
+
+  .pricing-heading {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 25px;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+  .pricing {
+    padding: 80px 16px;
+  }
+
+  .pricing-heading h2 {
+    font-size: 49px;
+  }
+
+  .pricing-grid {
+    margin-top: 50px;
+  }
+
+  .price-card {
+    padding: 21px;
+  }
+
+  .price-number {
+    font-size: 28px;
+  }
+
+  .price-features {
+    grid-template-columns: 1fr;
+  }
+
+  .early-partner {
+    grid-template-columns: 43px 1fr;
+
+    padding: 17px;
+  }
+
+  .early-partner-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .early-partner-copy h3 {
+    font-size: 11px;
+  }
+
+  .early-partner-copy > strong {
+    display: block;
+
+    margin: 5px 0 0;
+
+    font-size: 21px;
+  }
+
+  .early-partner > a {
+    grid-column: 1 / -1;
+
+    justify-content: center;
+
+    padding-top: 11px;
+
+    border-top: 1px solid rgba(255,255,255,.08);
+  }
+
+  .pricing-bottom {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 9px;
+  }
+}
