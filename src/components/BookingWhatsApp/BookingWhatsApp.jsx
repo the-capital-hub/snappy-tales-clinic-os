@@ -48,7 +48,7 @@ function BookingWhatsApp() {
 
             <p>
               Patients can choose the interaction that feels most
-              natural to them — requesting an appointment or
+              natural to them requesting an appointment or
               starting a conversation with the clinic.
             </p>
 

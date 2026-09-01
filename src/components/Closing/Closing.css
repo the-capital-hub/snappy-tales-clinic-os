@@ -5,7 +5,7 @@
 .closing-section {
   position: relative;
 
-  padding: 110px 40px 70px;
+  padding: 20px 40px 25px;
 
   background: #f4f1e9;
 
@@ -269,7 +269,7 @@
 @media (max-width: 1000px) {
 
   .closing-section {
-    padding: 90px 25px 55px;
+    padding: 30px 25px 25px;
   }
 
   .closing-image {
@@ -281,7 +281,7 @@
 
     gap: 35px;
 
-    padding: 60px 10px 50px;
+    padding: 20px 10px 30px;
   }
 
   .closing-thankyou {

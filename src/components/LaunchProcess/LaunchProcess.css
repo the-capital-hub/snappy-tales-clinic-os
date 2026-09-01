@@ -6,7 +6,7 @@
   position: relative;
   isolation: isolate;
 
-  padding: 120px 40px 95px;
+  padding: 30px 40px 25px;
 
   background: #111111;
   color: #ffffff;
@@ -523,7 +523,7 @@
 @media (max-width: 1000px) {
 
   .launch-process {
-    padding: 95px 28px 80px;
+    padding: 25px 28px 20px;
   }
 
   .launch-process-heading {
@@ -575,7 +575,7 @@
 @media (max-width: 650px) {
 
   .launch-process {
-    padding: 75px 16px 60px;
+    padding: 25px 16px 20px;
   }
 
   .launch-process-label {

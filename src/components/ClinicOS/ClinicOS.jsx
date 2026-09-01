@@ -341,7 +341,7 @@ function ClinicOS() {
 
                     <div>
                       <strong>01</strong>
-                      <span>Follow-up</span>
+                      <span>Follow up</span>
                     </div>
 
                   </div>

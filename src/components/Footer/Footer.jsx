@@ -2,6 +2,7 @@ import {
   ArrowUpRight,
  
   Mail,
+  Phone,
 } from "lucide-react";
 import "./Footer.css";
 import {
@@ -90,6 +91,13 @@ function Footer() {
 
             <div className="footer-column">
               <span>CONNECT</span>
+
+
+                <a href="tel:+917026020151">
+    <Phone size={12} />
+    +91 70260 20151
+  </a>
+
 
               <a href="mailto:hello@snappytales.in">
                 <Mail size={12} />

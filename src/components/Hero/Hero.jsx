@@ -197,6 +197,15 @@ function Hero() {
             WEBSITE • APPOINTMENT BOOKING • WHATSAPP • PATIENT MANAGEMENT
           </span>
 
+
+          <div className="clinic-hero-contact">
+    <span>GET IN TOUCH</span>
+    <a href="tel:+917026020151">
+      +91 70260 20151
+    </a>
+  </div>
+
+
           <p>
             Built specifically for modern dental clinics.
           </p>

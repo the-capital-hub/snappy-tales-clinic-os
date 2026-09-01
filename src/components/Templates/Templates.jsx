@@ -1,36 +1,57 @@
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 import "./Templates.css";
+
+import one from "../../image/one.png";
+import two from "../../image/two.png";
+import three from "../../image/three.png";
+import four from "../../image/four.png";
+import five from "../../image/five.png";
 
 const templates = [
   {
     number: "01",
-    name: "First Edition",
+    name: "First Version",
     style: "Modern",
+    image: one,
+    description:
+      "A clean and contemporary direction focused on trust, clarity and a strong first impression.",
     url: "https://oak-ivory-version1.snappytales.in/",
   },
   {
     number: "02",
-    name: "Third Edition",
+    name: "Third Version",
     style: "Editorial",
+    image: two,
+    description:
+      "An elegant editorial approach with refined typography and a premium clinical feel.",
     url: "https://oak-ivory-version3.snappytales.in/",
   },
   {
     number: "03",
-    name: "Fourth Edition",
+    name: "Fourth Version",
     style: "Clinical",
+    image: three,
+    description:
+      "A structured and professional design built around services, doctors and patient confidence.",
     url: "https://oak-ivory-version4.snappytales.in/",
   },
   {
     number: "04",
-    name: "Fifth Edition",
+    name: "Fifth Version",
     style: "Minimal",
+    image: four,
+    description:
+      "A calm, minimal interface that keeps the patient's attention on essential information.",
     url: "https://oak-ivory-version5.snappytales.in/",
   },
   {
     number: "05",
-    name: "Extra Edition",
+    name: "Extra Version",
     style: "Bold",
+    image: five,
+    description:
+      "A stronger visual direction for clinics looking for a distinctive and memorable identity.",
     url: "https://extra-version-khaki.snappytales.in/",
   },
 ];
@@ -48,79 +69,53 @@ function Templates() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <div className="templates-topline">
-
-            <div className="templates-label">
-              <span />
-              DESIGNED FOR DENTAL CLINICS
-            </div>
-
-            <div className="templates-page-number">
-              04 / 14
-            </div>
-
+          <div className="templates-label">
+            <span />
+            WEBSITE DESIGN DIRECTIONS
           </div>
 
           <div className="templates-heading-row">
+            <h2>
+              Five ways to
+              <br />
+              <span>introduce your clinic.</span>
+            </h2>
 
-            <div>
-              <p className="templates-eyebrow">
-                WEBSITE DIRECTIONS
-              </p>
-
-              <h2>
-                Five ways to make
-                <br />
-                your clinic <span>stand out.</span>
-              </h2>
-            </div>
-
-            <div className="templates-copy">
-
+            <div className="templates-intro">
               <p>
-                Start with a professionally designed dental
-                website and make it yours with your clinic's
-                branding, doctors, services and content.
+                Every clinic is different. Choose a visual direction
+                that reflects your practice, your personality and
+                the experience you want patients to remember.
               </p>
 
-              <div className="template-count">
+              <div className="templates-count">
                 <strong>05</strong>
                 <span>DESIGN DIRECTIONS</span>
               </div>
-
             </div>
-
           </div>
         </motion.div>
 
-        {/* TEMPLATE GRID */}
+        {/* TEMPLATES */}
         <div className="templates-grid">
 
           {templates.map((template, index) => (
-
             <motion.article
-              className="template-card"
+              className={`template-card template-card-${index + 1}`}
               key={template.number}
-              initial={{
-                opacity: 0,
-                y: 30,
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-              }}
-              viewport={{
-                once: true,
-              }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               transition={{
-                duration: 0.5,
-                delay: index * 0.08,
+                duration: 0.55,
+                delay: index * 0.07,
               }}
             >
 
-              {/* PREVIEW */}
+              {/* IMAGE PREVIEW */}
               <div className="template-preview">
 
+                {/* BROWSER BAR */}
                 <div className="template-browser">
 
                   <div className="browser-dots">
@@ -129,101 +124,109 @@ function Templates() {
                     <span />
                   </div>
 
-                  <div className="browser-url">
-                    {template.url
-                      .replace("https://", "")
-                      .replace("/", "")}
+                  <div className="browser-address">
+                    <span>
+                      {template.url
+                        .replace("https://", "")
+                        .replace("/", "")}
+                    </span>
                   </div>
 
-                  <ExternalLink size={11} />
+                  <ExternalLink size={12} />
 
                 </div>
 
-                <iframe
-                  src={template.url}
-                  title={`${template.name} dental website template`}
-                  loading="lazy"
-                  className="template-iframe"
-                />
+                {/* REAL IMAGE */}
+                <div className="template-screen">
 
-                {/* INFORMATION OVERLAY — NO CTA */}
-                <div className="template-overlay">
+                  <img
+                    src={template.image}
+                    alt={`${template.name} dental website`}
+                    className="template-image"
+                  />
 
-                  <span className="template-overlay-number">
-                    {template.number}
-                  </span>
+                  {/* HOVER OVERLAY */}
+                  <div className="template-hover">
 
-                  <div>
-                    <small>
-                      DENTAL WEBSITE
-                    </small>
+                    <a
+                      href={template.url}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      View Live Website
+                      <ArrowUpRight size={16} />
+                    </a>
 
-                    <strong>
-                      {template.style}
-                    </strong>
                   </div>
 
+                </div>
+
+                {/* NUMBER */}
+                <div className="template-preview-number">
+                  {template.number}
                 </div>
 
               </div>
 
-              {/* INFORMATION */}
+              {/* INFO */}
               <div className="template-info">
 
-                <div className="template-title">
+                <div className="template-info-main">
 
-                  <span>
-                    {template.number}
-                  </span>
-
-                  <div>
-                    <h3>
-                      {template.name}
-                    </h3>
-
-                    <small>
-                      {template.style} direction
-                    </small>
+                  <div className="template-meta">
+                    <span>{template.number}</span>
+                    <small>{template.style}</small>
                   </div>
 
+                  <h3>{template.name}</h3>
+
+                  <p>{template.description}</p>
+
                 </div>
 
-                <div className="template-type">
-                  WEBSITE
-                </div>
+                <a
+                  href={template.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="template-link"
+                  aria-label={`View ${template.name}`}
+                >
+                  <span>View Website</span>
+                  <ArrowUpRight size={15} />
+                </a>
 
               </div>
 
             </motion.article>
-
           ))}
 
         </div>
 
-        {/* BOTTOM INFORMATION */}
+        {/* FOOTER */}
         <motion.div
-          className="templates-bottom"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          className="templates-footer"
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
 
-          <div className="templates-bottom-line" />
+          <div className="templates-footer-line" />
 
-          <div>
-            <span>
-              YOUR CLINIC. YOUR BRAND.
-            </span>
+          <div className="templates-footer-content">
 
-            <strong>
-              Every design can be customised around
-              your clinic's identity.
-            </strong>
-          </div>
+            <div>
+              <span>ONE PLATFORM · MULTIPLE DIRECTIONS</span>
 
-          <div className="templates-bottom-count">
-            <strong>05</strong>
-            <span>STARTING DIRECTIONS</span>
+              <strong>
+                Each design can be customised around your clinic.
+              </strong>
+            </div>
+
+            <div className="templates-footer-mark">
+              <span>CLINICOS</span>
+              <strong>05</strong>
+            </div>
+
           </div>
 
         </motion.div>

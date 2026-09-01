@@ -4,40 +4,28 @@
 
 .pricing {
   position: relative;
-
-  padding: 125px 40px 120px;
-
+  padding: 25px 40px 30px;
   background: #f4f1e9;
   color: #151515;
-
   overflow: hidden;
 }
 
 .pricing::before {
   content: "";
-
   position: absolute;
-
-  width: 520px;
-  height: 520px;
-
-  right: -300px;
-  top: -250px;
-
-  border: 1px solid rgba(21, 21, 21, 0.055);
-
+  width: 620px;
+  height: 620px;
+  right: -360px;
+  top: 80px;
+  border: 1px solid rgba(21, 21, 21, 0.06);
   border-radius: 50%;
-
-  pointer-events: none;
 }
 
 .pricing-container {
   position: relative;
   z-index: 1;
-
   width: 100%;
   max-width: 1380px;
-
   margin: 0 auto;
 }
 
@@ -48,27 +36,18 @@
 .pricing-label {
   display: flex;
   align-items: center;
-
   gap: 9px;
-
   margin-bottom: 22px;
-
   color: #77736c;
-
   font-size: 10px;
   font-weight: 800;
-
   letter-spacing: 0.14em;
 }
 
 .pricing-label span {
   width: 7px;
   height: 7px;
-
-  flex-shrink: 0;
-
   background: #f4c906;
-
   border-radius: 50%;
 }
 
@@ -76,19 +55,13 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-
   gap: 60px;
 }
 
 .pricing-heading h2 {
   margin: 0;
-
   font-size: clamp(50px, 5.8vw, 80px);
-
   line-height: 0.92;
-
-  font-weight: 750;
-
   letter-spacing: -0.06em;
 }
 
@@ -97,15 +70,11 @@
 }
 
 .pricing-heading p {
-  max-width: 390px;
-
+  max-width: 410px;
   margin: 0 0 5px;
-
   color: #77736c;
-
   font-size: 12px;
-
-  line-height: 1.65;
+  line-height: 1.7;
 }
 
 /* =====================================================
@@ -114,11 +83,8 @@
 
 .pricing-grid {
   display: grid;
-
   grid-template-columns: 1fr 1fr;
-
-  gap: 12px;
-
+  gap: 14px;
   margin-top: 70px;
 }
 
@@ -128,94 +94,129 @@
 
 .price-card {
   position: relative;
-
-  min-height: 430px;
-
-  padding: 28px;
-
-  display: flex;
-  flex-direction: column;
-
+  padding: 30px;
   background: #ffffff;
-
   border: 1px solid #ded9d0;
-
-  border-radius: 18px;
-
+  border-radius: 20px;
   overflow: hidden;
 
   transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
 }
 
 .price-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 22px 55px rgba(21, 21, 21, 0.09);
+}
 
-  box-shadow:
-    0 20px 45px rgba(0, 0, 0, 0.08);
+.price-card-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #f4c906;
 }
 
 .price-card-dark {
   background: #151515;
-
   color: #ffffff;
-
   border-color: #151515;
-}
-
-.price-card-dark:hover {
-  box-shadow:
-    0 25px 55px rgba(0, 0, 0, 0.18);
 }
 
 /* =====================================================
    CARD TOP
 ===================================================== */
 
+.price-card-title {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.price-icon {
+  width: 43px;
+  height: 43px;
+
+  display: grid;
+  place-items: center;
+
+  background: #f1eee7;
+  color: #151515;
+
+  border-radius: 11px;
+}
+
+.price-card-dark .price-icon {
+  background: rgba(244, 201, 6, 0.1);
+  color: #f4c906;
+}
+
 .price-card-top {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-
   gap: 20px;
 }
 
-.price-card-top span {
+.price-card-top > div:first-child > div > span {
+  display: block;
   color: #99938a;
-
-  font-size: 11px;
+  font-size: 7px;
   font-weight: 800;
-
   letter-spacing: 0.12em;
 }
 
-.price-card-dark .price-card-top span {
-  color: rgba(255, 255, 255, 0.28);
+.price-card-dark .price-card-top > div:first-child > div > span {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .price-card-top h3 {
-  margin: 7px 0 0;
-
-  font-size: 30px;
-  font-weight: 700;
-
+  margin: 6px 0 0;
+  font-size: 29px;
   letter-spacing: -0.05em;
 }
 
+/* =====================================================
+   PRICE
+===================================================== */
+
 .price-number {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+
   color: #151515;
 
-  font-size: 35px;
-  font-weight: 850;
+  font-size: 39px;
+  font-weight: 900;
 
   line-height: 1;
+  letter-spacing: -0.065em;
 
-  letter-spacing: -0.06em;
+  white-space: nowrap;
+}
+
+.price-number small {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.price-number span {
+  margin-left: 3px;
+  color: #77736c;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0;
 }
 
 .price-card-dark .price-number {
   color: #f4c906;
+}
+
+.price-card-dark .price-number span {
+  color: rgba(255, 255, 255, 0.45);
 }
 
 /* =====================================================
@@ -223,21 +224,18 @@
 ===================================================== */
 
 .price-description {
-  max-width: 440px;
-
-  min-height: 50px;
-
+  max-width: 470px;
+  min-height: 62px;
   margin: 25px 0 0;
 
   color: #77736c;
 
-  font-size: 11px;
-
-  line-height: 1.6;
+  font-size: 10px;
+  line-height: 1.7;
 }
 
 .price-card-dark .price-description {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.42);
 }
 
 /* =====================================================
@@ -246,33 +244,26 @@
 
 .price-divider {
   height: 1px;
-
-  margin: 23px 0 17px;
-
-  background: #e2ddd4;
+  margin: 24px 0 18px;
+  background: #e3ded5;
 }
 
 .price-card-dark .price-divider {
   background: rgba(255, 255, 255, 0.09);
 }
 
-/* =====================================================
-   WHAT'S INCLUDED
-===================================================== */
-
-.price-includes {
+.includes-label {
   margin-bottom: 14px;
 
-  color: #99938a;
+  color: #aaa49b;
 
-  font-size: 11px;
-  font-weight: 800;
-
-  letter-spacing: 0.13em;
+  font-size: 6px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
 }
 
-.price-card-dark .price-includes {
-  color: rgba(255, 255, 255, 0.3);
+.price-card-dark .includes-label {
+  color: rgba(255, 255, 255, 0.25);
 }
 
 /* =====================================================
@@ -281,7 +272,6 @@
 
 .price-features {
   display: grid;
-
   grid-template-columns: 1fr 1fr;
 
   gap: 10px 20px;
@@ -295,14 +285,12 @@
 .price-features li {
   display: flex;
   align-items: center;
-
   gap: 8px;
 
   color: #57534d;
 
-  font-size: 11px;
-
-  line-height: 1.4;
+  font-size: 8px;
+  line-height: 1.45;
 }
 
 .price-card-dark .price-features li {
@@ -310,16 +298,15 @@
 }
 
 .price-features li > span {
-  width: 18px;
-  height: 18px;
+  width: 19px;
+  height: 19px;
 
   flex-shrink: 0;
 
   display: grid;
   place-items: center;
 
-  background: #eeeae3;
-
+  background: #efebe4;
   color: #151515;
 
   border-radius: 5px;
@@ -327,81 +314,164 @@
 
 .price-card-dark .price-features li > span {
   background: rgba(244, 201, 6, 0.1);
-
   color: #f4c906;
 }
 
 /* =====================================================
-   PRICE NOTE
+   CARD FOOTER
 ===================================================== */
 
-.price-note {
-  display: block;
+.price-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-  margin-top: auto;
-  padding-top: 22px;
+  margin-top: 28px;
+  padding-top: 18px;
 
-  color: #aaa49b;
-
-  font-size: 11px;
-
-  text-align: left;
+  border-top: 1px solid #e3ded5;
 }
 
-.price-card-dark .price-note {
-  color: rgba(255, 255, 255, 0.22);
+.price-card-dark .price-footer {
+  border-color: rgba(255, 255, 255, 0.09);
+}
+
+.price-footer > span {
+  color: #aaa49b;
+
+  font-size: 6px;
+  font-weight: 900;
+
+  letter-spacing: 0.12em;
+}
+
+.price-card-dark .price-footer > span {
+  color: rgba(255, 255, 255, 0.24);
+}
+
+.price-footer-arrow {
+  width: 31px;
+  height: 31px;
+
+  display: grid;
+  place-items: center;
+
+  background: #151515;
+  color: #ffffff;
+
+  border-radius: 8px;
+
+  transition: 0.25s ease;
+}
+
+.price-card:hover .price-footer-arrow {
+  background: #f4c906;
+  color: #111111;
+}
+
+.price-card-dark .price-footer-arrow {
+  background: #f4c906;
+  color: #111111;
 }
 
 /* =====================================================
-   POPULAR BADGE
+   POPULAR
 ===================================================== */
 
 .popular-badge {
   position: absolute;
 
   top: 0;
-  right: 25px;
+  right: 26px;
 
-  padding: 7px 9px;
+  padding: 8px 11px;
 
   background: #f4c906;
   color: #111111;
 
-  border-radius: 0 0 6px 6px;
+  border-radius: 0 0 7px 7px;
 
-  font-size: 11px;
+  font-size: 6px;
   font-weight: 900;
 
   letter-spacing: 0.1em;
 }
 
 /* =====================================================
-   EARLY PARTNER
+   EARLY PARTNER OFFER
 ===================================================== */
 
 .early-partner {
-  display: grid;
+  position: relative;
 
-  grid-template-columns: 54px 1fr auto;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
 
   align-items: center;
 
-  gap: 17px;
+  gap: 35px;
 
-  margin-top: 12px;
+  margin-top: 14px;
+  padding: 28px 30px;
 
-  padding: 20px 22px;
-
-  background: #151515;
+  background:
+    radial-gradient(
+      circle at 75% 50%,
+      rgba(244, 201, 6, 0.13),
+      transparent 35%
+    ),
+    #151515;
 
   color: #ffffff;
 
-  border-radius: 14px;
+  border-radius: 18px;
+
+  overflow: hidden;
+}
+
+.early-pattern {
+  position: absolute;
+
+  width: 260px;
+  height: 260px;
+
+  right: 100px;
+  top: -130px;
+
+  border: 1px solid rgba(244, 201, 6, 0.12);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.early-pattern::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 28px;
+
+  border: 1px solid rgba(244, 201, 6, 0.09);
+
+  border-radius: 50%;
+}
+
+.early-partner-left {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+
+  gap: 17px;
 }
 
 .early-partner-icon {
-  width: 46px;
-  height: 46px;
+  width: 55px;
+  height: 55px;
+
+  flex-shrink: 0;
 
   display: grid;
   place-items: center;
@@ -409,90 +479,133 @@
   background: #f4c906;
   color: #111111;
 
-  border-radius: 11px;
+  border-radius: 13px;
+
+  box-shadow: 0 0 30px rgba(244, 201, 6, 0.13);
 }
 
-.early-partner-copy > span {
+.early-label {
   display: block;
 
-  margin-bottom: 5px;
+  margin-bottom: 7px;
 
-  color: rgba(255, 255, 255, 0.28);
+  color: rgba(255, 255, 255, 0.3);
 
-  font-size: 11px;
-  font-weight: 800;
+  font-size: 6px;
+  font-weight: 900;
+
+  letter-spacing: 0.14em;
+}
+
+.early-partner-left h3 {
+  margin: 0;
+
+  font-size: 21px;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+}
+
+.early-partner-left p {
+  margin: 7px 0 0;
+
+  color: rgba(255, 255, 255, 0.35);
+
+  font-size: 8px;
+  line-height: 1.5;
+}
+
+/* =====================================================
+   EARLY PRICE
+===================================================== */
+
+.early-partner-price {
+  position: relative;
+  z-index: 2;
+
+  padding-left: 30px;
+
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.early-partner-price > span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #f4c906;
+
+  font-size: 6px;
+  font-weight: 900;
 
   letter-spacing: 0.13em;
 }
 
-.early-partner-copy h3 {
-  margin: 0;
-
-  font-size: 13px;
-  font-weight: 600;
-}
-
-.early-partner-price {
-  margin-top: 5px;
+.early-partner-price strong {
+  display: block;
 
   color: #f4c906;
 
-  font-size: 25px;
-  font-weight: 850;
+  font-size: 38px;
+  font-weight: 900;
 
-  line-height: 1;
+  line-height: 0.95;
 
-  letter-spacing: -0.05em;
-}
-
-.early-partner-copy p {
-  margin: 5px 0 0;
-
-  color: rgba(255, 255, 255, 0.28);
-
-  font-size: 11px;
-}
-
-/* =====================================================
-   EARLY PARTNER STATUS
-===================================================== */
-
-.early-partner-status {
-  display: flex;
-  align-items: center;
-
-  gap: 7px;
-
-  padding: 9px 12px;
-
-  background: rgba(244, 201, 6, 0.06);
-
-  border: 1px solid rgba(244, 201, 6, 0.2);
-
-  border-radius: 8px;
-
-  color: #f4c906;
-
-  font-size: 11px;
-  font-weight: 800;
-
-  letter-spacing: 0.1em;
+  letter-spacing: -0.06em;
 
   white-space: nowrap;
 }
 
-.early-partner-status span {
-  width: 5px;
-  height: 5px;
+.early-partner-price strong small {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
 
-  flex-shrink: 0;
+.early-partner-price em {
+  display: block;
 
-  background: #f4c906;
+  margin-top: 7px;
 
-  border-radius: 50%;
+  color: rgba(255, 255, 255, 0.25);
 
-  box-shadow:
-    0 0 8px rgba(244, 201, 6, 0.6);
+  font-size: 6px;
+  font-style: normal;
+}
+
+/* =====================================================
+   MARK
+===================================================== */
+
+.early-partner-mark {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  padding-left: 20px;
+
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.early-partner-mark span {
+  color: rgba(255, 255, 255, 0.22);
+
+  font-size: 6px;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+.early-partner-mark strong {
+  margin-top: 4px;
+
+  color: rgba(255, 255, 255, 0.12);
+
+  font-size: 32px;
+
+  line-height: 1;
 }
 
 /* =====================================================
@@ -506,18 +619,21 @@
 
   gap: 30px;
 
-  margin-top: 35px;
-
+  margin-top: 32px;
   padding-top: 22px;
 
   border-top: 1px solid #ddd8cf;
 }
 
 .pricing-bottom span {
+  display: block;
+
+  margin-bottom: 5px;
+
   color: #aaa49b;
 
-  font-size: 11px;
-  font-weight: 800;
+  font-size: 6px;
+  font-weight: 900;
 
   letter-spacing: 0.12em;
 }
@@ -530,6 +646,13 @@
   font-size: 9px;
 }
 
+.pricing-bottom > strong {
+  color: #99938a;
+
+  font-size: 9px;
+  font-weight: 700;
+}
+
 /* =====================================================
    TABLET
 ===================================================== */
@@ -537,27 +660,25 @@
 @media (max-width: 1000px) {
 
   .pricing {
-    padding: 100px 25px;
+    padding: 30px 25px;
   }
 
   .pricing-heading {
     align-items: flex-start;
-
     flex-direction: column;
-
     gap: 25px;
-  }
-
-  .pricing-heading p {
-    max-width: 520px;
   }
 
   .pricing-grid {
     grid-template-columns: 1fr;
   }
 
-  .price-card {
-    min-height: auto;
+  .early-partner {
+    grid-template-columns: 1fr auto;
+  }
+
+  .early-partner-mark {
+    display: none;
   }
 }
 
@@ -568,15 +689,11 @@
 @media (max-width: 650px) {
 
   .pricing {
-    padding: 80px 16px;
+    padding: 20px 16px;
   }
 
   .pricing-heading h2 {
     font-size: 49px;
-  }
-
-  .pricing-heading p {
-    font-size: 10px;
   }
 
   .pricing-grid {
@@ -584,66 +701,72 @@
   }
 
   .price-card {
-    padding: 21px;
-
-    border-radius: 15px;
+    padding: 22px;
   }
 
   .price-card-top {
     gap: 12px;
   }
 
+  .price-card-title {
+    gap: 10px;
+  }
+
+  .price-icon {
+    width: 38px;
+    height: 38px;
+  }
+
   .price-card-top h3 {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   .price-number {
-    font-size: 28px;
+    font-size: 29px;
+  }
+
+  .price-number small {
+    font-size: 13px;
+  }
+
+  .price-number span {
+    font-size: 7px;
   }
 
   .price-description {
+    min-height: auto;
     font-size: 9px;
   }
 
   .price-features {
     grid-template-columns: 1fr;
-
-    gap: 9px;
-  }
-
-  .price-features li {
-    font-size: 11px;
   }
 
   .early-partner {
-    grid-template-columns: 43px 1fr;
+    grid-template-columns: 1fr;
 
-    padding: 17px;
+    gap: 22px;
 
-    gap: 13px;
+    padding: 22px;
   }
 
-  .early-partner-icon {
-    width: 40px;
-    height: 40px;
+  .early-partner-left {
+    align-items: flex-start;
   }
 
-  .early-partner-copy h3 {
-    font-size: 11px;
+  .early-partner-left h3 {
+    font-size: 18px;
   }
 
   .early-partner-price {
-    font-size: 21px;
+    padding: 18px 0 0;
+
+    border-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
 
-  .early-partner-status {
-    grid-column: 1 / -1;
-
-    width: 100%;
-
-    box-sizing: border-box;
-
-    justify-content: center;
+  .early-partner-price strong {
+    font-size: 34px;
   }
 
   .pricing-bottom {
@@ -651,6 +774,10 @@
 
     flex-direction: column;
 
-    gap: 9px;
+    gap: 10px;
+  }
+
+  .pricing-bottom > strong {
+    font-size: 8px;
   }
 }

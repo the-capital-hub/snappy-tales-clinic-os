@@ -1,12 +1,15 @@
 import {
+  ArrowUpRight,
   Check,
   Sparkles,
+  Globe2,
+  LayoutDashboard,
 } from "lucide-react";
 import { motion } from "framer-motion";
 import "./Pricing.css";
 
 const websiteFeatures = [
-  "Premium dental website template",
+  "Premium dental website",
   "Custom clinic branding",
   "Doctor profiles",
   "Service pages",
@@ -34,7 +37,6 @@ function Feature({ children }) {
       <span>
         <Check size={11} />
       </span>
-
       {children}
     </li>
   );
@@ -45,107 +47,75 @@ function Pricing() {
     <section className="pricing" id="pricing">
       <div className="pricing-container">
 
-        {/* =================================================
-            HEADER
-        ================================================= */}
-
+        {/* HEADER */}
         <motion.div
           className="pricing-header"
-          initial={{
-            opacity: 0,
-            y: 30,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          viewport={{
-            once: true,
-          }}
-          transition={{
-            duration: 0.6,
-          }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
         >
-
           <div className="pricing-label">
             <span />
-            SIMPLE PRICING
+            SIMPLE, TRANSPARENT PRICING
           </div>
 
           <div className="pricing-heading">
-
             <h2>
-              Start with your website.
+              Choose what your
               <br />
-              <span>
-                Upgrade when you're ready.
-              </span>
+              <span>clinic needs today.</span>
             </h2>
 
             <p>
-              Choose the level that fits your clinic today.
-              Start with a professional website or build a
-              complete digital infrastructure with ClinicOS.
+              Start with a professional website or bring your
+              entire digital front desk together with ClinicOS.
+              Simple packages designed for modern dental clinics.
             </p>
-
           </div>
-
         </motion.div>
 
-        {/* =================================================
-            PRICING CARDS
-        ================================================= */}
-
+        {/* PRICING CARDS */}
         <div className="pricing-grid">
 
-          {/* =================================================
-              GET ONLINE
-          ================================================= */}
-
+          {/* GET ONLINE */}
           <motion.article
             className="price-card"
-            initial={{
-              opacity: 0,
-              y: 30,
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-            }}
-            viewport={{
-              once: true,
-            }}
-            transition={{
-              duration: 0.5,
-            }}
+            initial={{ opacity: 0, y: 35 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.55 }}
           >
+            <div className="price-card-accent" />
 
             <div className="price-card-top">
+              <div className="price-card-title">
+                <div className="price-icon">
+                  <Globe2 size={19} />
+                </div>
 
-              <div>
-                <span>
-                  01 / WEBSITE
-                </span>
-
-                <h3>
-                  Get Online
-                </h3>
+                <div>
+                  <span>01 / WEBSITE</span>
+                  <h3>Get Online</h3>
+                </div>
               </div>
 
               <div className="price-number">
-                ₹30K
+                <small>₹</small>
+                30
+                <span>Thousand</span>
               </div>
-
             </div>
 
             <p className="price-description">
-              A professional digital presence designed
-              specifically for modern dental clinics.
+              A professional digital presence designed specifically
+              for modern dental clinics that want to look credible
+              and make it easier for patients to connect.
             </p>
 
             <div className="price-divider" />
 
-            <div className="price-includes">
+            <div className="includes-label">
               WHAT'S INCLUDED
             </div>
 
@@ -157,65 +127,58 @@ function Pricing() {
               ))}
             </ul>
 
-            <div className="price-note">
-              One-time website setup
-            </div>
+            <div className="price-footer">
+              <span>ONE-TIME WEBSITE SETUP</span>
 
+              <div className="price-footer-arrow">
+                <ArrowUpRight size={16} />
+              </div>
+            </div>
           </motion.article>
 
-          {/* =================================================
-              CLINICOS
-          ================================================= */}
-
+          {/* CLINICOS */}
           <motion.article
             className="price-card price-card-dark"
-            initial={{
-              opacity: 0,
-              y: 30,
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-            }}
-            viewport={{
-              once: true,
-            }}
+            initial={{ opacity: 0, y: 35 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{
-              duration: 0.5,
+              duration: 0.55,
               delay: 0.08,
             }}
           >
-
             <div className="popular-badge">
               MOST COMPLETE
             </div>
 
             <div className="price-card-top">
+              <div className="price-card-title">
+                <div className="price-icon">
+                  <LayoutDashboard size={19} />
+                </div>
 
-              <div>
-                <span>
-                  02 / PLATFORM
-                </span>
-
-                <h3>
-                  ClinicOS
-                </h3>
+                <div>
+                  <span>02 / PLATFORM</span>
+                  <h3>ClinicOS</h3>
+                </div>
               </div>
 
               <div className="price-number">
-                ₹40K
+                <small>₹</small>
+                40
+                <span>Thousand</span>
               </div>
-
             </div>
 
             <p className="price-description">
-              Your complete digital front desk for managing
-              the patient journey beyond your website.
+              Your complete digital front desk for managing the
+              patient journey beyond your website — from enquiries
+              and appointments to patient management.
             </p>
 
             <div className="price-divider" />
 
-            <div className="price-includes">
+            <div className="includes-label">
               WHAT'S INCLUDED
             </div>
 
@@ -227,93 +190,91 @@ function Pricing() {
               ))}
             </ul>
 
-            <div className="price-note">
-              Platform setup
-            </div>
+            <div className="price-footer">
+              <span>CLINICOS PLATFORM SETUP</span>
 
+              <div className="price-footer-arrow">
+                <ArrowUpRight size={16} />
+              </div>
+            </div>
           </motion.article>
 
         </div>
 
-        {/* =================================================
-            EARLY PARTNER INFORMATION
-        ================================================= */}
-
+        {/* EARLY PARTNER OFFER */}
         <motion.div
           className="early-partner"
-          initial={{
-            opacity: 0,
-            y: 25,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          viewport={{
-            once: true,
-          }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{
-            duration: 0.5,
+            duration: 0.6,
+            delay: 0.1,
           }}
         >
+          <div className="early-pattern" />
 
-          <div className="early-partner-icon">
-            <Sparkles size={19} />
-          </div>
-
-          <div className="early-partner-copy">
-
-            <span>
-              EARLY CLINICOS PARTNER OFFER
-            </span>
-
-            <h3>
-              Complete ClinicOS experience
-            </h3>
-
-            <div className="early-partner-price">
-              ₹35,000
+          <div className="early-partner-left">
+            <div className="early-partner-icon">
+              <Sparkles size={21} />
             </div>
 
-            <p>
-              Available for selected early ClinicOS clinics.
-            </p>
+            <div>
+              <span className="early-label">
+                EARLY CLINICOS PARTNER
+              </span>
 
+              <h3>
+                Be among the first clinics
+                <br />
+                to experience ClinicOS.
+              </h3>
+
+              <p>
+                Get the complete ClinicOS experience at an
+                exclusive early-partner price.
+              </p>
+            </div>
           </div>
 
-          <div className="early-partner-status">
-            <span />
-            LIMITED EARLY ACCESS
+          <div className="early-partner-price">
+            <span>EARLY ACCESS</span>
+
+            <strong>
+              ₹35
+              <small> Thousand</small>
+            </strong>
+
+            <em>
+              Limited early partner availability
+            </em>
           </div>
 
+          <div className="early-partner-mark">
+            <span>CLINICOS</span>
+            <strong>01</strong>
+          </div>
         </motion.div>
 
-        {/* =================================================
-            BOTTOM INFORMATION
-        ================================================= */}
-
+        {/* BOTTOM */}
         <motion.div
           className="pricing-bottom"
-          initial={{
-            opacity: 0,
-          }}
-          whileInView={{
-            opacity: 1,
-          }}
-          viewport={{
-            once: true,
-          }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
         >
+          <div>
+            <span>BUILT FOR MODERN DENTAL CLINICS</span>
 
-          <span>
-            TRANSPARENT CLINICOS PRICING
-          </span>
+            <p>
+              Start with your website. Build your digital
+              infrastructure as your clinic grows.
+            </p>
+          </div>
 
-          <p>
-            Start with your website and expand your digital
-            infrastructure as your clinic grows.
-          </p>
-
+          <strong>
+            Website → ClinicOS → AI Receptionist
+          </strong>
         </motion.div>
 
       </div>

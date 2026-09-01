@@ -515,6 +515,10 @@
 
 @media (max-width: 1000px) {
 
+  .clinic-hero-eyebrow{
+    margin-top: 20px;
+  }
+
   .clinic-hero {
     min-height: auto;
 
@@ -679,5 +683,55 @@
 
   .clinic-hero-bottom > span {
     line-height: 1.5;
+  }
+}
+
+/* =====================================================
+   HERO CONTACT
+===================================================== */
+
+.clinic-hero-contact {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.clinic-hero-contact > span {
+  color: #aaa49b;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.13em;
+}
+
+.clinic-hero-contact a {
+  color: #151515;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+
+  transition: color 0.25s ease;
+}
+
+.clinic-hero-contact a:hover {
+  color: #b49b00;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .clinic-hero-contact {
+    width: 100%;
+
+    justify-content: space-between;
+
+    padding-top: 10px;
+
+    border-top: 1px solid rgba(17, 17, 17, 0.08);
+  }
+
+  .clinic-hero-contact a {
+    font-size: 10px;
   }
 }

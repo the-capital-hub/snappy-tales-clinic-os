@@ -299,9 +299,9 @@
 
   font-size: clamp(55px, 6vw, 82px);
 
-  line-height: .84;
+  line-height: .98;
 
-  letter-spacing: -.075em;
+  letter-spacing: -.085em;
 }
 
 .problem-content h2 em {

@@ -66,7 +66,7 @@ function WhySnappyTales() {
 
             <p>
               We build the technology and growth infrastructure
-              behind ambitious businesses — then help them
+              behind ambitious businesses then help them
               evolve as they grow.
             </p>
           </div>
@@ -202,7 +202,7 @@ function WhySnappyTales() {
           <div className="snappy-clinicos-left">
 
             <span>
-              OUR DENTAL-FIRST PRODUCT
+              OUR DENTAL FIRST PRODUCT
             </span>
 
             <h3>
@@ -226,7 +226,7 @@ function WhySnappyTales() {
             </div>
 
             <p>
-              A dental-first digital platform combining your
+              A dental first digital platform combining your
               website, patient journey, systems and future
               AI capabilities in one ecosystem.
             </p>

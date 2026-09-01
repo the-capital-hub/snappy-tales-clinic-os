@@ -61,6 +61,10 @@ function Navbar() {
           ))}
         </nav>
 
+        <a href="tel:+917026020151" className="nav-phone">
+  +91 70260 20151
+</a>
+
         {/* CTA */}
         
 

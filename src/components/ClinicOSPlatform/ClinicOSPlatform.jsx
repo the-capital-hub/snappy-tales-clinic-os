@@ -406,7 +406,7 @@ function ClinicOSPlatform() {
             </span>
 
             <strong>
-              From first enquiry to patient follow-up.
+              From first enquiry to patient follow up.
             </strong>
           </div>
 
